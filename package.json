@@ -2,16 +2,20 @@
   "name": "ignitic",
   "version": "0.0.1",
   "description": "",
-  "files": [
-    "src"
-  ],
+  "directories": {
+    "bin": "./src"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version:patch": "npm version patch && git push --follow-tags",
+    "version:minor": "npm version minor && git push --follow-tags",
+    "version:major": "npm version major && git push --follow-tags"
   },
   "repository": {
     "type": "git",
     "url": "github.com/arnarp/ignitic"
   },
   "author": "Arnar Birgisson",
+  "homepage": "https://github.com/arnarp/ignitic",
   "license": "MIT"
 }
