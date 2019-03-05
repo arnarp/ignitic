@@ -2,15 +2,16 @@
   "name": "ignitic",
   "version": "0.0.3",
   "description": "",
-  "directories": {
-    "bin": "./src"
-  },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start:dev",
+    "start:dev": "parcel dev/index.html --port 1113",
     "version:patch": "npm version patch && git push --follow-tags",
     "version:minor": "npm version minor && git push --follow-tags",
-    "version:major": "npm version major && git push --follow-tags",
-    "publish": "rm -rf ./dist && mkdir dist && cp package.json ./dist && cp -R ./src/. ./dist && cd dist && npm publish"
+    "version:major": "npm version major && git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,22 @@
   },
   "author": "Arnar Birgisson",
   "homepage": "https://github.com/arnarp/ignitic",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-typed-css-modules": "^1.1.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.4.10",
+    "postcss-modules": "^1.4.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
 }

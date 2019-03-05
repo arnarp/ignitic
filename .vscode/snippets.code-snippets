@@ -1,0 +1,22 @@
+{
+  "React_Component": {
+    "prefix": ["reactcomponent", "component"],
+    "description": "Boilerplate for a react component",
+    "scope": "typescriptreact",
+    "body": [
+      "import * as React from 'react';",
+      "",
+      "type Props = {",
+      "\t$1",
+      "}",
+      "",
+      "export function $2(props: Props) {",
+      "\t$3",
+      "\treturn (",
+      "\t\t$0",
+      "\t)",
+      "}",
+      ""
+    ]
+  }
+}
