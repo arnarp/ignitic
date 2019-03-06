@@ -20,6 +20,7 @@ function toVal(mix: ClassValue) {
   if (mix) {
     if (typeof mix === 'object') {
       for (k in mix) {
+        // @ts-ignore
         if (mix[k] && (y = toVal(!!mix.push ? mix[k] : k))) {
           str && (str += ' ')
           str += y
@@ -43,6 +44,5 @@ export function cn(...classes: ClassValue[]) {
       str += x
     }
   }
-  console.log('cn', { classes, str })
   return str
 }

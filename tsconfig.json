@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "strict": true,
+    "declaration": true,
+    "jsx": "react",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["dev/**/*"]
+}

@@ -2,30 +2,24 @@
   "name": "ignitic",
   "version": "0.1.0",
   "description": "",
-  "files": [
-    "src"
-  ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run start:dev",
-    "start:dev": "parcel dev/index.html --port 1113",
-    "version:patch": "npm version patch && git push --follow-tags",
-    "version:minor": "npm version minor && git push --follow-tags",
-    "version:major": "npm version major && git push --follow-tags"
-  },
+  "homepage": "https://github.com/arnarp/ignitic",
   "repository": {
     "type": "git",
     "url": "github.com/arnarp/ignitic"
   },
-  "author": "Arnar Birgisson",
-  "homepage": "https://github.com/arnarp/ignitic",
   "license": "MIT",
-  "devDependencies": {
-    "@types/react": "^16.8.6",
-    "@types/react-dom": "^16.8.2",
-    "parcel-bundler": "^1.11.0",
-    "parcel-plugin-typed-css-modules": "^1.1.0",
-    "typescript": "^3.3.3333"
+  "author": "Arnar Birgisson",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "start": "npm run start:dev",
+    "start:dev": "parcel dev/index.html --port 1113",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version:major": "npm version major && git push --follow-tags",
+    "version:minor": "npm version minor && git push --follow-tags",
+    "version:patch": "npm version patch && git push --follow-tags"
   },
   "dependencies": {
     "autoprefixer": "^9.4.10",
@@ -33,8 +27,16 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   },
+  "devDependencies": {
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-typed-css-modules": "^1.1.0",
+    "typescript": "^3.3.3333"
+  },
   "peerDependencies": {
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "tslib": "^1.9.3"
   }
 }
