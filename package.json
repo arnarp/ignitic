@@ -13,7 +13,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf dist && tsc && copyfiles -u 1 src/**/*.css dist/",
+    "copy": "copyfiles -u 1 src/**/*.css dist/",
     "start": "npm run start:dev",
     "start:dev": "parcel dev/index.html --port 1113",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,17 +22,18 @@
     "version:minor": "npm version minor && git push --follow-tags",
     "version:patch": "npm version patch && git push --follow-tags"
   },
-  "dependencies": {
-    "autoprefixer": "^9.4.10",
-    "postcss-modules": "^1.4.1",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.2",
+    "autoprefixer": "^9.4.10",
+    "copyfiles": "^2.1.0",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-typed-css-modules": "^1.1.0",
+    "postcss-modules": "^1.4.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "tslib": "^1.9.3",
     "typescript": "^3.3.3333"
   },
   "peerDependencies": {

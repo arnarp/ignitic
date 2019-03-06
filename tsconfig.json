@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "moduleResolution": "node",
+    "module": "es2015",
     "strict": true,
     "declaration": true,
     "jsx": "react",
     "outDir": "dist",
     "skipLibCheck": true,
     "importHelpers": true,
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["es6", "dom", "dom.iterable"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["dev/**/*"]
