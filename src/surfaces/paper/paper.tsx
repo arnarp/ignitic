@@ -1,8 +1,8 @@
 import * as React from 'react'
-import * as css from './paper.css'
 
 import { BaseComponentProps } from '../../types/base-component-props'
 import { cn } from '../../utils/cn'
+import css from './paper.css'
 
 type Props = {
   children: React.ReactNode

@@ -13,8 +13,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && tsc && copyfiles -u 1 src/**/*.css dist/",
+    "build": "rm -rf dist && tsc && copyfiles -u 1 src/**/*.css dist/ && modulet dist",
     "copy": "copyfiles -u 1 src/**/*.css dist/",
+    "cssmodules": "css-modules-compiler compile ./dist",
     "start": "npm run start:dev",
     "start:dev": "parcel dev/index.html --port 1113",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,6 +29,8 @@
     "@types/react-dom": "^16.8.2",
     "autoprefixer": "^9.4.10",
     "copyfiles": "^2.1.0",
+    "css-modules-compiler": "^1.0.0",
+    "modulet": "^0.1.0",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-typed-css-modules": "^1.1.0",
     "postcss-modules": "^1.4.1",
