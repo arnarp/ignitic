@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "module": "es2015",
+    "module": "commonjs",
     "strict": true,
     "declaration": true,
     "jsx": "react",
@@ -10,7 +10,8 @@
     "importHelpers": true,
     "lib": ["es6", "dom", "dom.iterable"],
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"],
   "exclude": ["dev/**/*"]

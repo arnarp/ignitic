@@ -1,5 +1,83 @@
+:root {
+  --background-default: white;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --border-radius: 0.25rem;
+  --box-shadow-main-color: rgba(0, 0, 0, 0.2);
+  --box-shadow-sharpen-color: rgba(0, 0, 0, 0.14);
+  --box-shadow-bottom-accent-color: rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  background: var(--background-default);
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+    'header'
+    'sidebar'
+    'content'
+    'sidebar2'
+    'footer';
+}
+.container.dark {
+  --background-default: #303030;
+  --box-shadow-main-color: rgba(255, 255, 255, 0.28);
+  --box-shadow-sharpen-color: rgba(255, 255, 255, 0.18);
+  --box-shadow-bottom-accent-color: rgba(255, 255, 255, 0.16);
+  --text-primary: white;
+}
+.header {
+  padding: 0 1rem;
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header form label + label {
+  margin-left: 1rem;
+}
+.header form input {
+  margin-left: 0.5rem;
+}
 .main {
-  padding: 32px;
-  padding-top: 80px;
+  grid-area: content;
   margin-bottom: 100px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 0 1rem;
+}
+
+.sidebar2 {
+  grid-area: sidebar2;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    grid-template-columns: 20% auto;
+    grid-template-areas:
+      'header   header'
+      'sidebar  content'
+      'sidebar2 sidebar2'
+      'footer   footer';
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    grid-gap: 20px;
+    grid-template-columns: 200px auto 100px;
+    grid-template-rows: 5rem auto 10rem;
+    grid-template-areas:
+      'header  header  header'
+      'sidebar content sidebar2'
+      'footer  footer  footer';
+  }
 }
