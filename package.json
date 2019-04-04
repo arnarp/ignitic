@@ -31,14 +31,15 @@
     "autoprefixer": "^9.4.10",
     "copyfiles": "^2.1.0",
     "css-modules-compiler": "^1.0.0",
-    "modulet": "^0.1.0",
+    "modulet": "^0.2.0",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-typed-css-modules": "^1.1.0",
     "postcss-modules": "^1.4.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "tslib": "^1.9.3",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "react-pose": "^4.0.8"
   },
   "peerDependencies": {
     "react": "^16.8.3",

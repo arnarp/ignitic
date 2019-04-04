@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "module": "es6",
+    "module": "esNext",
     "strict": true,
     "declaration": true,
     "jsx": "react",
@@ -10,8 +10,7 @@
     "importHelpers": true,
     "lib": ["es6", "dom", "dom.iterable"],
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false,
-    "resolveJsonModule": true
+    "esModuleInterop": false
   },
   "include": ["src/**/*"],
   "exclude": ["dev/**/*"]
