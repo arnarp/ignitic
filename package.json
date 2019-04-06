@@ -23,7 +23,9 @@
     "version:minor": "npm version minor && git push --follow-tags",
     "version:patch": "npm version patch && git push --follow-tags"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@reach/router": "^1.2.1"
+  },
   "devDependencies": {
     "@types/reach__router": "^1.2.3",
     "@types/react": "^16.8.6",
@@ -35,11 +37,11 @@
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-typed-css-modules": "^1.1.0",
     "postcss-modules": "^1.4.1",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-pose": "^4.0.8",
     "tslib": "^1.9.3",
-    "typescript": "^3.3.3333",
-    "react-pose": "^4.0.8"
+    "typescript": "^3.3.3333"
   },
   "peerDependencies": {
     "react": "^16.8.3",

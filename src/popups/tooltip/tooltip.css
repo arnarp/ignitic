@@ -1,14 +1,17 @@
 .t {
   position: absolute;
+  top: 0;
+  left: 0;
   border-radius: var(--border-radius, 0.25rem);
-  opacity: 0;
   pointer-events: none;
   color: #fff;
   padding: 4px 8px;
   font-size: 0.625rem;
   max-width: 300px;
-  width: fit-content;
   line-height: 1.4em;
+  width: fit-content;
+  height: fit-content;
   border-radius: 4px;
   background-color: #616161;
+  pointer-events: none;
 }
