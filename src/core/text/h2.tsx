@@ -1,7 +1,7 @@
+import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
 import { Omit } from '../../types/omit'
-import { cn } from '../../utils/cn'
 import css from './text.css'
 import { TextProps, defaultProps, getColorClass, getVariantClass } from '.'
 

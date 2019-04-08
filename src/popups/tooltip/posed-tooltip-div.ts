@@ -1,6 +1,6 @@
+import { Rect } from 'itils/dist/types/dom'
 import posed from 'react-pose'
 
-import { Rect } from '../../utils/getBox'
 import { TooltipPlacement } from './types'
 
 type DivProps = {

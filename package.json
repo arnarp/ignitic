@@ -33,6 +33,7 @@
     "autoprefixer": "^9.4.10",
     "copyfiles": "^2.1.0",
     "css-modules-compiler": "^1.0.0",
+    "itils": "^0.2.0",
     "modulet": "^0.2.0",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-typed-css-modules": "^1.1.0",
@@ -48,7 +49,8 @@
     "react-dom": "^16.8.3",
     "tslib": "^1.9.3",
     "react-pose": "^4.0.8",
-    "@reach/router": "^1.2.1"
+    "@reach/router": "^1.2.1",
+    "itils": "^0.2.0"
   },
   "importSort": {
     ".ts, .tsx": {

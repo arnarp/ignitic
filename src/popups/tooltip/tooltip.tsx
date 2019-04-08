@@ -1,8 +1,8 @@
+import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 
 import { BaseComponentProps } from '../../types/base-component-props'
-import { cn } from '../../utils/cn'
 import { getBox } from '../../utils/getBox'
 import { PosedTooltipDiv } from './posed-tooltip-div'
 import css from './tooltip.css'

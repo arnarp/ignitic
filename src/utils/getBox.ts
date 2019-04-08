@@ -1,11 +1,4 @@
-export type Rect = {
-  readonly bottom: number
-  readonly height: number
-  readonly left: number
-  readonly right: number
-  readonly top: number
-  readonly width: number
-}
+import { Rect } from 'itils/dist/types/dom'
 
 export function getBox(triggerRef: React.RefObject<HTMLElement>): Rect {
   if (triggerRef.current) {

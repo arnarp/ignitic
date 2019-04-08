@@ -1,7 +1,7 @@
+import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
 import { BaseComponentProps } from '../../types/base-component-props'
-import { cn } from '../../utils/cn'
 import css from './text.css'
 
 export type TextColor = 'primary'
