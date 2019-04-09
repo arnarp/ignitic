@@ -1,11 +1,11 @@
 import { Link, Router } from '@reach/router'
+import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
 import { version } from '../package.json'
 import { H1, Text } from '../src/core/text'
 import { useLocalStorage } from '../src/hooks/use-local-storage'
 import { Normalize } from '../src/styles/normalize/normalize'
-import { cn } from '../src/utils/cn'
 import * as css from './app.css'
 import { Core } from './routes/core'
 import { Popups } from './routes/popups'
