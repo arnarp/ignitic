@@ -11,10 +11,14 @@ export function TooltipPage(props: Props) {
   const h2Ref = React.useRef<HTMLHeadingElement>(null)
   const h2Id = useUUID()
   const [placement, setPlacement] = React.useState<TooltipPlacement>('bottom')
-  const [enterDelay, setEnterDelay] = React.useState<number>(0)
+  const [enterDelay, setEnterDelay] = React.useState<number>(100)
   return (
     <>
-      <H2 style={{ width: 'fit-content' }} aria-describedby={h2Id} ref={h2Ref}>
+      <H2
+        style={{ width: '50vw', background: 'beige' }}
+        aria-describedby={h2Id}
+        ref={h2Ref}
+      >
         Popups / Tooltip
       </H2>
       <Tooltip
@@ -47,6 +51,7 @@ export function TooltipPage(props: Props) {
           onChange={event => setEnterDelay(Number(event.target.value))}
         />
       </label>
+      <div style={{ height: '100vh', width: '1000px' }} />
     </>
   )
 }

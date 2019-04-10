@@ -4,17 +4,17 @@ import * as React from 'react'
 import css from './text.css'
 import { TextProps, getColorClass, getVariantClass } from '.'
 
-export const H3 = React.forwardRef<HTMLHeadingElement, TextProps>(function H3(
+export const H4 = React.forwardRef<HTMLHeadingElement, TextProps>(function H4(
   { color = 'primary', variant, className, style, ...rest },
   ref
 ) {
   return (
-    <h3
+    <h4
       ref={ref}
       className={cn(
         css.text,
         getColorClass(color),
-        getVariantClass('h3', variant),
+        getVariantClass('h4', variant),
         className
       )}
       style={style}

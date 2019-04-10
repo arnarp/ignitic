@@ -2,6 +2,8 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 
+import { useIsScrolling } from '../../hooks/use-is-scrolling'
+import { useScrollPosition } from '../../hooks/use-scroll-position'
 import { BaseComponentProps } from '../../types/base-component-props'
 import { getBox } from '../../utils/getBox'
 import { PosedTooltipDiv } from './posed-tooltip-div'
@@ -25,7 +27,7 @@ type Props = {
   enterDelay?: number
 } & BaseComponentProps
 
-type State = 'init' | 'hidden' | 'visible'
+type State = 'measure before visible' | 'hidden' | 'visible'
 
 export function Tooltip({
   children,
@@ -33,21 +35,29 @@ export function Tooltip({
   className,
   triggerRef,
   placement = 'bottom',
-  enterDelay = 0
+  enterDelay = 100
 }: Props) {
-  const [state, setState] = React.useState<State>('init')
+  const [state, setState] = React.useState<State>('hidden')
   const tooltipRef = React.useRef<HTMLDivElement>(null)
   const timeoutRef = React.useRef<any>(null)
   const tooltipBox = getBox(tooltipRef)
   const triggerBox = getBox(triggerRef)
+  const isScrolling = useIsScrolling()
+  const scrollPosition = useScrollPosition()
   React.useEffect(() => {
     setState('hidden')
-  }, [placement])
+  }, [placement, isScrolling])
   React.useEffect(() => {
-    const el: HTMLElement | null = triggerRef.current
+    if (state == 'measure before visible') {
+      window.requestAnimationFrame(() => {
+        setState('visible')
+      })
+    }
+  }, [state])
+  React.useEffect(() => {
     function onMouseEnter() {
       timeoutRef.current = setTimeout(() => {
-        setState('visible')
+        setState('measure before visible')
       }, enterDelay)
     }
     function onMouseLeave() {
@@ -55,20 +65,21 @@ export function Tooltip({
       setState('hidden')
     }
     console.log('Tooltip effect')
-    if (el) {
-      el.addEventListener('mouseenter', onMouseEnter)
-      el.addEventListener('mouseleave', onMouseLeave)
+    if (triggerRef.current) {
+      triggerRef.current.addEventListener('mouseenter', onMouseEnter)
+      triggerRef.current.addEventListener('mouseleave', onMouseLeave)
     }
     return () => {
-      if (el) {
-        el.removeEventListener('mouseenter', onMouseEnter)
-        el.removeEventListener('mouseleave', onMouseLeave)
+      if (triggerRef.current) {
+        triggerRef.current.removeEventListener('mouseenter', onMouseEnter)
+        triggerRef.current.removeEventListener('mouseleave', onMouseLeave)
       }
     }
   }, [triggerRef, enterDelay])
+  console.log('Tooltip render', { isScrolling, state, triggerBox })
   return ReactDOM.createPortal(
     <PosedTooltipDiv
-      pose={state}
+      pose={pose(state)}
       ref={tooltipRef}
       className={cn(css.t, className)}
       role="tooltip"
@@ -76,10 +87,23 @@ export function Tooltip({
       id={id}
       triggerBox={triggerBox}
       tooltipBox={tooltipBox}
+      scrollPosition={scrollPosition}
       placement={placement}
     >
       {children}
     </PosedTooltipDiv>,
     document.body
   )
+}
+
+function pose(state: State): 'hidden' | 'visible' | 'measureBeforeVisible' {
+  switch (state) {
+    case 'visible':
+      return 'visible'
+    case 'measure before visible':
+      return 'measureBeforeVisible'
+    case 'hidden':
+    default:
+      return 'hidden'
+  }
 }

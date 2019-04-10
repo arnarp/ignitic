@@ -1,12 +1,24 @@
+import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
-import { Omit } from '../../types/omit'
-import { Text, TextProps, defaultProps } from '.'
+import css from './text.css'
+import { TextProps, getColorClass, getVariantClass } from '.'
 
-type Props = Omit<TextProps, 'as'>
-
-export function H1(props: Props) {
-  return <Text as="h1" {...props} />
-}
-
-H1.defaultProps = defaultProps
+export const H1 = React.forwardRef<HTMLHeadingElement, TextProps>(function H1(
+  { color = 'primary', variant, className, style, ...rest },
+  ref
+) {
+  return (
+    <h1
+      ref={ref}
+      className={cn(
+        css.text,
+        getColorClass(color),
+        getVariantClass('h1', variant),
+        className
+      )}
+      style={style}
+      {...rest}
+    />
+  )
+})

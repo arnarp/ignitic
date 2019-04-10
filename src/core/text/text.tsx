@@ -5,49 +5,13 @@ import { BaseComponentProps } from '../../types/base-component-props'
 import css from './text.css'
 
 export type TextColor = 'primary'
-export type TextElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h6' | 'p' | 'span'
+export type TextElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
 
 export type TextProps = {
   children: React.ReactNode
-  as: TextElement
   variant?: TextElement
   color?: TextColor
 } & BaseComponentProps
-
-// const FancyButton = React.forwardRef((props, ref) => (
-//   <button ref={ref} className="FancyButton">
-//     {props.children}
-//   </button>
-// ))
-
-export const defaultProps: Pick<TextProps, 'color'> = {
-  color: 'primary'
-}
-
-export function Text({
-  as,
-  children,
-  color = 'primary',
-  variant,
-  className,
-  ...rest
-}: TextProps) {
-  return React.createElement(
-    as,
-    {
-      className: cn(
-        css.text,
-        getColorClass(color),
-        getVariantClass(as, variant),
-        className
-      ),
-      ...rest
-    },
-    children
-  )
-}
-
-Text.defaultProps = defaultProps
 
 export function getColorClass(color: TextColor) {
   switch (color) {
@@ -67,7 +31,12 @@ export function getVariantClass(as: TextElement, variant?: TextElement) {
       return css.h3
     case 'h4':
       return css.h4
+    case 'h5':
+      return css.h5
+    case 'h6':
+      return css.h6
     case 'p':
+    case 'span':
     default:
       return css.p
   }

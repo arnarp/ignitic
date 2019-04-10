@@ -3,7 +3,7 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
 import { version } from '../package.json'
-import { H1, Text } from '../src/core/text'
+import { H1, H2, H3 } from '../src/core/text'
 import { useLocalStorage } from '../src/hooks/use-local-storage'
 import { Normalize } from '../src/styles/normalize/normalize'
 import * as css from './app.css'
@@ -53,19 +53,13 @@ export function App(props: Props) {
           </form>
         </header>
         <div className={css.sidebar}>
-          <Text as="h2">{version}</Text>
+          <H2>{version}</H2>
           <nav>
-            <Text as="h3" variant="h4">
-              Core
-            </Text>
+            <H3 variant="h4">Core</H3>
             <Link to="/core/text">Text</Link>
-            <Text as="h3" variant="h4">
-              Surfaces
-            </Text>
+            <H3 variant="h4">Surfaces</H3>
             <Link to="/surfaces/paper">Paper</Link>
-            <Text as="h3" variant="h4">
-              Popups
-            </Text>
+            <H3 variant="h4">Popups</H3>
             <Link to="/popups/tooltip">Tooltip</Link>
           </nav>
         </div>
