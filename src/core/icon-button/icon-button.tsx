@@ -7,13 +7,12 @@ export type ButtonFontSize = 'small' | 'medium' | 'large'
 
 type Props = {
   children: React.ReactNode
-  disabled?: boolean
   onClick: () => void
-  'aria-label'?: string
+  'aria-label': string
   className?: string
   pressedDownEffect?: boolean
   fontSize?: ButtonFontSize
-}
+} & React.ButtonHTMLAttributes<HTMLElement>
 
 export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
   function IconButton(
@@ -37,8 +36,6 @@ export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
           {
             [css.large]: fontSize == 'large',
             [css.small]: fontSize == 'small'
-            // [css.pressedDownEffect]: pressedDownEffect,
-            // [css.disabled]: disabled
           },
           className
         )}
