@@ -64,7 +64,6 @@ export function Tooltip({
       clearTimeout(timeoutRef.current)
       setState('hidden')
     }
-    console.log('Tooltip effect')
     if (triggerRef.current) {
       triggerRef.current.addEventListener('mouseenter', onMouseEnter)
       triggerRef.current.addEventListener('mouseleave', onMouseLeave)
@@ -76,7 +75,12 @@ export function Tooltip({
       }
     }
   }, [triggerRef, enterDelay])
-  console.log('Tooltip render', { isScrolling, state, triggerBox })
+  console.log('Tooltip render', {
+    isScrolling,
+    state,
+    triggerBox,
+    scrollPosition
+  })
   return ReactDOM.createPortal(
     <PosedTooltipDiv
       pose={pose(state)}

@@ -48,7 +48,14 @@ body {
 }
 
 /**
- * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+ * Improve consistency of default fonts in all browsers.
+ * (https://github.com/sindresorhus/modern-normalize/issues/3)
+ * Safari, macOS and iOS (San Francisco)  -apple-system
+ * Chrome < 56,macOS (San Francisco)      BlinkMacSystemFont
+ * Windows                                "Segoe UI"
+ * Android                                "Roboto"
+ * Basic web fallback                     "Helvetica Neue", Arial, sans-serif
+ * Emoji fonts  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
  */
 
 body {

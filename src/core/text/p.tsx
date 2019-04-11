@@ -4,17 +4,17 @@ import * as React from 'react'
 import css from './text.css'
 import { TextProps, getColorClass, getVariantClass } from '.'
 
-export const H1 = React.forwardRef<HTMLHeadingElement, TextProps>(function H1(
+export const P = React.forwardRef<HTMLHeadingElement, TextProps>(function H6(
   { color = 'primary', variant, className, style, marginBottom, ...rest },
   ref
 ) {
   return (
-    <h1
+    <p
       ref={ref}
       className={cn(
         css.text,
         getColorClass(color),
-        getVariantClass('h1', variant),
+        getVariantClass('p', variant),
         { [css.marginBottom]: marginBottom },
         className
       )}

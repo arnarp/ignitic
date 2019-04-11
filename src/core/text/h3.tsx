@@ -5,7 +5,7 @@ import css from './text.css'
 import { TextProps, getColorClass, getVariantClass } from '.'
 
 export const H3 = React.forwardRef<HTMLHeadingElement, TextProps>(function H3(
-  { color = 'primary', variant, className, style, ...rest },
+  { color = 'primary', variant, className, style, marginBottom, ...rest },
   ref
 ) {
   return (
@@ -15,6 +15,8 @@ export const H3 = React.forwardRef<HTMLHeadingElement, TextProps>(function H3(
         css.text,
         getColorClass(color),
         getVariantClass('h3', variant),
+        { [css.marginBottom]: marginBottom },
+
         className
       )}
       style={style}

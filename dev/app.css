@@ -1,10 +1,20 @@
 :root {
   --background-default: white;
-  --text-primary: rgba(0, 0, 0, 0.87);
+  --paper-background: white;
+  --text-primary-color: rgba(0, 0, 0, 0.87);
+  --text-secondary-color: rgba(0, 0, 0, 0.54);
+  --text-disabled-color: rgba(0, 0, 0, 0.38);
   --border-radius: 0.25rem;
   --box-shadow-main-color: rgba(0, 0, 0, 0.2);
   --box-shadow-sharpen-color: rgba(0, 0, 0, 0.14);
   --box-shadow-bottom-accent-color: rgba(0, 0, 0, 0.12);
+  --zindex-dropdown: 1000;
+  --zindex-sticky: 1020;
+  --zindex-fixed: 1030;
+  --zindex-modal-backdrop: 1040;
+  --zindex-modal: 1050;
+  --zindex-popover: 1060;
+  --zindex-tooltip: 1070;
 }
 
 .container {
@@ -22,10 +32,13 @@
 }
 .container.dark {
   --background-default: #303030;
+  --paper-background: #212121;
   --box-shadow-main-color: rgba(255, 255, 255, 0.28);
   --box-shadow-sharpen-color: rgba(255, 255, 255, 0.18);
-  --box-shadow-bottom-accent-color: rgba(255, 255, 255, 0.16);
-  --text-primary: white;
+  --box-shadow-bottom-accent-color: rgba(255, 255, 255, 0);
+  --text-primary-color: rgba(255, 255, 255, 0.87);
+  --text-secondary-color: rgba(255, 255, 255, 0.64);
+  --text-disabled-color: rgba(255, 255, 255, 0.38);
 }
 .header {
   padding: 0 1rem;
@@ -49,6 +62,10 @@
 .sidebar {
   grid-area: sidebar;
   padding: 0 1rem;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar2 {

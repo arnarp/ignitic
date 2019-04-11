@@ -6,11 +6,13 @@ import css from './text.css'
 
 export type TextColor = 'primary'
 export type TextElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
+export type Variant = TextElement | 'p.lead' | 'p.small'
 
 export type TextProps = {
   children: React.ReactNode
-  variant?: TextElement
+  variant?: Variant
   color?: TextColor
+  marginBottom?: boolean
 } & BaseComponentProps
 
 export function getColorClass(color: TextColor) {
@@ -21,7 +23,7 @@ export function getColorClass(color: TextColor) {
   }
 }
 
-export function getVariantClass(as: TextElement, variant?: TextElement) {
+export function getVariantClass(as: TextElement, variant?: Variant) {
   switch (variant || as) {
     case 'h1':
       return css.h1
@@ -35,6 +37,10 @@ export function getVariantClass(as: TextElement, variant?: TextElement) {
       return css.h5
     case 'h6':
       return css.h6
+    case 'p.lead':
+      return cn(css.p, css.lead)
+    case 'p.small':
+      return cn(css.p, css.small)
     case 'p':
     case 'span':
     default:

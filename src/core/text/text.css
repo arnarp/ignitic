@@ -3,7 +3,7 @@
   padding: 0;
 }
 .colorPrimary {
-  color: var(--text-primary);
+  color: var(--text-primary-color);
 }
 .h1 {
   font-size: 4rem;
@@ -15,6 +15,10 @@
   line-height: 4rem;
   font-weight: 300;
 }
+.h1.marginBottom,
+.h2.marginBottom {
+  margin-bottom: 1.5rem;
+}
 .h3 {
   font-size: 2.5rem;
   line-height: 3.5rem;
@@ -24,6 +28,10 @@
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 300;
+}
+.h3.marginBottom,
+.h4.marginBottom {
+  margin-bottom: 1rem;
 }
 .h5 {
   font-size: 1.75rem;
@@ -35,8 +43,21 @@
   line-height: 2rem;
   font-weight: 300;
 }
+.p.lead {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.p.small {
+  font-size: 0.75rem;
+}
 .p {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
+}
+.h5.marginBottom,
+.h6.marginBottom,
+.p.marginBottom {
+  margin-bottom: 0.5rem;
 }

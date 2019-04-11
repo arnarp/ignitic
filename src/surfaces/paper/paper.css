@@ -1,5 +1,5 @@
 .p {
-  background: var(--background-default, #fff);
+  background: var(--paper-background, var(--background-default, #fff));
 }
 @media screen {
   .p {
