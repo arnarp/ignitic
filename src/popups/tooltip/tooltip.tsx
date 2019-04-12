@@ -75,12 +75,6 @@ export function Tooltip({
       }
     }
   }, [triggerRef, enterDelay])
-  console.log('Tooltip render', {
-    isScrolling,
-    state,
-    triggerBox,
-    scrollPosition
-  })
   return ReactDOM.createPortal(
     <PosedTooltipDiv
       pose={pose(state)}

@@ -4,6 +4,7 @@
   --text-primary-color: rgba(0, 0, 0, 0.87);
   --text-secondary-color: rgba(0, 0, 0, 0.54);
   --text-disabled-color: rgba(0, 0, 0, 0.38);
+  --button-default-hover-background: rgba(0, 0, 0, 0.08);
   --border-radius: 0.25rem;
   --box-shadow-main-color: rgba(0, 0, 0, 0.2);
   --box-shadow-sharpen-color: rgba(0, 0, 0, 0.14);
@@ -39,6 +40,7 @@
   --text-primary-color: rgba(255, 255, 255, 0.87);
   --text-secondary-color: rgba(255, 255, 255, 0.64);
   --text-disabled-color: rgba(255, 255, 255, 0.38);
+  --button-default-hover-background: rgba(255, 255, 255, 0.1);
 }
 .header {
   padding: 0 1rem;
