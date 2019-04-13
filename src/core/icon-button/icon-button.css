@@ -19,12 +19,12 @@
   --btn-font-size: 2rem;
 }
 .btn:disabled {
-  color: var(--text-disabled-color);
+  color: var(--disabled-color);
   cursor: not-allowed;
 }
 .btn:active {
   transform: scale(0.9);
 }
 .btn:hover:not(:disabled) {
-  background: var(--button-default-hover-background);
+  background: var(--neutral-hover-color-text);
 }

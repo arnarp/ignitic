@@ -3,8 +3,27 @@
   --paper-background: white;
   --text-primary-color: rgba(0, 0, 0, 0.87);
   --text-secondary-color: rgba(0, 0, 0, 0.54);
-  --text-disabled-color: rgba(0, 0, 0, 0.38);
-  --button-default-hover-background: rgba(0, 0, 0, 0.08);
+  --disabled-color: rgba(0, 0, 0, 0.54);
+  --neutral-color: #e0e0e0;
+  --neutral-on-background-color: rgba(0, 0, 0, 0.87);
+  --neutral-hover-color-text: rgba(0, 0, 0, 0.08);
+  --neutral-hover-color-filled: rgba(0, 0, 0, 0.08);
+  --default-color: #f29137;
+  --default-on-background-color: #af5500; /* Windsor Tan */
+  --default-hover-color-text: rgba(242, 145, 55, 0.1);
+  --default-hover-color-filled: #f27f13;
+  --primary-color: #41bcd8;
+  --primary-on-background-color: #00819e; /* CG Blue */
+  --primary-hover-color-text: rgba(65, 188, 216, 0.1);
+  --primary-hover-color-filled: #0ab2d8;
+  --secondary-color: #d6312f;
+  --secondary-on-background-color: #9b0000; /* USC Cardinal */
+  --secondary-hover-color-text: rgba(214, 49, 47, 0.1);
+  --secondary-hover-color-filled: #d60300;
+  --text-on-neutral-color: rgba(0, 0, 0, 0.87);
+  --text-on-default-color: rgba(0, 0, 0, 0.87);
+  --text-on-primary-color: rgba(0, 0, 0, 0.87);
+  --text-on-secondary-color: white;
   --border-radius: 0.25rem;
   --box-shadow-main-color: rgba(0, 0, 0, 0.2);
   --box-shadow-sharpen-color: rgba(0, 0, 0, 0.14);
@@ -20,7 +39,6 @@
 
 .container {
   background: var(--background-default);
-  width: 100vw;
   min-height: 100vh;
   display: grid;
   grid-gap: 1em;
@@ -39,8 +57,9 @@
   --box-shadow-bottom-accent-color: rgba(255, 255, 255, 0);
   --text-primary-color: rgba(255, 255, 255, 0.87);
   --text-secondary-color: rgba(255, 255, 255, 0.64);
-  --text-disabled-color: rgba(255, 255, 255, 0.38);
-  --button-default-hover-background: rgba(255, 255, 255, 0.1);
+  --neutral-color: rgba(255, 255, 255, 0.64);
+  --neutral-hover-color-text: rgba(255, 255, 255, 0.1);
+  --disabled-color: rgba(255, 255, 255, 0.38);
 }
 .header {
   padding: 0 1rem;

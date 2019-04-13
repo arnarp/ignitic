@@ -11,7 +11,7 @@ export function IconButtonPage(props: Props) {
   return (
     <>
       <H2>IconButton</H2>
-      <H3>Small / Medium / Large fontSize</H3>
+      <H3 variant="h5">Small / Medium / Large fontSize</H3>
       <IconButton fontSize="small" onClick={() => {}} aria-label="Delete">
         <MdDelete />
       </IconButton>
@@ -21,7 +21,7 @@ export function IconButtonPage(props: Props) {
       <IconButton fontSize="large" onClick={() => {}} aria-label="Delete">
         <MdDelete />
       </IconButton>
-      <H3>Disabled state</H3>
+      <H3 variant="h5">Disabled state</H3>
       <IconButton disabled onClick={() => {}} aria-label="Delete">
         <MdDelete />
       </IconButton>

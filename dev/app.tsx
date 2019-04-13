@@ -57,6 +57,7 @@ export function App(props: Props) {
           <nav>
             <H3 variant="h4">Core</H3>
             <Link to="/core/text">Text</Link>
+            <Link to="/core/button">Button</Link>
             <Link to="/core/icon-button">IconButton</Link>
             <H3 variant="h4">Surfaces</H3>
             <Link to="/surfaces/paper">Paper</Link>
