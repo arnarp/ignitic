@@ -1,33 +1,42 @@
 :root {
   --background-default: white;
   --paper-background: white;
+
   --text-primary-color: rgba(0, 0, 0, 0.87);
   --text-secondary-color: rgba(0, 0, 0, 0.54);
+
   --disabled-color: rgba(0, 0, 0, 0.54);
+
   --neutral-color: #e0e0e0;
   --neutral-on-background-color: rgba(0, 0, 0, 0.87);
   --neutral-hover-color-text: rgba(0, 0, 0, 0.08);
   --neutral-hover-color-filled: rgba(0, 0, 0, 0.08);
+  --text-on-neutral-color: rgba(0, 0, 0, 0.87);
+
   --default-color: #f29137;
   --default-on-background-color: #af5500; /* Windsor Tan */
   --default-hover-color-text: rgba(242, 145, 55, 0.1);
   --default-hover-color-filled: #f27f13;
+  --text-on-default-color: rgba(0, 0, 0, 0.87);
+
   --primary-color: #41bcd8;
   --primary-on-background-color: #00819e; /* CG Blue */
   --primary-hover-color-text: rgba(65, 188, 216, 0.1);
   --primary-hover-color-filled: #0ab2d8;
+  --text-on-primary-color: rgba(0, 0, 0, 0.87);
+
   --secondary-color: #d6312f;
   --secondary-on-background-color: #9b0000; /* USC Cardinal */
   --secondary-hover-color-text: rgba(214, 49, 47, 0.1);
   --secondary-hover-color-filled: #d60300;
-  --text-on-neutral-color: rgba(0, 0, 0, 0.87);
-  --text-on-default-color: rgba(0, 0, 0, 0.87);
-  --text-on-primary-color: rgba(0, 0, 0, 0.87);
   --text-on-secondary-color: white;
+
   --border-radius: 0.25rem;
+
   --box-shadow-main-color: rgba(0, 0, 0, 0.2);
   --box-shadow-sharpen-color: rgba(0, 0, 0, 0.14);
   --box-shadow-bottom-accent-color: rgba(0, 0, 0, 0.12);
+
   --zindex-dropdown: 1000;
   --zindex-sticky: 1020;
   --zindex-fixed: 1030;
@@ -52,14 +61,39 @@
 .container.dark {
   --background-default: #303030;
   --paper-background: #212121;
-  --box-shadow-main-color: rgba(255, 255, 255, 0.28);
-  --box-shadow-sharpen-color: rgba(255, 255, 255, 0.18);
-  --box-shadow-bottom-accent-color: rgba(255, 255, 255, 0);
+
   --text-primary-color: rgba(255, 255, 255, 0.87);
   --text-secondary-color: rgba(255, 255, 255, 0.64);
-  --neutral-color: rgba(255, 255, 255, 0.64);
+
+  --disabled-color: rgba(255, 255, 255, 0.5);
+
+  --neutral-color: #4e4e4e;
+  --neutral-on-background-color: rgba(255, 255, 255, 0.87);
   --neutral-hover-color-text: rgba(255, 255, 255, 0.1);
-  --disabled-color: rgba(255, 255, 255, 0.38);
+  --neutral-hover-color-filled: rgba(255, 255, 255, 0.08);
+  --text-on-neutral-color: white;
+
+  --default-color: #af5500;
+  --default-on-background-color: #f29137;
+  --default-hover-color-text: rgba(242, 145, 55, 0.1);
+  --default-hover-color-filled: #963c00;
+  --text-on-default-color: white;
+
+  --primary-color: #00819e;
+  --primary-on-background-color: #41bcd8;
+  --primary-hover-color-text: rgba(65, 188, 216, 0.1);
+  --primary-hover-color-filled: #006885;
+  --text-on-primary-color: white;
+
+  --secondary-color: #9b0000;
+  --secondary-on-background-color: #d6312f;
+  --secondary-hover-color-text: rgba(214, 49, 47, 0.1);
+  --secondary-hover-color-filled: #820000;
+  --text-on-secondary-color: rgba(255, 255, 255, 0.87);
+
+  --box-shadow-main-color: none;
+  --box-shadow-sharpen-color: none;
+  --box-shadow-bottom-accent-color: none;
 }
 .header {
   padding: 0 1rem;
