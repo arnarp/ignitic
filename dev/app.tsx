@@ -57,21 +57,21 @@ export function App(props: Props) {
           <H2>{version}</H2>
           <nav>
             <H3 variant="h4">Core</H3>
-            <Link className={linkStyles.link} to="/core/text">
+            <Link className={linkStyles.neutral} to="/core/text">
               Text
             </Link>
-            <Link className={linkStyles.link} to="/core/button">
+            <Link className={linkStyles.neutral} to="/core/button">
               Button
             </Link>
-            <Link className={linkStyles.link} to="/core/icon-button">
+            <Link className={linkStyles.neutral} to="/core/icon-button">
               IconButton
             </Link>
             <H3 variant="h4">Surfaces</H3>
-            <Link className={linkStyles.link} to="/surfaces/paper">
+            <Link className={linkStyles.neutral} to="/surfaces/paper">
               Paper
             </Link>
             <H3 variant="h4">Popups</H3>
-            <Link className={linkStyles.link} to="/popups/tooltip">
+            <Link className={linkStyles.neutral} to="/popups/tooltip">
               Tooltip
             </Link>
           </nav>

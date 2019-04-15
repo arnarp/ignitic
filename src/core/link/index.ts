@@ -1,3 +1,1 @@
-import linkStyles from './link.css'
-
-export { linkStyles }
+export * from './link'
