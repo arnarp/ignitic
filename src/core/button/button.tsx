@@ -15,6 +15,7 @@ type Props = {
   size?: ButtonSize
   variant: ButtonVariant
   color?: ButtonColor
+  iconPosition?: 'left' | 'right'
 } & React.ButtonHTMLAttributes<HTMLElement>
 
 export const Button = React.forwardRef<HTMLButtonElement, Props>(
@@ -27,6 +28,7 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
       size = 'medium',
       color = 'neutral',
       variant,
+      iconPosition,
       ...rest
     },
     ref
@@ -47,7 +49,9 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
             [css.colorDefault]: color == 'default',
             [css.colorPrimary]: color == 'primary',
             [css.colorSecondary]: color == 'secondary',
-            [css.colorNeutral]: color == 'neutral'
+            [css.colorNeutral]: color == 'neutral',
+            [css.iconOnLeft]: iconPosition == 'left',
+            [css.iconOnRight]: iconPosition == 'right'
           },
           className
         )}

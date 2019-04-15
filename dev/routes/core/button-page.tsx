@@ -1,6 +1,7 @@
 import { RouteComponentProps } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
+import { MdDelete, MdSend } from 'react-icons/md'
 
 import { Button, ButtonColor, ButtonVariant } from '../../../src/core/button'
 import { H2, H3 } from '../../../src/core/text'
@@ -37,6 +38,85 @@ export function ButtonPage(props: Props) {
           <ButtonPageRow variant="filled" color="default" />
           <ButtonPageRow variant="filled" color="primary" />
           <ButtonPageRow variant="filled" color="secondary" />
+        </div>
+      </div>
+      <div>
+        <H3 variant="h5">With icons</H3>
+        <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+          <div
+            className={cn(
+              flexStyles.row,
+              flexStyles.spacingMd,
+              flexStyles.alignEnd
+            )}
+          >
+            <Button
+              iconPosition="left"
+              variant="text"
+              color="default"
+              size="small"
+              onClick={() => {}}
+            >
+              <MdDelete />
+              Delete
+            </Button>
+            <Button
+              iconPosition="left"
+              variant="filled"
+              color="neutral"
+              onClick={() => {}}
+            >
+              <MdDelete />
+              Delete
+            </Button>
+            <Button
+              iconPosition="left"
+              variant="outlined"
+              color="primary"
+              size="large"
+              onClick={() => {}}
+            >
+              <MdDelete />
+              Delete
+            </Button>
+          </div>
+          <div
+            className={cn(
+              flexStyles.row,
+              flexStyles.spacingMd,
+              flexStyles.alignEnd
+            )}
+          >
+            <Button
+              iconPosition="right"
+              variant="text"
+              color="primary"
+              size="small"
+              onClick={() => {}}
+            >
+              Send
+              <MdSend />
+            </Button>
+            <Button
+              iconPosition="right"
+              variant="filled"
+              color="secondary"
+              onClick={() => {}}
+            >
+              Send
+              <MdSend />
+            </Button>
+            <Button
+              iconPosition="right"
+              variant="outlined"
+              color="default"
+              size="large"
+              onClick={() => {}}
+            >
+              Send
+              <MdSend />
+            </Button>
+          </div>
         </div>
       </div>
     </div>

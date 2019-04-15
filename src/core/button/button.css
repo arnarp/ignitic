@@ -20,6 +20,15 @@
 .button:active {
   transform: scale(0.9);
 }
+.button svg {
+  font-size: var(--btn-line-height);
+}
+.button.iconOnLeft svg {
+  margin-right: calc(0.5 * var(--btn-font-size));
+}
+.button.iconOnRight svg {
+  margin-left: calc(0.5 * var(--btn-font-size));
+}
 
 .sizeSmall {
   --btn-font-size: 0.75rem;

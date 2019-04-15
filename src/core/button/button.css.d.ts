@@ -1,4 +1,6 @@
 export const button: string;
+export const iconOnLeft: string;
+export const iconOnRight: string;
 export const sizeSmall: string;
 export const sizeLarge: string;
 export const variantText: string;
