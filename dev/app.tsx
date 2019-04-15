@@ -3,6 +3,7 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
 import { version } from '../package.json'
+import { linkStyles } from '../src/core/link'
 import { H1, H2, H3 } from '../src/core/text'
 import { useLocalStorage } from '../src/hooks/use-local-storage'
 import { Normalize } from '../src/styles/normalize/normalize'
@@ -56,13 +57,23 @@ export function App(props: Props) {
           <H2>{version}</H2>
           <nav>
             <H3 variant="h4">Core</H3>
-            <Link to="/core/text">Text</Link>
-            <Link to="/core/button">Button</Link>
-            <Link to="/core/icon-button">IconButton</Link>
+            <Link className={linkStyles.link} to="/core/text">
+              Text
+            </Link>
+            <Link className={linkStyles.link} to="/core/button">
+              Button
+            </Link>
+            <Link className={linkStyles.link} to="/core/icon-button">
+              IconButton
+            </Link>
             <H3 variant="h4">Surfaces</H3>
-            <Link to="/surfaces/paper">Paper</Link>
+            <Link className={linkStyles.link} to="/surfaces/paper">
+              Paper
+            </Link>
             <H3 variant="h4">Popups</H3>
-            <Link to="/popups/tooltip">Tooltip</Link>
+            <Link className={linkStyles.link} to="/popups/tooltip">
+              Tooltip
+            </Link>
           </nav>
         </div>
         <div className={css.sidebar2} />

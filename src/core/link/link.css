@@ -1,0 +1,20 @@
+.link {
+  --btn-font-size: 1rem;
+  --btn-line-height: 1.5rem;
+  font-size: var(--btn-font-size);
+  line-height: var(--btn-line-height);
+  text-decoration: none;
+  color: var(--neutral-on-background-color);
+  letter-spacing: 0.057em;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.sizeSmall {
+  --btn-font-size: 0.75rem;
+  --btn-line-height: 1rem;
+}
+.sizeLarge {
+  --btn-font-size: 1.25rem;
+  --btn-line-height: 2rem;
+}
