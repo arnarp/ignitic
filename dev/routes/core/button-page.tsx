@@ -55,17 +55,11 @@ export function ButtonPage(props: Props) {
               variant="text"
               color="default"
               size="small"
-              onClick={() => {}}
             >
               <MdDelete />
               Delete
             </Button>
-            <Button
-              iconPosition="left"
-              variant="filled"
-              color="neutral"
-              onClick={() => {}}
-            >
+            <Button iconPosition="left" variant="filled" color="neutral">
               <MdDelete />
               Delete
             </Button>
@@ -74,7 +68,6 @@ export function ButtonPage(props: Props) {
               variant="outlined"
               color="primary"
               size="large"
-              onClick={() => {}}
             >
               <MdDelete />
               Delete
@@ -92,17 +85,11 @@ export function ButtonPage(props: Props) {
               variant="text"
               color="primary"
               size="small"
-              onClick={() => {}}
             >
               Send
               <MdSend />
             </Button>
-            <Button
-              iconPosition="right"
-              variant="filled"
-              color="secondary"
-              onClick={() => {}}
-            >
+            <Button iconPosition="right" variant="filled" color="secondary">
               Send
               <MdSend />
             </Button>
@@ -111,7 +98,6 @@ export function ButtonPage(props: Props) {
               variant="outlined"
               color="default"
               size="large"
-              onClick={() => {}}
             >
               Send
               <MdSend />
@@ -134,16 +120,16 @@ function ButtonPageRow({
     <div
       className={cn(flexStyles.row, flexStyles.spacingMd, flexStyles.alignEnd)}
     >
-      <Button variant={variant} color={color} size="small" onClick={() => {}}>
+      <Button variant={variant} color={color} size="small">
         Small
       </Button>
-      <Button variant={variant} color={color} onClick={() => {}}>
+      <Button variant={variant} color={color}>
         Medium
       </Button>
-      <Button variant={variant} color={color} size="large" onClick={() => {}}>
+      <Button variant={variant} color={color} size="large">
         Large
       </Button>
-      <Button variant={variant} color={color} disabled onClick={() => {}}>
+      <Button variant={variant} color={color} disabled>
         Disabled
       </Button>
     </div>

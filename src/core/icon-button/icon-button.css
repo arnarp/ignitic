@@ -11,6 +11,7 @@
   justify-content: center;
   color: var(--text-secondary-color);
   transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+  outline-offset: -4px;
 }
 .btn.small {
   --btn-font-size: 1rem;

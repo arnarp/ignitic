@@ -9,7 +9,6 @@ export type ButtonColor = 'default' | 'primary' | 'secondary' | 'neutral'
 
 type Props = {
   children: React.ReactNode
-  onClick: () => void
   className?: string
   pressedDownEffect?: boolean
   size?: ButtonSize

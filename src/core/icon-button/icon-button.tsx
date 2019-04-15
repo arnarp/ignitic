@@ -7,7 +7,6 @@ export type ButtonFontSize = 'small' | 'medium' | 'large'
 
 type Props = {
   children: React.ReactNode
-  onClick: () => void
   'aria-label': string
   className?: string
   pressedDownEffect?: boolean

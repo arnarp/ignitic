@@ -12,17 +12,17 @@ export function IconButtonPage(props: Props) {
     <>
       <H2>IconButton</H2>
       <H3 variant="h5">Small / Medium / Large fontSize</H3>
-      <IconButton fontSize="small" onClick={() => {}} aria-label="Delete">
+      <IconButton fontSize="small" aria-label="Delete">
         <MdDelete />
       </IconButton>
-      <IconButton onClick={() => {}} aria-label="Delete">
+      <IconButton aria-label="Delete">
         <MdDelete />
       </IconButton>
-      <IconButton fontSize="large" onClick={() => {}} aria-label="Delete">
+      <IconButton fontSize="large" aria-label="Delete">
         <MdDelete />
       </IconButton>
       <H3 variant="h5">Disabled state</H3>
-      <IconButton disabled onClick={() => {}} aria-label="Delete">
+      <IconButton disabled aria-label="Delete">
         <MdDelete />
       </IconButton>
     </>

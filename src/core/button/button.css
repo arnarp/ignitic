@@ -13,6 +13,7 @@
   transition: transform 0.2s ease-out, background-color 0.2s ease-out;
   text-transform: uppercase;
   letter-spacing: 0.057em;
+  outline-offset: -4px;
 }
 .button:disabled {
   cursor: not-allowed;
