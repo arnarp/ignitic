@@ -1,0 +1,11 @@
+.label {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--text-primary-color);
+  display: inline-flex;
+  flex-direction: row;
+}
+.label > * + * {
+  margin-left: 0.5rem;
+}

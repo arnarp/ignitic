@@ -9,6 +9,7 @@ import { useLocalStorage } from '../src/hooks/use-local-storage'
 import { Normalize } from '../src/styles/normalize/normalize'
 import * as css from './app.css'
 import { Core } from './routes/core'
+import { Inputs } from './routes/inputs'
 import { Popups } from './routes/popups'
 import { Surfaces } from './routes/surfaces'
 
@@ -66,6 +67,10 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/core/icon-button">
               IconButton
             </Link>
+            <H3 variant="h4">Inputs</H3>
+            <Link className={linkStyles.neutral} to="/inputs/switch">
+              Switch
+            </Link>
             <H3 variant="h4">Surfaces</H3>
             <Link className={linkStyles.neutral} to="/surfaces/paper">
               Paper
@@ -82,6 +87,7 @@ export function App(props: Props) {
             <Core path="/core/*" />
             <Surfaces path="/surfaces/*" />
             <Popups path="/popups/*" />
+            <Inputs path="/inputs/*" />
           </Router>
         </main>
         <footer className={css.footer} />
