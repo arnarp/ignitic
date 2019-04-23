@@ -26,6 +26,7 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
       disabled,
       size = 'medium',
       color = 'neutral',
+      type = 'button',
       variant,
       iconPosition,
       ...rest
@@ -37,6 +38,7 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
         {...rest}
         ref={ref}
         disabled={disabled}
+        type={type}
         className={cn(
           css.button,
           {

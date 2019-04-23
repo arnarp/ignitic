@@ -98,8 +98,9 @@ export function ButtonPage(props: Props) {
               variant="outlined"
               color="default"
               size="large"
+              type="submit"
             >
-              Send
+              Submit
               <MdSend />
             </Button>
           </div>

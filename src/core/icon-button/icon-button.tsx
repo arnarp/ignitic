@@ -20,6 +20,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
       className,
       pressedDownEffect,
       disabled,
+      type = 'button',
       fontSize = 'medium',
       ...rest
     },
@@ -30,6 +31,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
         {...rest}
         ref={ref}
         disabled={disabled}
+        type={type}
         className={cn(
           css.btn,
           {
