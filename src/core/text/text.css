@@ -2,8 +2,17 @@
   margin: 0;
   padding: 0;
 }
+.colorNeutral {
+  color: var(--neutral-on-background-color);
+}
+.colorDefault {
+  color: var(--default-on-background-color);
+}
 .colorPrimary {
-  color: var(--text-primary-color);
+  color: var(--primary-on-background-color);
+}
+.colorSecondary {
+  color: var(--secondary-on-background-color);
 }
 .h1 {
   font-size: 4rem;

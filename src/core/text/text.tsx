@@ -4,7 +4,7 @@ import * as React from 'react'
 import { BaseComponentProps } from '../../types/base-component-props'
 import css from './text.css'
 
-export type TextColor = 'primary'
+export type TextColor = 'neutral' | 'default' | 'primary' | 'secondary'
 export type TextElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
 export type Variant = TextElement | 'p.lead' | 'p.small'
 
@@ -18,8 +18,14 @@ export type TextProps = {
 export function getColorClass(color: TextColor) {
   switch (color) {
     case 'primary':
-    default:
       return css.colorPrimary
+    case 'default':
+      return css.colorDefault
+    case 'secondary':
+      return css.colorSecondary
+    case 'neutral':
+    default:
+      return css.colorNeutral
   }
 }
 

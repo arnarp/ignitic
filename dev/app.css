@@ -2,13 +2,11 @@
   --background-default: white;
   --paper-background: white;
 
-  --text-primary-color: rgba(0, 0, 0, 0.87);
-  --text-secondary-color: rgba(0, 0, 0, 0.54);
-
   --disabled-color: rgba(0, 0, 0, 0.54);
 
   --neutral-color: #e0e0e0;
   --neutral-on-background-color: rgba(0, 0, 0, 0.87);
+  --neutral-on-background-color-light: rgba(0, 0, 0, 0.54);
   --neutral-hover-color-text: rgba(0, 0, 0, 0.08);
   --neutral-hover-color-filled: rgba(0, 0, 0, 0.08);
   --text-on-neutral-color: rgba(0, 0, 0, 0.87);
@@ -62,13 +60,12 @@
   --background-default: #303030;
   --paper-background: #212121;
 
-  --text-primary-color: rgba(255, 255, 255, 0.87);
-  --text-secondary-color: rgba(255, 255, 255, 0.64);
-
   --disabled-color: rgba(255, 255, 255, 0.5);
 
   --neutral-color: #4e4e4e;
   --neutral-on-background-color: rgba(255, 255, 255, 0.87);
+  --neutral-on-background-color-light: rgba(255, 255, 255, 0.64);
+
   --neutral-hover-color-text: rgba(255, 255, 255, 0.1);
   --neutral-hover-color-filled: rgba(255, 255, 255, 0.08);
   --text-on-neutral-color: white;

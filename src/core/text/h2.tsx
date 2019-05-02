@@ -5,7 +5,7 @@ import css from './text.css'
 import { TextProps, getColorClass, getVariantClass } from '.'
 
 export const H2 = React.forwardRef<HTMLHeadingElement, TextProps>(function H2(
-  { color = 'primary', variant, className, style, marginBottom, ...rest },
+  { color = 'default', variant, className, style, marginBottom, ...rest },
   ref
 ) {
   return (

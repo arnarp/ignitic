@@ -55,7 +55,7 @@ export function App(props: Props) {
           </form>
         </header>
         <div className={css.sidebar}>
-          <H2>{version}</H2>
+          <H2 color="primary">{version}</H2>
           <nav>
             <H3 variant="h4">Core</H3>
             <Link className={linkStyles.neutral} to="/core/text">

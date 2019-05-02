@@ -39,6 +39,11 @@ export function TextPage(props: Props) {
         ultricies sapien. Vivamus sed est sit amet orci imperdiet imperdiet vel
         et eros.
       </P>
+      <H2>Colors</H2>
+      <H1 color="neutral">neutral</H1>
+      <H1 color="default">default</H1>
+      <H1 color="primary">primary</H1>
+      <H1 color="secondary">secondary</H1>
     </>
   )
 }
