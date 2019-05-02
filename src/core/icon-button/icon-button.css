@@ -1,4 +1,4 @@
-.btn {
+.button {
   --btn-font-size: 1.5rem;
   font-size: var(--btn-font-size);
   background: none;
@@ -9,23 +9,47 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary-color);
   transition: transform 0.2s ease-out, background-color 0.2s ease-out;
   outline-offset: -4px;
 }
-.btn.small {
+
+.button.sizeSmall {
   --btn-font-size: 1rem;
 }
-.btn.large {
+.button.sizeLarge {
   --btn-font-size: 2rem;
 }
-.btn:disabled {
-  color: var(--disabled-color);
-  cursor: not-allowed;
-}
-.btn:active {
+
+.button:active {
   transform: scale(0.9);
 }
-.btn:hover:not(:disabled) {
+
+.colorNeutral {
+  color: var(--neutral-on-background-color);
+}
+.colorNeutral:hover:not(:disabled) {
   background: var(--neutral-hover-color-text);
+}
+.colorDefault {
+  color: var(--default-on-background-color);
+}
+.colorDefault:hover:not(:disabled) {
+  background: var(--default-hover-color-text);
+}
+.colorPrimary {
+  color: var(--primary-on-background-color);
+}
+.colorPrimary:hover:not(:disabled) {
+  background: var(--primary-hover-color-text);
+}
+.colorSecondary {
+  color: var(--secondary-on-background-color);
+}
+.colorSecondary:hover:not(:disabled) {
+  background: var(--secondary-hover-color-text);
+}
+
+.button:disabled {
+  color: var(--disabled-color);
+  cursor: not-allowed;
 }

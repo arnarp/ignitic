@@ -39,7 +39,8 @@ export function Tooltip({
 }: Props) {
   const [state, setState] = React.useState<State>('hidden')
   const tooltipRef = React.useRef<HTMLDivElement>(null)
-  const timeoutRef = React.useRef<any>(null)
+  const mouseEnterTimeoutRef = React.useRef<any>(null)
+  const mouseUpTimeoutRef = React.useRef<any>(null)
   const tooltipBox = getBox(tooltipRef)
   const triggerBox = getBox(triggerRef)
   const isScrolling = useIsScrolling()
@@ -55,23 +56,34 @@ export function Tooltip({
     }
   }, [state])
   React.useEffect(() => {
-    function onMouseEnter() {
-      timeoutRef.current = setTimeout(() => {
+    function onMouseEnter(ev: MouseEvent) {
+      mouseEnterTimeoutRef.current = setTimeout(() => {
         setState('measure before visible')
       }, enterDelay)
     }
+    function onMouseUp() {
+      console.log('mouseup')
+      mouseUpTimeoutRef.current = setTimeout(() => {
+        setState('hidden')
+      }, 2000)
+    }
     function onMouseLeave() {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(mouseEnterTimeoutRef.current)
+      clearTimeout(mouseUpTimeoutRef.current)
       setState('hidden')
     }
     if (triggerRef.current) {
       triggerRef.current.addEventListener('mouseenter', onMouseEnter)
       triggerRef.current.addEventListener('mouseleave', onMouseLeave)
+      triggerRef.current.addEventListener('mouseup', onMouseUp)
     }
     return () => {
       if (triggerRef.current) {
         triggerRef.current.removeEventListener('mouseenter', onMouseEnter)
         triggerRef.current.removeEventListener('mouseleave', onMouseLeave)
+        triggerRef.current.removeEventListener('mouseup', onMouseUp)
+        clearTimeout(mouseEnterTimeoutRef.current)
+        clearTimeout(mouseUpTimeoutRef.current)
       }
     }
   }, [triggerRef, enterDelay])

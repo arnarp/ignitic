@@ -14,7 +14,7 @@ export function ButtonPage(props: Props) {
     <div className={cn(flexStyles.col, flexStyles.spacingLg)}>
       <H2>Button</H2>
       <div>
-        <H3 variant="h5">Variant: outlined, size: small / medium / large</H3>
+        <H3 variant="h5">variant: outlined, size: small / medium / large</H3>
         <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
           <ButtonPageRow variant="outlined" color="neutral" />
           <ButtonPageRow variant="outlined" color="default" />
@@ -23,7 +23,7 @@ export function ButtonPage(props: Props) {
         </div>
       </div>
       <div>
-        <H3 variant="h5">Variant: text, size: small / medium / large</H3>
+        <H3 variant="h5">variant: text, size: small / medium / large</H3>
         <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
           <ButtonPageRow variant="text" color="neutral" />
           <ButtonPageRow variant="text" color="default" />
@@ -32,7 +32,7 @@ export function ButtonPage(props: Props) {
         </div>
       </div>
       <div>
-        <H3 variant="h5">Variant: filled, size: small / medium / large</H3>
+        <H3 variant="h5">variant: filled, size: small / medium / large</H3>
         <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
           <ButtonPageRow variant="filled" color="neutral" />
           <ButtonPageRow variant="filled" color="default" />

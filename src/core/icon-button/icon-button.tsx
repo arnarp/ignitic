@@ -4,6 +4,7 @@ import * as React from 'react'
 import css from './icon-button.css'
 
 export type ButtonFontSize = 'small' | 'medium' | 'large'
+export type ButtonColor = 'default' | 'primary' | 'secondary' | 'neutral'
 
 type Props = {
   children: React.ReactNode
@@ -11,6 +12,7 @@ type Props = {
   className?: string
   pressedDownEffect?: boolean
   fontSize?: ButtonFontSize
+  color?: ButtonColor
 } & React.ButtonHTMLAttributes<HTMLElement>
 
 export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
@@ -22,6 +24,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
       disabled,
       type = 'button',
       fontSize = 'medium',
+      color = 'neutral',
       ...rest
     },
     ref
@@ -33,10 +36,14 @@ export const IconButton = React.forwardRef<HTMLButtonElement, Props>(
         disabled={disabled}
         type={type}
         className={cn(
-          css.btn,
+          css.button,
           {
-            [css.large]: fontSize == 'large',
-            [css.small]: fontSize == 'small'
+            [css.sizeLarge]: fontSize == 'large',
+            [css.sizeSmall]: fontSize == 'small',
+            [css.colorDefault]: color == 'default',
+            [css.colorPrimary]: color == 'primary',
+            [css.colorSecondary]: color == 'secondary',
+            [css.colorNeutral]: color == 'neutral'
           },
           className
         )}
