@@ -72,6 +72,9 @@ export function App(props: Props) {
               Switch
             </Link>
             <H3 variant="h4">Surfaces</H3>
+            <Link className={linkStyles.neutral} to="/surfaces/surface">
+              Surface
+            </Link>
             <Link className={linkStyles.neutral} to="/surfaces/paper">
               Paper
             </Link>

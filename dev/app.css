@@ -1,34 +1,92 @@
 :root {
-  --background-default: white;
-  --paper-background: white;
+  /**
+    * Background and surfaces
+    */
+  --background-color: white;
+  --paper-surface-color: white;
+  --neutral-surface-color: #f5f5f5;
+  --default-surface-color: #ffd4ad; /* light apricot */
+  --primary-surface-color: #bff1ff; /* diamond */
+  --secondary-surface-color: #ffacaa; /* melon */
 
   --disabled-color: rgba(0, 0, 0, 0.54);
 
-  --neutral-color: #e0e0e0;
-  --neutral-on-background-color: rgba(0, 0, 0, 0.87);
+  /**
+    * Neutral color
+    */
+  --neutral-color: #f5f5f5;
+  --neutral-on-background-color: #222222;
   --neutral-on-background-color-light: rgba(0, 0, 0, 0.54);
   --neutral-hover-color-text: rgba(0, 0, 0, 0.08);
   --neutral-hover-color-filled: rgba(0, 0, 0, 0.08);
   --text-on-neutral-color: rgba(0, 0, 0, 0.87);
 
+  /**
+    * Default color
+    */
   --default-color: #f29137;
   --default-on-background-color: #af5500; /* Windsor Tan */
   --default-hover-color-text: rgba(242, 145, 55, 0.1);
   --default-hover-color-filled: #f27f13;
   --text-on-default-color: rgba(0, 0, 0, 0.87);
 
-  --primary-color: #41bcd8;
+  /**
+    * Primary color
+    */
+  --primary-color: #41bcd8; /* Sea serpent */
   --primary-on-background-color: #00819e; /* CG Blue */
   --primary-hover-color-text: rgba(65, 188, 216, 0.1);
   --primary-hover-color-filled: #0ab2d8;
   --text-on-primary-color: rgba(0, 0, 0, 0.87);
 
+  /**
+  * Secondary color
+  */
   --secondary-color: #d6312f;
   --secondary-on-background-color: #9b0000; /* USC Cardinal */
   --secondary-hover-color-text: rgba(214, 49, 47, 0.1);
   --secondary-hover-color-filled: #d60300;
   --text-on-secondary-color: white;
 
+  /**
+  * Paper surface
+  */
+  --neutral-on-paper-surface-color: #222222;
+  --default-on-paper-surface-color: #af5500;
+  --primary-on-paper-surface-color: #00819e;
+  --secondary-on-paper-surface-color: #9b0000;
+  /**
+  * Neutral surface
+  */
+  --neutral-on-neutral-surface-color: #3e3e3e;
+  --default-on-neutral-surface-color: #af5500;
+  --primary-on-neutral-surface-color: #004352;
+  --secondary-on-neutral-surface-color: #820000;
+  /**
+  * Default surface
+  */
+  --neutral-on-default-surface-color: #222222;
+  --default-on-default-surface-color: #9a4b00;
+  --primary-on-default-surface-color: #006a82;
+  --secondary-on-default-surface-color: #9b0000;
+  /**
+    * Primary surface
+    */
+  --neutral-on-primary-surface-color: #222222;
+  --default-on-primary-surface-color: #a75100;
+  --primary-on-primary-surface-color: #00728c;
+  --secondary-on-primary-surface-color: #9b0000;
+  /**
+    * Secondary surface
+    */
+  --neutral-on-secondary-surface-color: #222222;
+  --default-on-secondary-surface-color: #803e00;
+  --primary-on-secondary-surface-color: #00576b;
+  --secondary-on-secondary-surface-color: #9b0000;
+
+  /**
+    * Misc
+    */
   --border-radius: 0.25rem;
 
   --box-shadow-main-color: rgba(0, 0, 0, 0.2);
@@ -45,7 +103,7 @@
 }
 
 .container {
-  background: var(--background-default);
+  background: var(--background-color);
   min-height: 100vh;
   display: grid;
   grid-gap: 1em;
@@ -57,37 +115,91 @@
     'footer';
 }
 .container.dark {
-  --background-default: #303030;
-  --paper-background: #212121;
+  --background-color: #303030;
+  --paper-surface-color: #212121;
+  --neutral-surface-color: #212121;
+  --default-surface-color: #663a11; /*  */
+  --primary-surface-color: #12404c; /*  */
+  --secondary-surface-color: #490d0b; /*  */
 
   --disabled-color: rgba(255, 255, 255, 0.5);
 
+  /**
+    * Neutral color
+    */
   --neutral-color: #4e4e4e;
-  --neutral-on-background-color: rgba(255, 255, 255, 0.87);
+  --neutral-on-background-color: #e4e4e4;
   --neutral-on-background-color-light: rgba(255, 255, 255, 0.64);
-
   --neutral-hover-color-text: rgba(255, 255, 255, 0.1);
   --neutral-hover-color-filled: rgba(255, 255, 255, 0.08);
   --text-on-neutral-color: white;
 
+  /**
+    * Default color
+    */
   --default-color: #af5500;
   --default-on-background-color: #f29137;
   --default-hover-color-text: rgba(242, 145, 55, 0.1);
   --default-hover-color-filled: #963c00;
   --text-on-default-color: white;
 
+  /**
+    * Primary color
+    */
   --primary-color: #00819e;
   --primary-on-background-color: #41bcd8;
   --primary-hover-color-text: rgba(65, 188, 216, 0.1);
   --primary-hover-color-filled: #006885;
   --text-on-primary-color: white;
 
+  /**
+  * Secondary color
+  */
   --secondary-color: #9b0000;
   --secondary-on-background-color: #d6312f;
   --secondary-hover-color-text: rgba(214, 49, 47, 0.1);
   --secondary-hover-color-filled: #820000;
   --text-on-secondary-color: rgba(255, 255, 255, 0.87);
 
+  /**
+  * Paper surface
+  */
+  --neutral-on-paper-surface-color: #e4e4e4;
+  --default-on-paper-surface-color: #f29137;
+  --primary-on-paper-surface-color: #41bcd8;
+  --secondary-on-paper-surface-color: #ff3b38;
+  /**
+  * Neutral surface
+  */
+  --neutral-on-neutral-surface-color: #e4e4e4;
+  --default-on-neutral-surface-color: #f29137;
+  --primary-on-neutral-surface-color: #41bcd8;
+  --secondary-on-neutral-surface-color: #ff3b38;
+  /**
+  * Default surface
+  */
+  --neutral-on-default-surface-color: #e4e4e4;
+  --default-on-default-surface-color: #ff993b;
+  --primary-on-default-surface-color: #40c1de;
+  --secondary-on-default-surface-color: #ff9391;
+  /**
+    * Primary surface
+    */
+  --neutral-on-primary-surface-color: #e4e4e4;
+  --default-on-primary-surface-color: #f29137;
+  --primary-on-primary-surface-color: #41bcd8;
+  --secondary-on-primary-surface-color: #ff7e7d;
+  /**
+    * Secondary surface
+    */
+  --neutral-on-secondary-surface-color: #e4e4e4;
+  --default-on-secondary-surface-color: #f29137;
+  --primary-on-secondary-surface-color: #41bcd8;
+  --secondary-on-secondary-surface-color: #ff413f;
+
+  /**
+    * Misc
+    */
   --box-shadow-main-color: none;
   --box-shadow-sharpen-color: none;
   --box-shadow-bottom-accent-color: none;

@@ -127,28 +127,28 @@
   background: none;
 }
 .variantOutlined.colorNeutral {
-  border: 1px solid var(--neutral-color);
+  border: 1px solid var(--neutral-on-background-color);
   color: var(--neutral-on-background-color);
 }
 .variantOutlined.colorNeutral:hover:not(:disabled) {
   background: var(--neutral-hover-color-text);
 }
 .variantOutlined.colorDefault {
-  border: 1px solid var(--default-color);
+  border: 1px solid var(--default-on-background-color);
   color: var(--default-on-background-color);
 }
 .variantOutlined.colorDefault:hover:not(:disabled) {
   background: var(--default-hover-color-text);
 }
 .variantOutlined.colorPrimary {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-on-background-color);
   color: var(--primary-on-background-color);
 }
 .variantOutlined.colorPrimary:hover:not(:disabled) {
   background: var(--primary-hover-color-text);
 }
 .variantOutlined.colorSecondary {
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-on-background-color);
   color: var(--secondary-on-background-color);
 }
 .variantOutlined.colorSecondary:hover:not(:disabled) {
