@@ -1,7 +1,7 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 
-import { H2 } from '../../../src/core/text'
+import { H2, Span } from '../../../src/core/text'
 import { useUUID } from '../../../src/hooks/use-uuid'
 import { Tooltip, TooltipPlacement } from '../../../src/popups/tooltip'
 
@@ -27,7 +27,7 @@ export function TooltipPage(props: Props) {
         placement={placement}
         enterDelay={enterDelay}
       >
-        This is a tooltip for 'Popups / Tooltip' header
+        <Span>This is a tooltip for 'Popups / Tooltip' header</Span>
       </Tooltip>
       <label>
         placement

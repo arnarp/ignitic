@@ -21,14 +21,17 @@ export function App(props: Props) {
     key: 'theme',
     defaultValue: 'light'
   })
+  React.useEffect(() => {
+    if (theme == 'dark') {
+      document.body.classList.add(css.dark)
+    } else {
+      document.body.classList.remove(css.dark)
+    }
+  })
   return (
     <React.Fragment>
       <Normalize />
-      <div
-        className={cn(css.container, {
-          [css.dark]: theme == 'dark'
-        })}
-      >
+      <div className={cn(css.container)}>
         <header role="banner" className={css.header}>
           <H1>Ignitic</H1>
           <form name="switch theme" noValidate autoComplete="off">

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 
 import { useIsScrolling } from '../../hooks/use-is-scrolling'
 import { useScrollPosition } from '../../hooks/use-scroll-position'
+import { Surface } from '../../surfaces/surface'
 import { BaseComponentProps } from '../../types/base-component-props'
 import { getBox } from '../../utils/getBox'
 import { PosedTooltipDiv } from './posed-tooltip-div'
@@ -100,7 +101,9 @@ export function Tooltip({
       scrollPosition={scrollPosition}
       placement={placement}
     >
-      {children}
+      <Surface className={css.inner} color="neutral" rounded>
+        {children}
+      </Surface>
     </PosedTooltipDiv>,
     document.body
   )
