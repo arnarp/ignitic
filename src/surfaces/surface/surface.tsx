@@ -2,15 +2,26 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
 import { BaseComponentProps } from '../../types/base-component-props'
-import css from './surface.css'
+import css, { rounded } from './surface.css'
 
 type Props = {
   children: React.ReactNode
   color: 'paper' | 'neutral' | 'default' | 'primary' | 'secondary'
+  padding?: 'medium'
+  border?: 'neutral' | 'default' | 'primary' | 'secondary'
+  rounded?: boolean
 } & BaseComponentProps &
   React.DOMAttributes<HTMLDivElement>
 
-export function Surface({ children, className, color, ...rest }: Props) {
+export function Surface({
+  children,
+  className,
+  color,
+  border,
+  padding,
+  rounded,
+  ...rest
+}: Props) {
   return (
     <div
       {...rest}
@@ -20,7 +31,13 @@ export function Surface({ children, className, color, ...rest }: Props) {
           [css.neutralColor]: color == 'neutral',
           [css.defaultColor]: color == 'default',
           [css.primaryColor]: color == 'primary',
-          [css.secondaryColor]: color == 'secondary'
+          [css.secondaryColor]: color == 'secondary',
+          [css.paddingMd]: padding == 'medium',
+          [css.rounded]: rounded == true,
+          [css.borderNeutral]: border == 'neutral',
+          [css.borderDefault]: border == 'default',
+          [css.borderPrimary]: border == 'primary',
+          [css.borderSecondary]: border == 'secondary'
         },
         className
       )}

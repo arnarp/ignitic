@@ -33,3 +33,21 @@
   --primary-on-background-color: var(--primary-on-secondary-surface-color);
   --secondary-on-background-color: var(--secondary-on-secondary-surface-color);
 }
+.paddingMd {
+  padding: 1.5rem;
+}
+.rounded {
+  border-radius: var(--border-radius, 0.25rem);
+}
+.borderNeutral {
+  border: 1px solid var(--neutral-on-background-color);
+}
+.borderDefault {
+  border: 1px solid var(--default-on-background-color);
+}
+.borderPrimary {
+  border: 1px solid var(--primary-on-background-color);
+}
+.borderSecondary {
+  border: 1px solid var(--secondary-on-background-color);
+}

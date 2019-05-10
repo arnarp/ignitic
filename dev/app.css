@@ -118,9 +118,9 @@
   --background-color: #303030;
   --paper-surface-color: #212121;
   --neutral-surface-color: #212121;
-  --default-surface-color: #663a11; /*  */
-  --primary-surface-color: #12404c; /*  */
-  --secondary-surface-color: #490d0b; /*  */
+  --default-surface-color: #59320f; /*  */
+  --primary-surface-color: #0f363f; /*  */
+  --secondary-surface-color: #3d0a09; /*  */
 
   --disabled-color: rgba(255, 255, 255, 0.5);
 
