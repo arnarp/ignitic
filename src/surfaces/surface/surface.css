@@ -33,8 +33,17 @@
   --primary-on-background-color: var(--primary-on-secondary-surface-color);
   --secondary-on-background-color: var(--secondary-on-secondary-surface-color);
 }
+.paddingSm {
+  padding: var(--space-sm);
+}
 .paddingMd {
-  padding: 1.5rem;
+  padding: var(--space-md);
+}
+.paddingLg {
+  padding: var(--space-lg);
+}
+.paddingXl {
+  padding: var(--space-xl);
 }
 .rounded {
   border-radius: var(--border-radius, 0.25rem);

@@ -16,23 +16,23 @@ export function SurfacePage(props: Props) {
       <H3>Default background</H3>
       <SurfaceContent />
       <H3>Color: 'paper'</H3>
-      <Surface color="paper">
+      <Surface padding="md" color="paper">
         <SurfaceContent />
       </Surface>
       <H3>Color: 'neutral'</H3>
-      <Surface color="neutral">
+      <Surface padding="md" color="neutral">
         <SurfaceContent />
       </Surface>
       <H3>Color: 'default'</H3>
-      <Surface color="default">
+      <Surface padding="md" color="default">
         <SurfaceContent />
       </Surface>
       <H3>Color: 'primary'</H3>
-      <Surface color="primary">
+      <Surface padding="md" color="primary">
         <SurfaceContent />
       </Surface>
       <H3>Color: 'secondary'</H3>
-      <Surface color="secondary">
+      <Surface padding="md" color="secondary">
         <SurfaceContent />
       </Surface>
     </div>
@@ -41,7 +41,7 @@ export function SurfacePage(props: Props) {
 
 export function SurfaceContent() {
   return (
-    <div style={{ minWidth: 300, minHeight: 300, padding: 24 }}>
+    <div style={{ minWidth: 300, minHeight: 300 }}>
       <H4>Text</H4>
       <P variant="p.lead" color="neutral">
         neutral color

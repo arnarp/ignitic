@@ -100,6 +100,12 @@
   --zindex-modal: 1050;
   --zindex-popover: 1060;
   --zindex-tooltip: 1070;
+
+  --spacer: 0.5rem;
+  --space-sm: calc(var(--spacer) * 1);
+  --space-md: calc(var(--spacer) * 2);
+  --space-lg: calc(var(--spacer) * 3);
+  --space-xl: calc(var(--spacer) * 4);
 }
 
 .container {

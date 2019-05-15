@@ -12,7 +12,7 @@ type Props = {
 
 export function Paper({ children, className, ...rest }: Props) {
   return (
-    <Surface color="paper" {...rest} className={cn(css.p, className)}>
+    <Surface rounded color="paper" {...rest} className={cn(css.p, className)}>
       {children}
     </Surface>
   )

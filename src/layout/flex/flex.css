@@ -3,13 +3,13 @@
   flex-direction: column;
 }
 .col.spacingLg > * + * {
-  margin-top: 1.5rem;
+  margin-top: var(--space-lg);
 }
 .col.spacingMd > * + * {
-  margin-top: 1rem;
+  margin-top: var(--space-md);
 }
 .col.spacingSm > * + * {
-  margin-top: 0.5rem;
+  margin-top: var(--space-sm);
 }
 .row {
   display: flex;
@@ -21,15 +21,15 @@
 }
 .inlineRow.spacingLg > * + *,
 .row.spacingLg > * + * {
-  margin-left: 1.5rem;
+  margin-left: var(--space-lg);
 }
 .inlineRow.spacingMd > * + *,
 .row.spacingMd > * + * {
-  margin-left: 1rem;
+  margin-left: var(--space-md);
 }
 .inlineRow.spacingSm > * + *,
 .row.spacingSm > * + * {
-  margin-left: 0.5rem;
+  margin-left: var(--space-sm);
 }
 .justifyEnd {
   justify-content: flex-end;

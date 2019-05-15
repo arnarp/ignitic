@@ -5,9 +5,9 @@ import { BaseComponentProps } from '../../types/base-component-props'
 import css, { rounded } from './surface.css'
 
 type Props = {
-  children: React.ReactNode
+  children?: React.ReactNode
   color: 'paper' | 'neutral' | 'default' | 'primary' | 'secondary'
-  padding?: 'medium'
+  padding?: 'sm' | 'md' | 'lg' | 'xl'
   border?: 'neutral' | 'default' | 'primary' | 'secondary'
   rounded?: boolean
 } & BaseComponentProps &
@@ -32,7 +32,10 @@ export function Surface({
           [css.defaultColor]: color == 'default',
           [css.primaryColor]: color == 'primary',
           [css.secondaryColor]: color == 'secondary',
-          [css.paddingMd]: padding == 'medium',
+          [css.paddingSm]: padding == 'sm',
+          [css.paddingMd]: padding == 'md',
+          [css.paddingLg]: padding == 'lg',
+          [css.paddingXl]: padding == 'xl',
           [css.rounded]: rounded == true,
           [css.borderNeutral]: border == 'neutral',
           [css.borderDefault]: border == 'default',
