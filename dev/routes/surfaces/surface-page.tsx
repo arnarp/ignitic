@@ -4,6 +4,8 @@ import * as React from 'react'
 
 import { Button, ButtonVariant } from '../../../src/core/button'
 import { H2, H3, H4, P } from '../../../src/core/text'
+import { Label } from '../../../src/inputs/label'
+import { Switch } from '../../../src/inputs/switch'
 import { flexStyles } from '../../../src/layout/flex'
 import { Surface } from '../../../src/surfaces/surface'
 
@@ -40,26 +42,68 @@ export function SurfacePage(props: Props) {
 }
 
 export function SurfaceContent() {
+  const [checked, setChecked] = React.useState(true)
+
   return (
-    <div style={{ minWidth: 300, minHeight: 300 }}>
-      <H4>Text</H4>
-      <P variant="p.lead" color="neutral">
-        neutral color
-      </P>
-      <P variant="p.lead" color="default">
-        default color
-      </P>
-      <P variant="p.lead" color="primary">
-        primary color
-      </P>
-      <P variant="p.lead" color="secondary">
-        secondary color
-      </P>
-      <H4>Buttons</H4>
+    <div
+      className={cn(flexStyles.row)}
+      style={{ minWidth: 300, minHeight: 300 }}
+    >
+      <div className={cn(flexStyles.col)}>
+        <H4>Text</H4>
+        <P variant="p.lead" color="neutral">
+          neutral color
+        </P>
+        <P variant="p.lead" color="default">
+          default color
+        </P>
+        <P variant="p.lead" color="primary">
+          primary color
+        </P>
+        <P variant="p.lead" color="secondary">
+          secondary color
+        </P>
+        <H4>Buttons</H4>
+        <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+          <ButtonPageRow variant="filled" />
+          <ButtonPageRow variant="outlined" />
+          <ButtonPageRow variant="text" />
+        </div>
+      </div>
       <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
-        <ButtonPageRow variant="filled" />
-        <ButtonPageRow variant="outlined" />
-        <ButtonPageRow variant="text" />
+        <H4>Inputs</H4>
+        <Label>
+          <span>Switch</span>
+          <Switch
+            onChange={() => setChecked(!checked)}
+            color="neutral"
+            checked={checked}
+          />
+        </Label>
+        <Label>
+          <span>Switch</span>
+          <Switch
+            onChange={() => setChecked(!checked)}
+            color="default"
+            checked={checked}
+          />
+        </Label>
+        <Label>
+          <span>Switch</span>
+          <Switch
+            onChange={() => setChecked(!checked)}
+            color="primary"
+            checked={checked}
+          />
+        </Label>
+        <Label>
+          <span>Switch</span>
+          <Switch
+            onChange={() => setChecked(!checked)}
+            color="secondary"
+            checked={checked}
+          />
+        </Label>
       </div>
       {/* <div
         style={{

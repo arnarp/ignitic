@@ -42,6 +42,7 @@ export function Tooltip({
   const tooltipRef = React.useRef<HTMLDivElement>(null)
   const mouseEnterTimeoutRef = React.useRef<any>(null)
   const mouseUpTimeoutRef = React.useRef<any>(null)
+  const measureTimeoutRef = React.useRef<any>(null)
   const tooltipBox = getBox(tooltipRef)
   const triggerBox = getBox(triggerRef)
   const isScrolling = useIsScrolling()
@@ -51,11 +52,16 @@ export function Tooltip({
   }, [placement, isScrolling])
   React.useEffect(() => {
     if (state == 'measure before visible') {
-      window.requestAnimationFrame(() => {
-        setState('visible')
-      })
+      measureTimeoutRef.current = setTimeout(() => {
+        if (state == 'measure before visible') {
+          setState('visible')
+        }
+      }, 100)
     }
-  }, [state])
+    return () => {
+      clearTimeout(measureTimeoutRef.current)
+    }
+  }, [state, placement])
   React.useEffect(() => {
     function onMouseEnter(ev: MouseEvent) {
       mouseEnterTimeoutRef.current = setTimeout(() => {
@@ -87,7 +93,7 @@ export function Tooltip({
         clearTimeout(mouseUpTimeoutRef.current)
       }
     }
-  }, [triggerRef, enterDelay])
+  }, [triggerRef, enterDelay, placement])
   return ReactDOM.createPortal(
     <PosedTooltipDiv
       pose={pose(state)}

@@ -13,3 +13,4 @@ export const h6: string;
 export const p: string;
 export const lead: string;
 export const small: string;
+export const span: string;

@@ -2,6 +2,14 @@
 
 A React UI toolkit
 
+## Changelog
+
+### 0.22
+
+- Fix tooltip
+- Font sizes moved to css variables
+- Minor color changes
+
 ## Publish
 
 Run
@@ -21,32 +29,16 @@ npm publish
 
 ### New css variables
 
---neutral-surface-color
---default-surface-color
---primary-surface-color
---secondary-surface-color
+--neutral-light-on-background-color: #dcdcdc;
+--neutral-very-light-on-background-color: #F5F5F5;
 
---neutral-on-paper-surface-color
---default-on-paper-surface-color
---primary-on-paper-surface-color
---secondary-on-paper-surface-color
+--spacer: 0.5rem;
+--space-sm: calc(var(--spacer) _ 1);
+--space-md: calc(var(--spacer) _ 2);
+--space-lg: calc(var(--spacer) _ 3);
+--space-xl: calc(var(--spacer) _ 4);
 
---neutral-on-neutral-surface-color
---default-on-neutral-surface-color
---primary-on-neutral-surface-color
---secondary-on-neutral-surface-color
+### gone
 
---neutral-on-default-surface-color
---default-on-default-surface-color
---primary-on-default-surface-color
---secondary-on-default-surface-color
-
---neutral-on-primary-surface-color
---default-on-primary-surface-color
---primary-on-primary-surface-color
---secondary-on-primary-surface-color
-
---neutral-on-secondary-surface-color
---default-on-secondary-surface-color
---primary-on-secondary-surface-color
---secondary-on-secondary-surface-color
+--neutral-color
+--neutral-on-background-color-light

@@ -9,12 +9,24 @@ export function TextPage(props: Props) {
   return (
     <>
       <H2>Core / Text</H2>
-      <H1 marginBottom>h1. Heading</H1>
-      <H2 marginBottom>h2. Heading</H2>
-      <H3 marginBottom>h3. Heading</H3>
-      <H4 marginBottom>h4. Heading</H4>
-      <H5 marginBottom>h5. Heading</H5>
-      <H6 marginBottom>h6. Heading</H6>
+      <H1 marginBottom>
+        h1. Heading. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </H1>
+      <H2 marginBottom>
+        h2. Heading. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </H2>
+      <H3 marginBottom>
+        h3. Heading. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </H3>
+      <H4 marginBottom>
+        h4. Heading. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </H4>
+      <H5 marginBottom>
+        h5. Heading. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </H5>
+      <H6 marginBottom>
+        h6. Heading. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </H6>
       <P marginBottom variant="p.lead">
         p. Paragraph lead. Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Maecenas ornare libero risus, ac condimentum sapien egestas ut.

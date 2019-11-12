@@ -71,6 +71,9 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/core/icon-button">
               IconButton
             </Link>
+            <Link className={linkStyles.neutral} to="/core/link">
+              Links
+            </Link>
             <H3 variant="h4">Inputs</H3>
             <Link className={linkStyles.neutral} to="/inputs/switch">
               Switch

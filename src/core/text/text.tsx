@@ -48,8 +48,9 @@ export function getVariantClass(as: TextElement, variant?: Variant) {
     case 'p.small':
       return cn(css.p, css.small)
     case 'p':
+      return css.p
     case 'span':
     default:
-      return css.p
+      return css.span
   }
 }

@@ -85,7 +85,7 @@
     0px 3px 1px -2px var(--box-shadow-bottom-accent-color);
 }
 .variantFilled.colorNeutral {
-  background: var(--neutral-color);
+  background: var(--neutral-very-light-on-background-color);
   color: var(--text-on-neutral-color);
 }
 .variantFilled.colorNeutral:hover:not(:disabled) {
