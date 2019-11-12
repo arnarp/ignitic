@@ -18,6 +18,15 @@ export function LinkPage(props: Props) {
       <Link to="" className={cn(linkStyles.neutral, linkStyles.sizeLarge)}>
         Neutral large link
       </Link>
+      <Link to="" className={linkStyles.primary}>
+        primary link
+      </Link>
+      <Link to="" className={cn(linkStyles.primary, linkStyles.sizeSmall)}>
+        primary small link
+      </Link>
+      <Link to="" className={cn(linkStyles.primary, linkStyles.sizeLarge)}>
+        primary large link
+      </Link>
     </div>
   )
 }

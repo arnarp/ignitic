@@ -1,6 +1,6 @@
 .label {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
   font-weight: 300;
   color: var(--neutral-on-background-color);
   display: inline-flex;

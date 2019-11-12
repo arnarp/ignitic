@@ -112,7 +112,7 @@
     * small
     */
   --font-size-p-small: 0.75rem;
-  --line-height-p-small: 1.5rem;
+  --line-height-p-small: 1rem;
   --font-size-p: 0.875rem;
   --line-height-p: 1.5rem;
   --font-size-p-lead: 1rem;
@@ -134,7 +134,7 @@
     * large
     */
   /* --font-size-p-small: 0.75rem;
-  --line-height-p-small: 1.5rem;
+  --line-height-p-small: 1rem;
   --font-size-p: 1rem;
   --line-height-p: 1.5rem;
   --font-size-p-lead: 1.25rem;

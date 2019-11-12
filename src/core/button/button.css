@@ -1,7 +1,7 @@
 .button {
   position: relative;
-  --btn-font-size: 1rem;
-  --btn-line-height: 1.5rem;
+  --btn-font-size: var(--font-size-p);
+  --btn-line-height: var(--line-height-p);
   font-size: var(--btn-font-size);
   line-height: var(--btn-line-height);
   border-radius: var(--border-radius);
@@ -32,12 +32,12 @@
 }
 
 .sizeSmall {
-  --btn-font-size: 0.75rem;
-  --btn-line-height: 1rem;
+  --btn-font-size: var(--font-size-p-small);
+  --btn-line-height: var(--line-height-p-small);
 }
 .sizeLarge {
-  --btn-font-size: 1.25rem;
-  --btn-line-height: 2rem;
+  --btn-font-size: var(--font-size-p-lead);
+  --btn-line-height: var(--line-height-p-lead);
 }
 
 /* Variant: text */
