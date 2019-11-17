@@ -133,7 +133,7 @@
     * Font sizes
     * large
     */
-  /* --font-size-p-small: 0.75rem;
+  --font-size-p-small: 0.75rem;
   --line-height-p-small: 1rem;
   --font-size-p: 1rem;
   --line-height-p: 1.5rem;
@@ -150,7 +150,7 @@
   --font-size-h2: 3rem;
   --line-height-h2: 4rem;
   --font-size-h1: 4rem;
-  --line-height-h1: 5rem; */
+  --line-height-h1: 5rem;
 }
 
 .container {
@@ -284,10 +284,6 @@
   flex-direction: column;
 }
 
-.sidebar2 {
-  grid-area: sidebar2;
-}
-
 .footer {
   grid-area: footer;
 }
@@ -298,7 +294,6 @@
     grid-template-areas:
       'header   header'
       'sidebar  content'
-      'sidebar2 sidebar2'
       'footer   footer';
   }
 }
@@ -306,11 +301,11 @@
 @media only screen and (min-width: 600px) {
   .container {
     grid-gap: 20px;
-    grid-template-columns: 200px auto 100px;
+    grid-template-columns: 200px auto;
     grid-template-rows: 5rem auto 10rem;
     grid-template-areas:
-      'header  header  header'
-      'sidebar content sidebar2'
-      'footer  footer  footer';
+      'header  header'
+      'sidebar content'
+      'footer  footer';
   }
 }

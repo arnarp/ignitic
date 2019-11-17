@@ -1,7 +1,6 @@
 import { Link, Router } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
-
 import { version } from '../package.json'
 import { linkStyles } from '../src/core/link'
 import { H1, H2, H3 } from '../src/core/text'
@@ -9,6 +8,7 @@ import { useLocalStorage } from '../src/hooks/use-local-storage'
 import { Normalize } from '../src/styles/normalize/normalize'
 import * as css from './app.css'
 import { Core } from './routes/core'
+import { Data } from './routes/data'
 import { Inputs } from './routes/inputs'
 import { Layout } from './routes/layout'
 import { Popups } from './routes/popups'
@@ -93,9 +93,12 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/popups/tooltip">
               Tooltip
             </Link>
+            <H3 variant="h4">Data</H3>
+            <Link className={linkStyles.neutral} to="/data/table">
+              Table
+            </Link>
           </nav>
         </div>
-        <div className={css.sidebar2} />
         <main className={css.main}>
           <Router>
             <Core path="/core/*" />
@@ -103,6 +106,7 @@ export function App(props: Props) {
             <Popups path="/popups/*" />
             <Inputs path="/inputs/*" />
             <Layout path="/layout/*" />
+            <Data path="/data/*" />
           </Router>
         </main>
         <footer className={css.footer} />

@@ -1,0 +1,127 @@
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  --cell-padding-top-bottom: var(--spacer);
+  --cell-padding-right: calc(var(--spacer) * 6);
+  --cell-padding-left: var(--spacer);
+  --header-cell-padding-top-bottom: calc(var(--spacer) * 1.5);
+  --table-cell-font-size: var(--font-size-p);
+  --table-cell-line-height: var(--line-height-p);
+}
+.table.cellPaddingDense,
+.td.cellPaddingDense,
+.th.cellPaddingDense {
+  --cell-padding-right: calc(var(--spacer) * 1.5);
+}
+.table.cellPaddingDense,
+.td.cellPaddingDense {
+  --cell-padding-top-bottom: calc(var(--spacer) / 2);
+}
+.table.cellPaddingDense,
+.th.cellPaddingDense {
+  --header-cell-padding-top-bottom: var(--spacer);
+}
+.table.cellPaddingCheckbox,
+.th.cellPaddingCheckbox,
+.td.cellPaddingCheckbox {
+  --cell-padding-top-bottom: 0;
+  --header-cell-padding-top-bottom: 0;
+  --cell-padding-right: calc(var(--spacer) * 1.5);
+  --cell-padding-left: calc(var(--spacer) * 1.5);
+}
+.table.cellPaddingNone,
+.th.cellPaddingNone,
+.td.cellPaddingNone {
+  --cell-padding-top-bottom: 0;
+  --header-cell-padding-top-bottom: 0;
+  --cell-padding-right: 0;
+  --cell-padding-left: 0;
+}
+
+.tr {
+  vertical-align: middle;
+}
+.tr.hover:hover .tableCell {
+  background: var(--neutral-hover-color-filled);
+}
+
+.tableCell {
+  font-size: var(--table-cell-font-size);
+  line-height: var(--table-cell-line-height);
+  font-weight: 300;
+  color: var(--neutral-on-background-color);
+  text-align: left;
+  border-bottom: 1px solid var(--neutral-very-light-on-background-color);
+  text-align: left;
+}
+.tableCell.alignCenter {
+  text-align: center;
+}
+.tableCell.alignRight {
+  text-align: right;
+}
+.tableCell.alignJustify {
+  text-align: justify;
+}
+
+.table.cellSizeSmall .tableCell {
+  --table-cell-font-size: var(--font-size-p-small);
+  --table-cell-line-height: var(--line-height-p-small);
+}
+
+.th {
+  color: var(--disabled-color);
+  padding: var(--header-cell-padding-top-bottom) var(--cell-padding-right)
+    var(--header-cell-padding-top-bottom) var(--cell-padding-left);
+}
+.td {
+  padding: var(--cell-padding-top-bottom) var(--cell-padding-right)
+    var(--cell-padding-top-bottom) var(--cell-padding-left);
+}
+.thSortButton {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  line-height: inherit;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  outline-offset: -4px;
+  padding: var(--header-cell-padding-top-bottom) 0
+    var(--header-cell-padding-top-bottom) var(--cell-padding-left);
+  margin: calc(-1 * var(--header-cell-padding-top-bottom))
+    calc(-1 * var(--cell-padding-right))
+    calc(-1 * var(--header-cell-padding-top-bottom))
+    calc(-1 * var(--cell-padding-left));
+}
+.thSortButton > svg {
+  flex-shrink: 0;
+  display: inline-block;
+  fill: currentColor;
+  margin-left: 0.25rem;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  opacity: 0;
+  height: var(--table-cell-line-height);
+  width: var(--table-cell-line-height);
+}
+.thSortButton.sortDirectionAsc,
+.thSortButton.sortDirectionDesc {
+  color: var(--neutral-on-background-color);
+}
+.thSortButton.sortDirectionAsc > svg,
+.thSortButton.sortDirectionDesc > svg {
+  opacity: 1;
+}
+.thSortButton.thSortButton.sortDirectionAsc > svg {
+  transform: rotate(180deg);
+}
+.tableCell.alignCenter .thSortButton {
+  justify-content: center;
+}
+.tableCell.alignRight .thSortButton {
+  justify-content: end;
+}

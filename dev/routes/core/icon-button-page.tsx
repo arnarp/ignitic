@@ -2,7 +2,6 @@ import { RouteComponentProps } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import { MdDelete } from 'react-icons/md'
-
 import { ButtonColor, IconButton } from '../../../src/core/icon-button'
 import { H2, H3 } from '../../../src/core/text'
 import { flexStyles } from '../../../src/layout/flex'
