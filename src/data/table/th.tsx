@@ -40,7 +40,7 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
         {...rest}
         ref={ref}
         className={cn(
-          css.tableCell,
+          css.tc,
           css.th,
           {
             [css.cellPaddingDense]: cellPadding == 'dense',

@@ -42,11 +42,11 @@
 .tr {
   vertical-align: middle;
 }
-.tr.hover:hover .tableCell {
+.tr.hover:hover .tc {
   background: var(--neutral-hover-color-filled);
 }
 
-.tableCell {
+.tc {
   font-size: var(--table-cell-font-size);
   line-height: var(--table-cell-line-height);
   font-weight: 300;
@@ -55,17 +55,17 @@
   border-bottom: 1px solid var(--neutral-very-light-on-background-color);
   text-align: left;
 }
-.tableCell.alignCenter {
+.tc.alignCenter {
   text-align: center;
 }
-.tableCell.alignRight {
+.tc.alignRight {
   text-align: right;
 }
-.tableCell.alignJustify {
+.tc.alignJustify {
   text-align: justify;
 }
 
-.table.cellSizeSmall .tableCell {
+.table.cellSizeSmall .tc {
   --table-cell-font-size: var(--font-size-p-small);
   --table-cell-line-height: var(--line-height-p-small);
 }
@@ -79,7 +79,7 @@
   padding: var(--cell-padding-top-bottom) var(--cell-padding-right)
     var(--cell-padding-top-bottom) var(--cell-padding-left);
 }
-.thSortButton {
+.sortButton {
   width: 100%;
   border: none;
   background: transparent;
@@ -97,7 +97,7 @@
     calc(-1 * var(--header-cell-padding-top-bottom))
     calc(-1 * var(--cell-padding-left));
 }
-.thSortButton > svg {
+.sortButton > svg {
   flex-shrink: 0;
   display: inline-block;
   fill: currentColor;
@@ -108,20 +108,20 @@
   height: var(--table-cell-line-height);
   width: var(--table-cell-line-height);
 }
-.thSortButton.sortDirectionAsc,
-.thSortButton.sortDirectionDesc {
+.sortButton.sortDirectionAsc,
+.sortButton.sortDirectionDesc {
   color: var(--neutral-on-background-color);
 }
-.thSortButton.sortDirectionAsc > svg,
-.thSortButton.sortDirectionDesc > svg {
+.sortButton.sortDirectionAsc > svg,
+.sortButton.sortDirectionDesc > svg {
   opacity: 1;
 }
-.thSortButton.thSortButton.sortDirectionAsc > svg {
+.sortButton.sortDirectionAsc > svg {
   transform: rotate(180deg);
 }
-.tableCell.alignCenter .thSortButton {
+.tc.alignCenter .sortButton {
   justify-content: center;
 }
-.tableCell.alignRight .thSortButton {
+.tc.alignRight .sortButton {
   justify-content: end;
 }

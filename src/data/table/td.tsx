@@ -25,7 +25,7 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
       {...rest}
       ref={ref}
       className={cn(
-        css.tableCell,
+        css.tc,
         css.td,
         {
           [css.cellPaddingDense]: cellPadding == 'dense',

@@ -13,7 +13,7 @@ export const THSortButton = React.forwardRef<HTMLButtonElement, Props>(
         ref={ref}
         {...spreadDown}
         className={cn(
-          css.thSortButton,
+          css.sortButton,
           {
             [css.sortDirectionAsc]: sortDirection == 'asc',
             [css.sortDirectionDesc]: sortDirection == 'desc'
