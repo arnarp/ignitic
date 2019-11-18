@@ -4,7 +4,7 @@
   border-collapse: collapse;
   --cell-padding-top-bottom: var(--spacer);
   --cell-padding-right: calc(var(--spacer) * 6);
-  --cell-padding-left: var(--spacer);
+  --cell-padding-left: calc(var(--spacer) * 3);
   --header-cell-padding-top-bottom: calc(var(--spacer) * 1.5);
   --table-cell-font-size: var(--font-size-p);
   --table-cell-line-height: var(--line-height-p);
@@ -21,6 +21,9 @@
 .table.cellPaddingDense,
 .th.cellPaddingDense {
   --header-cell-padding-top-bottom: var(--spacer);
+}
+.table.cellPaddingDense .tc:not(:first-child) {
+  --cell-padding-left: var(--spacer);
 }
 .table.cellPaddingCheckbox,
 .th.cellPaddingCheckbox,
