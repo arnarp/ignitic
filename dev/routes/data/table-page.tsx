@@ -100,7 +100,7 @@ export function TablePage(props: Props) {
         <H3 variant="h6">cellPadding='dense' cellSize='small'</H3>
       </div>
       <Surface color="secondary">
-        <Table padding={{ bottom: 'md' }} cellPadding="dense" cellSize="small">
+        <Table cellPadding="dense" cellSize="small">
           <THead>
             <TR>
               <TH sortDirection={sd}>

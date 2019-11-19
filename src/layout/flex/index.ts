@@ -17,5 +17,6 @@ export const flexStyles = {
   grow: css.grow,
   basis50Percent: css.basis50Percent,
   wrap: css.wrap,
-  paddingMd: css.paddingMd
+  paddingMd: css.paddingMd,
+  sidePaddingMd: css.sidePaddingMd
 }

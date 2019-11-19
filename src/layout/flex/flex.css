@@ -19,6 +19,11 @@
 .row.paddingMd {
   padding: var(--space-md);
 }
+.col.sidePaddingMd,
+.row.sidePaddingMd {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
 .inlineRow {
   display: inline-flex;
   flex-direction: row;
