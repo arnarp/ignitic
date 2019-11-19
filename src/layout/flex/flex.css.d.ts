@@ -3,6 +3,7 @@ export const spacingLg: string;
 export const spacingMd: string;
 export const spacingSm: string;
 export const row: string;
+export const paddingMd: string;
 export const inlineRow: string;
 export const justifyEnd: string;
 export const justifySpaceBetween: string;

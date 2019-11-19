@@ -1,17 +1,18 @@
 import { RouteComponentProps } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
-import { flexStyles } from '../../../src/layout/flex'
 import { H2, H3 } from '../../../src/core/text'
 import {
+  SortDirection,
   Table,
-  THead,
-  TR,
-  TH,
   TD,
+  TH,
+  THead,
   THSortButton,
-  SortDirection
+  TR
 } from '../../../src/data/table'
+import { flexStyles } from '../../../src/layout/flex'
+import { Paper } from '../../../src/surfaces/paper'
 import { Surface } from '../../../src/surfaces/surface'
 
 type Props = {} & RouteComponentProps
@@ -19,13 +20,11 @@ type Props = {} & RouteComponentProps
 export function TablePage(props: Props) {
   const [sd, setSd] = React.useState<SortDirection>(false)
   return (
-    <Surface
-      color="paper"
-      padding="md"
-      className={cn(flexStyles.col, flexStyles.spacingLg)}
-    >
-      <H2>Table</H2>
-      <H3 variant="h6">Normal</H3>
+    <Paper className={cn(flexStyles.col, flexStyles.spacingLg)}>
+      <div className={cn(flexStyles.col, flexStyles.paddingMd)}>
+        <H2>Table</H2>
+        <H3 variant="h6">Normal</H3>
+      </div>
       <Table>
         <THead>
           <TR>
@@ -58,7 +57,11 @@ export function TablePage(props: Props) {
           </TR>
         </tbody>
       </Table>
-      <H3 variant="h6">cellPadding='dense'</H3>
+
+      <div className={cn(flexStyles.row, flexStyles.paddingMd)}>
+        <H3 variant="h6">cellPadding='dense'</H3>
+      </div>
+
       <Surface color="neutral">
         <Table cellPadding="dense">
           <THead>
@@ -93,9 +96,11 @@ export function TablePage(props: Props) {
           </tbody>
         </Table>
       </Surface>
-      <H3 variant="h6">cellPadding='dense' cellSize='small'</H3>
+      <div className={cn(flexStyles.row, flexStyles.paddingMd)}>
+        <H3 variant="h6">cellPadding='dense' cellSize='small'</H3>
+      </div>
       <Surface color="secondary">
-        <Table cellPadding="dense" cellSize="small">
+        <Table padding={{ bottom: 'md' }} cellPadding="dense" cellSize="small">
           <THead>
             <TR>
               <TH sortDirection={sd}>
@@ -128,7 +133,7 @@ export function TablePage(props: Props) {
           </tbody>
         </Table>
       </Surface>
-    </Surface>
+    </Paper>
   )
 
   function onSortBtnClick(): (
