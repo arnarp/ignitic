@@ -1,19 +1,19 @@
-import { cn } from "itils/dist/misc/cn";
-import * as React from "react";
+import { cn } from 'itils/dist/misc/cn'
+import * as React from 'react'
 
-import css from "./button.css";
+import css from './button.css'
 
-export type ButtonSize = "small" | "medium" | "large";
-export type ButtonVariant = "text" | "filled" | "outlined";
-export type ButtonColor = "default" | "primary" | "secondary" | "neutral";
+export type ButtonSize = 'small' | 'medium' | 'large'
+export type ButtonVariant = 'text' | 'filled' | 'outlined'
+export type ButtonColor = 'default' | 'primary' | 'secondary' | 'neutral'
 
 type Props = {
-  pressedDownEffect?: boolean;
-  size?: ButtonSize;
-  variant: ButtonVariant;
-  color?: ButtonColor;
-  iconPosition?: "left" | "right";
-} & React.ButtonHTMLAttributes<HTMLElement>;
+  pressedDownEffect?: boolean
+  size?: ButtonSize
+  variant: ButtonVariant
+  color?: ButtonColor
+  iconPosition?: 'left' | 'right'
+} & React.ButtonHTMLAttributes<HTMLElement>
 
 export const Button = React.forwardRef<HTMLButtonElement, Props>(
   function Button(
@@ -22,9 +22,9 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
       className,
       pressedDownEffect,
       disabled,
-      size = "medium",
-      color = "neutral",
-      type = "button",
+      size = 'medium',
+      color = 'neutral',
+      type = 'button',
       variant,
       iconPosition,
       ...rest
@@ -40,23 +40,23 @@ export const Button = React.forwardRef<HTMLButtonElement, Props>(
         className={cn(
           css.button,
           {
-            [css.sizeLarge]: size == "large",
-            [css.sizeSmall]: size == "small",
-            [css.variantText]: variant == "text",
-            [css.variantFilled]: variant == "filled",
-            [css.variantOutlined]: variant == "outlined",
-            [css.colorDefault]: color == "default",
-            [css.colorPrimary]: color == "primary",
-            [css.colorSecondary]: color == "secondary",
-            [css.colorNeutral]: color == "neutral",
-            [css.iconOnLeft]: iconPosition == "left",
-            [css.iconOnRight]: iconPosition == "right"
+            [css.sizeLarge]: size == 'large',
+            [css.sizeSmall]: size == 'small',
+            [css.variantText]: variant == 'text',
+            [css.variantFilled]: variant == 'filled',
+            [css.variantOutlined]: variant == 'outlined',
+            [css.colorDefault]: color == 'default',
+            [css.colorPrimary]: color == 'primary',
+            [css.colorSecondary]: color == 'secondary',
+            [css.colorNeutral]: color == 'neutral',
+            [css.iconOnLeft]: iconPosition == 'left',
+            [css.iconOnRight]: iconPosition == 'right'
           },
           className
         )}
       >
         {children}
       </button>
-    );
+    )
   }
-);
+)

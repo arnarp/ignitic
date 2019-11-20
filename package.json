@@ -35,7 +35,7 @@
     "copyfiles": "^2.1.0",
     "css-modules-compiler": "^1.0.0",
     "itils": "^0.2.0",
-    "modulet": "^0.2.0",
+    "modulet": "^0.3.0",
     "parcel-bundler": "^1.11.0",
     "parcel-plugin-typed-css-modules": "^1.1.0",
     "postcss-modules": "^1.4.1",
