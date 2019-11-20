@@ -15,7 +15,7 @@ import { CellPadding, CellSize } from './types'
 type Props = {
   cellPadding?: CellPadding
   cellSize?: CellSize
-  layout: 'auto' | 'fixed'
+  layout?: 'auto' | 'fixed'
 } & React.TableHTMLAttributes<HTMLElement>
 
 export const Table = React.forwardRef<HTMLTableElement, Props>(function Table(
