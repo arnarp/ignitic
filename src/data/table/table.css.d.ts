@@ -1,4 +1,5 @@
 export const table: string;
+export const layoutFixed: string;
 export const cellPaddingDense: string;
 export const td: string;
 export const th: string;

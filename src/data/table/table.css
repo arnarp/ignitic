@@ -9,7 +9,9 @@
   --table-cell-font-size: var(--font-size-p);
   --table-cell-line-height: var(--line-height-p);
 }
-
+.table.layoutFixed {
+  table-layout: fixed;
+}
 .table.cellPaddingDense,
 .td.cellPaddingDense,
 .th.cellPaddingDense {
@@ -56,8 +58,17 @@
   font-weight: 300;
   color: var(--neutral-on-background-color);
   text-align: left;
-  box-shadow: inset 0px -1px 0px 0px var(--neutral-seperator-on-bakcground-color);
   text-align: left;
+}
+@media screen {
+  .tc {
+    box-shadow: inset 0px -1px 0px 0px var(--neutral-seperator-on-bakcground-color);
+  }
+}
+@media print {
+  .tc {
+    border-bottom: 1px solid var(--neutral-seperator-on-bakcground-color);
+  }
 }
 .tc.alignCenter {
   text-align: center;
