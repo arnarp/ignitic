@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
 import { App } from './app'
+import { IgniticSettingsContext } from '../src/context/ignitic-settings-context'
 
 declare global {
   const enum Env {
@@ -20,4 +21,11 @@ declare global {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root') as HTMLElement)
+const container = document.getElementById('root') as HTMLElement
+
+ReactDOM.render(
+  <IgniticSettingsContext.Provider value={{ container }}>
+    <App />
+  </IgniticSettingsContext.Provider>,
+  container
+)

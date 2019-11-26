@@ -42,15 +42,15 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.5.0",
-    "react-pose": "^4.0.8",
     "tslib": "^1.9.3",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "framer-motion": "^1.6.17"
   },
   "peerDependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "tslib": "^1.9.3",
-    "react-pose": "^4.0.8",
+    "framer-motion": "^1.6.17",
     "@reach/router": "^1.2.1",
     "itils": "^0.2.0"
   },

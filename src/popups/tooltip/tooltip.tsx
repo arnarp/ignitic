@@ -1,15 +1,16 @@
+import { AnimationProps, motion } from 'framer-motion'
 import { cn } from 'itils/dist/misc/cn'
+import { Rect } from 'itils/dist/types/dom'
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-
 import { useIsScrolling } from '../../hooks/use-is-scrolling'
-import { useScrollPosition } from '../../hooks/use-scroll-position'
+import { ScrollPosition, useScrollPosition } from '../../hooks/use-scroll-position'
 import { Surface } from '../../surfaces/surface'
 import { BaseComponentProps } from '../../types/base-component-props'
 import { getBox } from '../../utils/getBox'
-import { PosedTooltipDiv } from './posed-tooltip-div'
 import css from './tooltip.css'
 import { TooltipPlacement } from './types'
+
 
 type Props = {
   /**
@@ -28,7 +29,7 @@ type Props = {
   enterDelay?: number
 } & BaseComponentProps
 
-type State = 'measure before visible' | 'hidden' | 'visible'
+type State = 'measureBeforeVisible' | 'hidden' | 'visible'
 
 export function Tooltip({
   children,
@@ -51,9 +52,9 @@ export function Tooltip({
     setState('hidden')
   }, [placement, isScrolling])
   React.useEffect(() => {
-    if (state == 'measure before visible') {
+    if (state == 'measureBeforeVisible') {
       measureTimeoutRef.current = setTimeout(() => {
-        if (state == 'measure before visible') {
+        if (state == 'measureBeforeVisible') {
           setState('visible')
         }
       }, 100)
@@ -65,7 +66,7 @@ export function Tooltip({
   React.useEffect(() => {
     function onMouseEnter(ev: MouseEvent) {
       mouseEnterTimeoutRef.current = setTimeout(() => {
-        setState('measure before visible')
+        setState('measureBeforeVisible')
       }, enterDelay)
     }
     function onMouseUp() {
@@ -94,35 +95,86 @@ export function Tooltip({
       }
     }
   }, [triggerRef, enterDelay, placement])
+  const variants: AnimationProps['variants'] = {
+    measureBeforeVisible: {
+      y: calcY(placement, triggerBox, tooltipBox, 0, scrollPosition),
+      x: calcX(placement, triggerBox, tooltipBox, 0, scrollPosition),
+      opacity: 0,
+      transition: {
+        duration: 0
+      }
+    },
+    hidden: {
+      y: calcY(placement, triggerBox, tooltipBox, 0, scrollPosition),
+      x: calcX(placement, triggerBox, tooltipBox, 0, scrollPosition),
+      opacity: 0
+    },
+    visible: {
+      y: calcY(placement, triggerBox, tooltipBox, 10, scrollPosition),
+      x: calcX(placement, triggerBox, tooltipBox, 10, scrollPosition),
+      opacity: 1
+    }
+  }
   return ReactDOM.createPortal(
-    <PosedTooltipDiv
-      pose={pose(state)}
+    <motion.div
       ref={tooltipRef}
       className={cn(css.t, className)}
       role="tooltip"
       key={id}
       id={id}
-      triggerBox={triggerBox}
-      tooltipBox={tooltipBox}
-      scrollPosition={scrollPosition}
-      placement={placement}
+      variants={variants}
+      animate={state}
     >
       <Surface className={css.inner} color="neutral" rounded>
         {children}
       </Surface>
-    </PosedTooltipDiv>,
+    </motion.div>,
     document.body
   )
 }
 
-function pose(state: State): 'hidden' | 'visible' | 'measureBeforeVisible' {
-  switch (state) {
-    case 'visible':
-      return 'visible'
-    case 'measure before visible':
-      return 'measureBeforeVisible'
-    case 'hidden':
+function calcX(
+  placement: TooltipPlacement,
+  triggerBox: Rect,
+  tooltipBox: Rect,
+  delta: number,
+  scrollPosition: ScrollPosition
+) {
+  switch (placement) {
+    case 'left':
+      return triggerBox.left - tooltipBox.width - delta + scrollPosition.x
+    case 'right':
+      return triggerBox.right + delta + scrollPosition.x
+    case 'top':
+    case 'bottom':
     default:
-      return 'hidden'
+      return (
+        triggerBox.left +
+        (triggerBox.width - tooltipBox.width) / 2 +
+        scrollPosition.x
+      )
+  }
+}
+function calcY(
+  placement: TooltipPlacement,
+  triggerBox: Rect,
+  tooltipBox: Rect,
+  delta: number,
+  scrollPosition: ScrollPosition
+) {
+  switch (placement) {
+    case 'left':
+    case 'right':
+      return (
+        triggerBox.top +
+        triggerBox.height / 2 -
+        tooltipBox.height / 2 +
+        scrollPosition.y
+      )
+    case 'top':
+      return triggerBox.top - tooltipBox.height - delta + scrollPosition.y
+    case 'bottom':
+    default:
+      return triggerBox.bottom + delta + scrollPosition.y
   }
 }
