@@ -6,7 +6,7 @@ export const flexStyles = {
   spacingMd: css.spacingMd,
   spacingSm: css.spacingSm,
   row: css.row,
-  inlineRow: css.inlineRow,
+  inline: css.inline,
   justifyEnd: css.justifyEnd,
   justifySpaceBetween: css.justifySpaceBetween,
   justifyStart: css.justifyStart,
