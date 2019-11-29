@@ -25,7 +25,8 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "@reach/router": "^1.2.1"
+    "@reach/router": "^1.2.1",
+    "react-laag": "^1.5.1"
   },
   "devDependencies": {
     "@types/reach__router": "^1.2.3",

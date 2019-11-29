@@ -3,9 +3,10 @@ import * as React from 'react'
 import { cn } from 'itils/dist/misc/cn'
 import { H2, Span } from '../../../src/core/text'
 import { useUUID } from '../../../src/hooks/use-uuid'
-import { Tooltip, TooltipPlacement } from '../../../src/popups/tooltip'
+import { TooltipPlacement, Tooltip } from '../../../src/popups/tooltip'
 import { flexStyles } from '../../../src/layout/flex'
 import { Button } from '../../../src/core/button'
+import { justifyCenter } from '../../../src/layout/flex/flex.css'
 
 type Props = {} & RouteComponentProps
 
@@ -20,7 +21,9 @@ export function TooltipPage(props: Props) {
   const t2Id = useUUID()
   const t3Id = useUUID()
   const t4Id = useUUID()
-  const [placement, setPlacement] = React.useState<TooltipPlacement>('bottom')
+  const [placement, setPlacement] = React.useState<TooltipPlacement>(
+    'BOTTOM_CENTER'
+  )
   const [enterDelay, setEnterDelay] = React.useState<number>(100)
   console.log('Tooltip page')
   return (
@@ -48,10 +51,10 @@ export function TooltipPage(props: Props) {
             setPlacement(event.target.value as TooltipPlacement)
           }
         >
-          <option value="top">top</option>
-          <option value="bottom">bottom</option>
-          <option value="left">left</option>
-          <option value="right">right</option>
+          <option value="TOP_CENTER">top</option>
+          <option value="BOTTOM_CENTER">BOTTOM_CENTER</option>
+          <option value="LEFT_CENTER">left</option>
+          <option value="RIGHT_CENTER">right</option>
         </select>
       </label>
       <label>
@@ -62,8 +65,9 @@ export function TooltipPage(props: Props) {
           onChange={event => setEnterDelay(Number(event.target.value))}
         />
       </label>
-      <div className={cn(flexStyles.col, flexStyles.spacingLg)}>
+      <div className={cn(flexStyles.col, flexStyles.spacingLg, justifyCenter)}>
         <Button
+          style={{ width: '8rem' }}
           variant="outlined"
           color="default"
           aria-describedby={t1Id}
@@ -72,6 +76,7 @@ export function TooltipPage(props: Props) {
           Tooltip One
         </Button>
         <Button
+          style={{ width: '8rem' }}
           variant="outlined"
           color="default"
           aria-describedby={t2Id}
@@ -80,6 +85,7 @@ export function TooltipPage(props: Props) {
           Tooltip Two
         </Button>
         <Button
+          style={{ width: '8rem' }}
           variant="outlined"
           color="default"
           aria-describedby={t3Id}
@@ -88,6 +94,7 @@ export function TooltipPage(props: Props) {
           Tooltip Three
         </Button>
         <Button
+          style={{ width: '8rem' }}
           variant="outlined"
           color="default"
           aria-describedby={t4Id}

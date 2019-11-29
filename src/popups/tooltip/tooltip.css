@@ -1,10 +1,15 @@
-.t {
+.inner {
+  box-shadow: 0px 1px 3px 0px var(--box-shadow-main-color, rgba(0, 0, 0, 0.2)),
+    0px 1px 1px 0px var(--box-shadow-sharpen-color, rgba(0, 0, 0, 0.14)),
+    0px 2px 1px -1px var(--box-shadow-bottom-accent-color, rgba(0, 0, 0, 0.12));
+  padding: 4px 8px;
+}
+
+.tooltip {
   position: absolute;
-  top: 0;
-  left: 0;
   border-radius: var(--border-radius, 0.25rem);
-  pointer-events: none;
-  /* color: #fff; */
+  transform-origin: center center;
+  z-index: var(--zindex-tooltip, 1070);
   font-size: 0.625rem;
   max-width: 300px;
   line-height: 1.4em;
@@ -14,11 +19,4 @@
   /* background-color: #616161; */
   background: transparent;
   pointer-events: none;
-  z-index: var(--zindex-tooltip, 1070);
-}
-.inner {
-  box-shadow: 0px 1px 3px 0px var(--box-shadow-main-color, rgba(0, 0, 0, 0.2)),
-    0px 1px 1px 0px var(--box-shadow-sharpen-color, rgba(0, 0, 0, 0.14)),
-    0px 2px 1px -1px var(--box-shadow-bottom-accent-color, rgba(0, 0, 0, 0.12));
-  padding: 4px 8px;
 }
