@@ -21,42 +21,26 @@ export function TooltipPage(props: Props) {
   const t2Id = useUUID()
   const t3Id = useUUID()
   const t4Id = useUUID()
-  const [placement, setPlacement] = React.useState<TooltipPlacement>(
-    'BOTTOM_CENTER'
-  )
   const [enterDelay, setEnterDelay] = React.useState<number>(100)
-  console.log('Tooltip page')
   return (
-    <div className={cn(flexStyles.col, flexStyles.spacingSm)}>
-      <H2
-        style={{ width: '50vw', background: 'beige' }}
-        aria-describedby={h2Id}
-        ref={h2Ref}
-      >
+    <div
+      className={cn(
+        flexStyles.col,
+        flexStyles.alignStart,
+        flexStyles.spacingSm
+      )}
+    >
+      <H2 style={{ width: 'fit-content' }} aria-describedby={h2Id} ref={h2Ref}>
         Popups / Tooltip
       </H2>
       <Tooltip
         id={h2Id}
         triggerRef={h2Ref}
         enterDelay={enterDelay}
-        placement={placement}
+        placement="BOTTOM_CENTER"
       >
         <Span>This is a tooltip for 'Popups / Tooltip' header</Span>
       </Tooltip>
-      <label>
-        placement
-        <select
-          value={placement}
-          onChange={event =>
-            setPlacement(event.target.value as TooltipPlacement)
-          }
-        >
-          <option value="TOP_CENTER">top</option>
-          <option value="BOTTOM_CENTER">BOTTOM_CENTER</option>
-          <option value="LEFT_CENTER">left</option>
-          <option value="RIGHT_CENTER">right</option>
-        </select>
-      </label>
       <label>
         enterDelay
         <input
@@ -65,74 +49,70 @@ export function TooltipPage(props: Props) {
           onChange={event => setEnterDelay(Number(event.target.value))}
         />
       </label>
-      <div className={cn(flexStyles.col, flexStyles.spacingLg, justifyCenter)}>
+      <div className={cn(flexStyles.col, flexStyles.spacingMd, justifyCenter)}>
         <Button
-          style={{ width: '8rem' }}
           variant="outlined"
           color="default"
           aria-describedby={t1Id}
           ref={t1Ref}
         >
-          Tooltip One
-        </Button>
-        <Button
-          style={{ width: '8rem' }}
-          variant="outlined"
-          color="default"
-          aria-describedby={t2Id}
-          ref={t2Ref}
-        >
-          Tooltip Two
-        </Button>
-        <Button
-          style={{ width: '8rem' }}
-          variant="outlined"
-          color="default"
-          aria-describedby={t3Id}
-          ref={t3Ref}
-        >
-          Tooltip Three
-        </Button>
-        <Button
-          style={{ width: '8rem' }}
-          variant="outlined"
-          color="default"
-          aria-describedby={t4Id}
-          ref={t4Ref}
-        >
-          Tooltip Four
+          TOP_CENTER
         </Button>
         <Tooltip
           id={t1Id}
           triggerRef={t1Ref}
           enterDelay={enterDelay}
-          placement={placement}
+          placement="TOP_CENTER"
         >
-          <Span>Tooltip One</Span>
+          <Span>TOP_CENTER</Span>
         </Tooltip>
+        <Button
+          variant="outlined"
+          color="default"
+          aria-describedby={t2Id}
+          ref={t2Ref}
+        >
+          BOTTOM_CENTER
+        </Button>
         <Tooltip
           id={t2Id}
           triggerRef={t2Ref}
           enterDelay={enterDelay}
-          placement={placement}
+          placement="BOTTOM_CENTER"
         >
-          <Span>Tooltip Two</Span>
+          <Span>BOTTOM_CENTER</Span>
         </Tooltip>
+        <Button
+          variant="outlined"
+          color="default"
+          aria-describedby={t3Id}
+          ref={t3Ref}
+        >
+          LEFT_CENTER
+        </Button>
         <Tooltip
           id={t3Id}
           triggerRef={t3Ref}
           enterDelay={enterDelay}
-          placement={placement}
+          placement="LEFT_CENTER"
         >
-          <Span>Tooltip Three</Span>
+          <Span>LEFT_CENTER</Span>
         </Tooltip>
+        <Button
+          variant="outlined"
+          color="default"
+          aria-describedby={t4Id}
+          ref={t4Ref}
+        >
+          RIGHT_CENTER
+        </Button>
         <Tooltip
           id={t4Id}
           triggerRef={t4Ref}
           enterDelay={enterDelay}
-          placement={placement}
+          placement="RIGHT_CENTER"
         >
-          <Span>Tooltip Four</Span>
+          <Span>RIGHT_CENTER</Span>
         </Tooltip>
       </div>
     </div>
