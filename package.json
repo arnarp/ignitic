@@ -26,7 +26,9 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "react-laag": "^1.5.1"
+    "react-laag": "^1.5.1",
+    "wicg-inert": "^3.0.0",
+    "react-icons": "^3.5.0"
   },
   "devDependencies": {
     "@types/reach__router": "^1.2.3",
@@ -42,7 +44,6 @@
     "postcss-modules": "^1.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-icons": "^3.5.0",
     "tslib": "^1.9.3",
     "typescript": "^3.3.3333",
     "framer-motion": "^1.6.17"

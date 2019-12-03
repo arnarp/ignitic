@@ -1,0 +1,35 @@
+.sheet {
+  position: fixed;
+  background: var(--paper-surface-color, var(--background-color, #fff));
+  margin: var(--space-md) var(--space-md) 0 var(--space-md);
+  padding-bottom: var(--space-md);
+  width: calc(100vw - 2 * var(--space-md));
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  min-height: calc(50vh);
+  max-height: calc(100vh - var(--space-xl) - var(--space-md));
+  top: 100vh;
+  z-index: var(--zindex-modal);
+  --close-btn-height-width: calc(1.5rem + var(--line-height-p));
+}
+.header {
+  padding-left: var(--close-btn-height-width);
+}
+.header .line {
+  content: '';
+  height: 0.1rem;
+  width: 5rem;
+  border-radius: 0.1rem;
+  background-color: var(--neutral-on-background-color);
+  margin: auto;
+}
+.content {
+  margin: var(--space-md) 0;
+  padding: 0 var(--space-md);
+  min-height: calc(50vh - var(--close-btn-height-width) - var(--space-md) * 3);
+  max-height: calc(
+    100vh - var(--space-xl) - var(--close-btn-height-width) - var(--space-md) *
+      4
+  );
+  overflow-y: auto;
+}

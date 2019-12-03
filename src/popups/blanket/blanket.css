@@ -1,0 +1,14 @@
+.blanket {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--blanket-color);
+  opacity: 0;
+  z-index: var(--zindex-blanket);
+  transform: translateZ(0);
+}

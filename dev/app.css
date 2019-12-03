@@ -10,6 +10,7 @@
   --secondary-surface-color: #ffacaa; /* melon */
 
   --disabled-color: rgba(0, 0, 0, 0.54);
+  --blanket-color: rgba(0, 0, 0, 0.7);
 
   /**
     * Neutral color
@@ -97,7 +98,7 @@
   --zindex-dropdown: 1000;
   --zindex-sticky: 1020;
   --zindex-fixed: 1030;
-  --zindex-modal-backdrop: 1040;
+  --zindex-blanket: 1040;
   --zindex-modal: 1050;
   --zindex-popover: 1060;
   --zindex-tooltip: 1070;
@@ -153,7 +154,41 @@
   --font-size-h1: 4rem;
   --line-height-h1: 5rem; */
 }
-
+html,
+body {
+  background: var(--background-color);
+  scrollbar-face-color: var(--neutral-on-background-color);
+  scrollbar-base-color: var(--neutral-on-background-color);
+  scrollbar-3dlight-color: var(--neutral-on-background-color);
+  scrollbar-highlight-color: var(--neutral-on-background-color);
+  scrollbar-track-color: var(--background-color);
+  scrollbar-arrow-color: var(--background-color);
+  scrollbar-shadow-color: var(--neutral-on-background-color);
+  scrollbar-dark-shadow-color: var(--neutral-on-background-color);
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+::-webkit-scrollbar-button {
+  background-color: #666;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--neutral-on-background-color);
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #666;
+}
+::-webkit-scrollbar-corner {
+  background-color: var(--neutral-on-background-color);
+}
+::-webkit-resizer {
+  background-color: #666;
+}
 .container {
   background: var(--background-color);
   min-height: 100vh;
@@ -175,6 +210,7 @@
   --secondary-surface-color: #3d0a09; /*  */
 
   --disabled-color: rgba(255, 255, 255, 0.5);
+  --blanket-color: rgba(0, 0, 0, 0.7);
 
   /**
     * Neutral color

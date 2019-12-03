@@ -1,5 +1,5 @@
 .button {
-  --btn-font-size: 1.5rem;
+  --btn-font-size: var(--line-height-p);
   font-size: var(--btn-font-size);
   background: none;
   border: none;
@@ -14,10 +14,10 @@
 }
 
 .button.sizeSmall {
-  --btn-font-size: 1rem;
+  --btn-font-size: var(--line-height-p-small);
 }
 .button.sizeLarge {
-  --btn-font-size: 2rem;
+  --btn-font-size: var(--line-height-p-lead);
 }
 
 .button:active {

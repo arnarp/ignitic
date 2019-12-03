@@ -25,8 +25,10 @@ export function App(props: Props) {
   React.useEffect(() => {
     if (theme == 'dark') {
       document.body.classList.add(css.dark)
+      document.documentElement.classList.add(css.dark)
     } else {
       document.body.classList.remove(css.dark)
+      document.documentElement.classList.remove(css.dark)
     }
   })
   return (
@@ -92,6 +94,12 @@ export function App(props: Props) {
             <H3 variant="h4">Popups</H3>
             <Link className={linkStyles.neutral} to="/popups/tooltip">
               Tooltip
+            </Link>
+            <Link className={linkStyles.neutral} to="/popups/action-sheet">
+              Action sheet
+            </Link>
+            <Link className={linkStyles.neutral} to="/popups/blanket">
+              Blanket
             </Link>
             <H3 variant="h4">Data</H3>
             <Link className={linkStyles.neutral} to="/data/table">

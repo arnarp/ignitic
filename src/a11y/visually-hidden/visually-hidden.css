@@ -1,0 +1,11 @@
+.style {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 0rem;
+  width: 0rem;
+  margin: -0.1rem;
+  padding: 0;
+  border: 0;
+  text-indent: -99.9rem;
+}
