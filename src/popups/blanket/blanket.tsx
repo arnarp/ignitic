@@ -3,7 +3,11 @@ import css from './blanket.css'
 import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from 'itils/dist/misc/cn'
 
-type Props = { show: boolean; onClick?: () => void; className?: string }
+type Props = {
+  show: boolean
+  onClick?: () => void
+  className?: string
+} & React.DOMAttributes<HTMLDivElement>
 
 export const Blanket = React.forwardRef<HTMLDivElement, Props>(function Blanket(
   { show, onClick, className, ...rest },

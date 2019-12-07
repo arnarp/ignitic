@@ -5,6 +5,8 @@ import { version } from '../package.json'
 import { linkStyles } from '../src/core/link'
 import { H1, H2, H3 } from '../src/core/text'
 import { useLocalStorage } from '../src/hooks/use-local-storage'
+import { Label } from '../src/inputs/label'
+import { Switch } from '../src/inputs/switch'
 import { Normalize } from '../src/styles/normalize/normalize'
 import * as css from './app.css'
 import { Core } from './routes/core'
@@ -38,26 +40,16 @@ export function App(props: Props) {
         <header role="banner" className={css.header}>
           <H1>Ignitic</H1>
           <form name="switch theme" noValidate autoComplete="off">
-            <label>
-              Light theme
-              <input
-                type="radio"
-                name="theme"
-                checked={theme == 'light'}
-                onChange={() => {}}
-                onClick={() => setTheme('light')}
+            <Label>
+              <span>Light/Dark</span>
+              <Switch
+                onChange={() =>
+                  theme == 'light' ? setTheme('dark') : setTheme('light')
+                }
+                color="neutral"
+                checked={theme != 'light'}
               />
-            </label>
-            <label>
-              Dark theme
-              <input
-                type="radio"
-                name="theme"
-                checked={theme == 'dark'}
-                onChange={() => {}}
-                onClick={() => setTheme('dark')}
-              />
-            </label>
+            </Label>
           </form>
         </header>
         <div className={css.sidebar}>

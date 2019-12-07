@@ -91,14 +91,11 @@ export function ActionSheet(props: Props) {
   console.log({ open: props.open, sheetHeight })
   return ReactDOM.createPortal(
     <>
-      <Blanket
-        show={props.open}
-        onClick={props.onClose}
-        aria-labelledby={headingId}
-      />
+      <Blanket show={props.open} onClick={props.onClose} />
       <AnimatePresence>
         {props.open && (
           <motion.div
+            aria-labelledby={headingId}
             key={headingId}
             ref={sheetRef}
             role="dialog"

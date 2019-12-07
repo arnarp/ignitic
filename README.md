@@ -22,5 +22,5 @@ npm publish
 
 ### New css variables
 
---neutral-seperator-on-bakcground-color
+--neutral-seperator-on-background-color
 rgba(81, 81, 81, 1);

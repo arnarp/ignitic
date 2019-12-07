@@ -62,12 +62,12 @@
 }
 @media screen {
   .tc {
-    box-shadow: inset 0px -1px 0px 0px var(--neutral-seperator-on-bakcground-color);
+    box-shadow: inset 0px -1px 0px 0px var(--neutral-seperator-on-background-color);
   }
 }
 @media print {
   .tc {
-    border-bottom: 1px solid var(--neutral-seperator-on-bakcground-color);
+    border-bottom: 1px solid var(--neutral-seperator-on-background-color);
   }
 }
 .tc.alignCenter {

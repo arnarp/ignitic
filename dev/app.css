@@ -18,7 +18,7 @@
   --neutral-on-background-color: #222222;
   --neutral-light-on-background-color: #dcdcdc;
   --neutral-very-light-on-background-color: #f5f5f5; /* 4% darker than white */
-  --neutral-seperator-on-bakcground-color: rgba(224, 224, 224, 1);
+  --neutral-seperator-on-background-color: rgba(224, 224, 224, 1);
   --neutral-hover-color-text: rgba(0, 0, 0, 0.08);
   --neutral-hover-color-filled: rgba(0, 0, 0, 0.08);
   --text-on-neutral-color: rgba(0, 0, 0, 0.87);
@@ -219,7 +219,7 @@ body {
   --neutral-light-on-background-color: #4e4e4e;
   /* --neutral-very-light-on-background-color: rgba(255, 255, 255, 0.64); */
   --neutral-very-light-on-background-color: #3a3a3a;
-  --neutral-seperator-on-bakcground-color: rgba(81, 81, 81, 1);
+  --neutral-seperator-on-background-color: rgba(81, 81, 81, 1);
   --neutral-hover-color-text: rgba(255, 255, 255, 0.1);
   --neutral-hover-color-filled: rgba(255, 255, 255, 0.08);
   --text-on-neutral-color: white;
