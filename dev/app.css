@@ -327,7 +327,31 @@ body {
   grid-area: footer;
 }
 
-@media only screen and (min-width: 500px) {
+/* Extra Small (xs) 512px */
+@media (min-width: 32rem) {
+}
+
+/* Small (sm) 640px */
+@media (min-width: 40rem) {
+  /* ... */
+}
+
+/* Medium (md) 768px */
+@media (min-width: 48rem) {
+  /* ... */
+}
+
+/* Large (lg) 1024px */
+@media (min-width: 64rem) {
+  /* ... */
+}
+
+/* Extra Large (xl) 1280px */
+@media (min-width: 80rem) {
+  /* ... */
+}
+
+@media only screen and (min-width: 32rem) {
   .container {
     grid-template-columns: 20% auto;
     grid-template-areas:
@@ -337,7 +361,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 40rem) {
   .container {
     grid-gap: 20px;
     grid-template-columns: 200px auto;

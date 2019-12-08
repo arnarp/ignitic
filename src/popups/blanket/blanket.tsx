@@ -7,10 +7,10 @@ type Props = {
   show: boolean
   onClick?: () => void
   className?: string
-} & React.DOMAttributes<HTMLDivElement>
+}
 
 export const Blanket = React.forwardRef<HTMLDivElement, Props>(function Blanket(
-  { show, onClick, className, ...rest },
+  { show, onClick, className },
   ref
 ) {
   return (

@@ -4,7 +4,6 @@ import * as React from 'react'
 
 import { H2, H3, H4, P } from '../../../src/core/text'
 import { flexStyles } from '../../../src/layout/flex'
-import { Paper } from '../../../src/surfaces/paper'
 import { Surface } from '../../../src/surfaces/surface'
 
 const items = [0, 1, 2]
