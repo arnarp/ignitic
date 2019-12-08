@@ -11,7 +11,8 @@ import {
   THSortButton,
   TR
 } from '../../../src/data/table'
-import { flexStyles } from '../../../src/layout/flex'
+import { display } from '../../../src/styles/display'
+import { flex } from '../../../src/styles/flex'
 import { Paper } from '../../../src/surfaces/paper'
 import { Surface } from '../../../src/surfaces/surface'
 
@@ -20,8 +21,8 @@ type Props = {} & RouteComponentProps
 export function TablePage(props: Props) {
   const [sd, setSd] = React.useState<SortDirection>(false)
   return (
-    <Paper className={cn(flexStyles.col, flexStyles.spacingLg)}>
-      <div className={cn(flexStyles.col, flexStyles.paddingMd)}>
+    <Paper className={cn(display.flex, flex.col, flex.spacingLg)}>
+      <div className={cn(display.flex, flex.col, flex.paddingMd)}>
         <H2>Table</H2>
         <H3 variant="h6">Normal</H3>
       </div>
@@ -58,7 +59,7 @@ export function TablePage(props: Props) {
         </tbody>
       </Table>
 
-      <div className={cn(flexStyles.row, flexStyles.paddingMd)}>
+      <div className={cn(display.flex, flex.row, flex.paddingMd)}>
         <H3 variant="h6">cellPadding='dense'</H3>
       </div>
 
@@ -96,7 +97,7 @@ export function TablePage(props: Props) {
           </tbody>
         </Table>
       </Surface>
-      <div className={cn(flexStyles.row, flexStyles.paddingMd)}>
+      <div className={cn(display.flex, flex.row, flex.paddingMd)}>
         <H3 variant="h6">cellPadding='dense' cellSize='small'</H3>
       </div>
       <Surface color="secondary">

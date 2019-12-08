@@ -1,17 +1,18 @@
+import { AnimatePresence, motion } from 'framer-motion'
+import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import ReactDOM from 'react-dom'
 import { MdClose } from 'react-icons/md'
-import { IgniticSettingsContext } from '../../context/ignitic-settings-context'
-import { Blanket } from '../blanket'
-import { AnimatePresence, motion } from 'framer-motion'
-import css from './action-sheet.css'
-import { VisuallyHidden } from '../../a11y/visually-hidden'
-import { useUUID } from '../../hooks/use-uuid'
 import 'wicg-inert'
-import { usePrevious } from '../../hooks/use-previous'
+import { VisuallyHidden } from '../../a11y/visually-hidden'
+import { IgniticSettingsContext } from '../../context/ignitic-settings-context'
 import { IconButton } from '../../core/icon-button'
-import { cn } from 'itils/dist/misc/cn'
-import { flexStyles } from '../../layout/flex'
+import { usePrevious } from '../../hooks/use-previous'
+import { useUUID } from '../../hooks/use-uuid'
+import { display } from '../../styles/display'
+import { flex } from '../../styles/flex'
+import { Blanket } from '../blanket'
+import css from './action-sheet.css'
 
 declare global {
   interface HTMLElement {
@@ -113,7 +114,12 @@ export function ActionSheet(props: Props) {
             }}
           >
             <div
-              className={cn(flexStyles.row, flexStyles.alignCenter, css.header)}
+              className={cn(
+                display.flex,
+                flex.row,
+                flex.alignCenter,
+                css.header
+              )}
             >
               <VisuallyHidden>
                 <h2 id={headingId} tabIndex={-1} ref={h2Ref}>

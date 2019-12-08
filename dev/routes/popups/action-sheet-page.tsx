@@ -1,10 +1,11 @@
 import { RouteComponentProps } from '@reach/router'
-import * as React from 'react'
 import { cn } from 'itils/dist/misc/cn'
+import * as React from 'react'
+import { Button } from '../../../src/core/button'
 import { H2, P } from '../../../src/core/text'
 import { ActionSheet } from '../../../src/popups/action-sheet'
-import { flexStyles } from '../../../src/layout/flex'
-import { Button } from '../../../src/core/button'
+import { display } from '../../../src/styles/display'
+import { flex } from '../../../src/styles/flex'
 
 type Props = {} & RouteComponentProps
 
@@ -12,13 +13,14 @@ export function ActionSheetPage(props: Props) {
   const [show, setShow] = React.useState(false)
   const triggerBtnRef = React.useRef<HTMLButtonElement>(null)
   return (
-    <div className={cn(flexStyles.col, flexStyles.alignStart)}>
+    <div className={cn(display.flex, flex.col, flex.alignStart)}>
       <H2 style={{ width: 'fit-content' }}>Popups / ActionSheet</H2>
       <div
         className={cn(
-          flexStyles.col,
-          flexStyles.alignCenter,
-          flexStyles.justifyCenter
+          display.flex,
+          flex.col,
+          flex.alignCenter,
+          flex.justifyCenter
         )}
       >
         <Button

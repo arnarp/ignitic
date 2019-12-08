@@ -1,23 +1,25 @@
 import { RouteComponentProps } from '@reach/router'
-import * as React from 'react'
 import { cn } from 'itils/dist/misc/cn'
-import { H2, Span } from '../../../src/core/text'
-import { Blanket } from '../../../src/popups/blanket'
-import { flexStyles } from '../../../src/layout/flex'
+import * as React from 'react'
 import { Button } from '../../../src/core/button'
+import { H2 } from '../../../src/core/text'
+import { Blanket } from '../../../src/popups/blanket'
+import { display } from '../../../src/styles/display'
+import { flex } from '../../../src/styles/flex'
 
 type Props = {} & RouteComponentProps
 
 export function BlanketPage(props: Props) {
   const [show, setShow] = React.useState(false)
   return (
-    <div className={cn(flexStyles.col, flexStyles.alignStart)}>
+    <div className={cn(display.flex, flex.col, flex.alignStart)}>
       <H2 style={{ width: 'fit-content' }}>Popups / Blanket</H2>
       <div
         className={cn(
-          flexStyles.col,
-          flexStyles.alignCenter,
-          flexStyles.justifyCenter
+          display.flex,
+          flex.col,
+          flex.alignCenter,
+          flex.justifyCenter
         )}
       >
         <Button

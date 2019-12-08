@@ -5,7 +5,8 @@ import * as React from 'react'
 import { H2 } from '../../../src/core/text'
 import { Label } from '../../../src/inputs/label'
 import { Switch } from '../../../src/inputs/switch'
-import { flexStyles } from '../../../src/layout/flex'
+import { flex } from '../../../src/styles/flex'
+import { display } from '../../../src/styles/display'
 
 type Props = {} & RouteComponentProps
 
@@ -13,7 +14,7 @@ export function SwitchPage(props: Props) {
   const [checked, setChecked] = React.useState(false)
   console.log({ checked })
   return (
-    <div className={cn(flexStyles.col, flexStyles.spacingLg)}>
+    <div className={cn(display.flex, flex.col, flex.spacingLg)}>
       <H2>Switch</H2>
       <Label>
         <span>Switch</span>

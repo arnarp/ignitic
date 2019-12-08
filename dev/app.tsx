@@ -12,7 +12,7 @@ import * as css from './app.css'
 import { Core } from './routes/core'
 import { Data } from './routes/data'
 import { Inputs } from './routes/inputs'
-import { Layout } from './routes/layout'
+import { Styles } from './routes/styles'
 import { Popups } from './routes/popups'
 import { Surfaces } from './routes/surfaces'
 
@@ -72,8 +72,11 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/inputs/switch">
               Switch
             </Link>
-            <H3 variant="h4">Layout</H3>
-            <Link className={linkStyles.neutral} to="/layout/flex">
+            <H3 variant="h4">Styles</H3>
+            <Link className={linkStyles.neutral} to="/styles/display">
+              Display
+            </Link>
+            <Link className={linkStyles.neutral} to="/styles/flex">
               Flex
             </Link>
             <H3 variant="h4">Surfaces</H3>
@@ -105,7 +108,7 @@ export function App(props: Props) {
             <Surfaces path="/surfaces/*" />
             <Popups path="/popups/*" />
             <Inputs path="/inputs/*" />
-            <Layout path="/layout/*" />
+            <Styles path="/styles/*" />
             <Data path="/data/*" />
           </Router>
         </main>

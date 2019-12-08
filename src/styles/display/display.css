@@ -7,7 +7,13 @@
 .inline {
   display: inline;
 }
-.hidden {
+.flex {
+  display: flex;
+}
+.inlineFlex {
+  display: inline-flex;
+}
+.none {
   display: none;
 }
 
@@ -22,7 +28,13 @@
   .xsInline {
     display: inline;
   }
-  .xsHidden {
+  .xsFlex {
+    display: flex;
+  }
+  .xsInlineFlex {
+    display: inline-flex;
+  }
+  .xsNone {
     display: none;
   }
 }
@@ -38,7 +50,13 @@
   .smInline {
     display: inline;
   }
-  .smHidden {
+  .smFlex {
+    display: flex;
+  }
+  .smInlineFlex {
+    display: inline-flex;
+  }
+  .smNone {
     display: none;
   }
 }
@@ -54,7 +72,13 @@
   .mdInline {
     display: inline;
   }
-  .mdHidden {
+  .mdFlex {
+    display: flex;
+  }
+  .mdInlineFlex {
+    display: inline-flex;
+  }
+  .mdNone {
     display: none;
   }
 }
@@ -70,7 +94,13 @@
   .lgInline {
     display: inline;
   }
-  .lgHidden {
+  .lgFlex {
+    display: flex;
+  }
+  .lgInlineFlex {
+    display: inline-flex;
+  }
+  .lgNone {
     display: none;
   }
 }
@@ -86,7 +116,13 @@
   .xlInline {
     display: inline;
   }
-  .xlHidden {
+  .xlFlex {
+    display: flex;
+  }
+  .xlInlineFlex {
+    display: inline-flex;
+  }
+  .xlNone {
     display: none;
   }
 }

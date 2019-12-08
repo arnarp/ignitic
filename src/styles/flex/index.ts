@@ -1,12 +1,11 @@
 import css from './flex.css'
 
-export const flexStyles = {
+export const flex = {
   col: css.col,
   spacingLg: css.spacingLg,
   spacingMd: css.spacingMd,
   spacingSm: css.spacingSm,
   row: css.row,
-  inline: css.inline,
   justifyEnd: css.justifyEnd,
   justifySpaceBetween: css.justifySpaceBetween,
   justifyStart: css.justifyStart,

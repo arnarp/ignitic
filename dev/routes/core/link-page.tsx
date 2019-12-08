@@ -1,14 +1,15 @@
-import { RouteComponentProps, Link } from '@reach/router'
+import { Link, RouteComponentProps } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
-import { flexStyles } from '../../../src/layout/flex'
 import { linkStyles } from '../../../src/core/link'
+import { display } from '../../../src/styles/display'
+import { flex } from '../../../src/styles/flex'
 
 type Props = {} & RouteComponentProps
 
 export function LinkPage(props: Props) {
   return (
-    <div className={cn(flexStyles.col, flexStyles.spacingSm)}>
+    <div className={cn(display.flex, flex.col, flex.spacingSm)}>
       <Link to="" className={linkStyles.neutral}>
         Neutral link
       </Link>

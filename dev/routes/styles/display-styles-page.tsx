@@ -10,9 +10,9 @@ export function DisplayStylesPage(props: Props) {
   return (
     <>
       <H2>Styles / Display</H2>
-      <Item className={display.hidden} />
-      <Item className={display.xs_Hidden} />
-      <Item className={display.sm_Hidden} />
+      <Item className={display.none} />
+      <Item className={display.xs_none} />
+      <Item className={display.sm_none} />
     </>
   )
 }

@@ -4,13 +4,14 @@ import * as React from 'react'
 import { MdDelete } from 'react-icons/md'
 import { ButtonColor, IconButton } from '../../../src/core/icon-button'
 import { H2, H3 } from '../../../src/core/text'
-import { flexStyles } from '../../../src/layout/flex'
+import { display } from '../../../src/styles/display'
+import { flex } from '../../../src/styles/flex'
 
 type Props = {} & RouteComponentProps
 
 export function IconButtonPage(props: Props) {
   return (
-    <div className={cn(flexStyles.col, flexStyles.spacingLg)}>
+    <div className={cn(display.flex, flex.col, flex.spacingLg)}>
       <H2>IconButton</H2>
       <H3 variant="h5">fontSize: small / medium / large fontSize</H3>
       <IconButtonPageRow color="neutral" />
@@ -23,9 +24,7 @@ export function IconButtonPage(props: Props) {
 
 function IconButtonPageRow({ color }: { color: ButtonColor }) {
   return (
-    <div
-      className={cn(flexStyles.row, flexStyles.spacingMd, flexStyles.alignEnd)}
-    >
+    <div className={cn(display.flex, flex.row, flex.spacingMd, flex.alignEnd)}>
       <IconButton aria-label="Delete" color={color} fontSize="small">
         <MdDelete />
       </IconButton>

@@ -1,19 +1,19 @@
 import { RouteComponentProps } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
-
 import { Button, ButtonVariant } from '../../../src/core/button'
 import { H2, H3, H4, P } from '../../../src/core/text'
 import { Label } from '../../../src/inputs/label'
 import { Switch } from '../../../src/inputs/switch'
-import { flexStyles } from '../../../src/layout/flex'
+import { display } from '../../../src/styles/display'
+import { flex } from '../../../src/styles/flex'
 import { Surface } from '../../../src/surfaces/surface'
 
 type Props = {} & RouteComponentProps
 
 export function SurfacePage(props: Props) {
   return (
-    <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+    <div className={cn(display.flex, flex.col, flex.spacingMd)}>
       <H2 marginBottom>Surfaces / Surface</H2>
       <H3>Default background</H3>
       <SurfaceContent />
@@ -46,10 +46,10 @@ export function SurfaceContent() {
 
   return (
     <div
-      className={cn(flexStyles.row)}
+      className={cn(display.flex, flex.row)}
       style={{ minWidth: 300, minHeight: 300 }}
     >
-      <div className={cn(flexStyles.col)}>
+      <div className={cn(display.flex, flex.col)}>
         <H4>Text</H4>
         <P variant="p.lead" color="neutral">
           neutral color
@@ -64,13 +64,13 @@ export function SurfaceContent() {
           secondary color
         </P>
         <H4>Buttons</H4>
-        <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+        <div className={cn(display.flex, flex.col, flex.spacingMd)}>
           <ButtonPageRow variant="filled" />
           <ButtonPageRow variant="outlined" />
           <ButtonPageRow variant="text" />
         </div>
       </div>
-      <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+      <div className={cn(display.flex, flex.col, flex.spacingMd)}>
         <H4>Inputs</H4>
         <Label>
           <span>Switch</span>
@@ -120,7 +120,7 @@ export function SurfaceContent() {
 function ButtonPageRow({ variant }: { variant: ButtonVariant }) {
   return (
     <>
-      <div className={cn(flexStyles.row, flexStyles.spacingMd)}>
+      <div className={cn(display.flex, flex.row, flex.spacingMd)}>
         <Button variant={variant} color="neutral">
           neutral
         </Button>
@@ -134,7 +134,7 @@ function ButtonPageRow({ variant }: { variant: ButtonVariant }) {
           disabled
         </Button>
       </div>
-      <div className={cn(flexStyles.row, flexStyles.spacingMd)}>
+      <div className={cn(display.flex, flex.row, flex.spacingMd)}>
         <Button variant={variant} color="primary">
           primary
         </Button>

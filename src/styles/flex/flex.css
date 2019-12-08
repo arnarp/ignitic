@@ -1,5 +1,4 @@
 .col {
-  display: flex;
   flex-direction: column;
 }
 .col.spacingLg > * + * {
@@ -12,7 +11,6 @@
   margin-top: var(--space-sm);
 }
 .row {
-  display: flex;
   flex-direction: row;
 }
 .col.paddingMd,
@@ -23,9 +21,6 @@
 .row.sidePaddingMd {
   padding-left: var(--space-md);
   padding-right: var(--space-md);
-}
-.inline {
-  display: inline-flex;
 }
 .row.spacingLg > * + * {
   margin-left: var(--space-lg);

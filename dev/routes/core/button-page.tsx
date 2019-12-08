@@ -2,20 +2,20 @@ import { RouteComponentProps } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import { MdDelete, MdSend } from 'react-icons/md'
-
 import { Button, ButtonColor, ButtonVariant } from '../../../src/core/button'
 import { H2, H3 } from '../../../src/core/text'
-import { flexStyles } from '../../../src/layout/flex'
+import { display } from '../../../src/styles/display'
+import { flex } from '../../../src/styles/flex'
 
 type Props = {} & RouteComponentProps
 
 export function ButtonPage(props: Props) {
   return (
-    <div className={cn(flexStyles.col, flexStyles.spacingLg)}>
+    <div className={cn(display.flex, flex.col, flex.spacingLg)}>
       <H2>Button</H2>
       <div>
         <H3 variant="h5">variant: outlined, size: small / medium / large</H3>
-        <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+        <div className={cn(display.flex, flex.col, flex.spacingMd)}>
           <ButtonPageRow variant="outlined" color="neutral" />
           <ButtonPageRow variant="outlined" color="default" />
           <ButtonPageRow variant="outlined" color="primary" />
@@ -24,7 +24,7 @@ export function ButtonPage(props: Props) {
       </div>
       <div>
         <H3 variant="h5">variant: text, size: small / medium / large</H3>
-        <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+        <div className={cn(display.flex, flex.col, flex.spacingMd)}>
           <ButtonPageRow variant="text" color="neutral" />
           <ButtonPageRow variant="text" color="default" />
           <ButtonPageRow variant="text" color="primary" />
@@ -33,7 +33,7 @@ export function ButtonPage(props: Props) {
       </div>
       <div>
         <H3 variant="h5">variant: filled, size: small / medium / large</H3>
-        <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+        <div className={cn(display.flex, flex.col, flex.spacingMd)}>
           <ButtonPageRow variant="filled" color="neutral" />
           <ButtonPageRow variant="filled" color="default" />
           <ButtonPageRow variant="filled" color="primary" />
@@ -42,12 +42,13 @@ export function ButtonPage(props: Props) {
       </div>
       <div>
         <H3 variant="h5">With icons</H3>
-        <div className={cn(flexStyles.col, flexStyles.spacingMd)}>
+        <div className={cn(display.flex, flex.col, flex.spacingMd)}>
           <div
             className={cn(
-              flexStyles.row,
-              flexStyles.spacingMd,
-              flexStyles.alignEnd
+              display.flex,
+              flex.row,
+              flex.spacingMd,
+              flex.alignEnd
             )}
           >
             <Button
@@ -75,9 +76,10 @@ export function ButtonPage(props: Props) {
           </div>
           <div
             className={cn(
-              flexStyles.row,
-              flexStyles.spacingMd,
-              flexStyles.alignEnd
+              display.flex,
+              flex.row,
+              flex.spacingMd,
+              flex.alignEnd
             )}
           >
             <Button
@@ -118,9 +120,7 @@ function ButtonPageRow({
   color: ButtonColor
 }) {
   return (
-    <div
-      className={cn(flexStyles.row, flexStyles.spacingMd, flexStyles.alignEnd)}
-    >
+    <div className={cn(display.flex, flex.row, flex.spacingMd, flex.alignEnd)}>
       <Button variant={variant} color={color} size="small">
         Small
       </Button>

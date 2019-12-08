@@ -5,7 +5,6 @@ export const spacingSm: string;
 export const row: string;
 export const paddingMd: string;
 export const sidePaddingMd: string;
-export const inline: string;
 export const justifyEnd: string;
 export const justifySpaceBetween: string;
 export const justifyStart: string;

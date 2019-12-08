@@ -3,10 +3,10 @@ import * as React from 'react'
 import { cn } from 'itils/dist/misc/cn'
 import { H2, Span } from '../../../src/core/text'
 import { useUUID } from '../../../src/hooks/use-uuid'
-import { TooltipPlacement, Tooltip } from '../../../src/popups/tooltip'
-import { flexStyles } from '../../../src/layout/flex'
+import { Tooltip } from '../../../src/popups/tooltip'
+import { flex } from '../../../src/styles/flex'
 import { Button } from '../../../src/core/button'
-import { justifyCenter } from '../../../src/layout/flex/flex.css'
+import { display } from '../../../src/styles/display'
 
 type Props = {} & RouteComponentProps
 
@@ -24,11 +24,7 @@ export function TooltipPage(props: Props) {
   const [enterDelay, setEnterDelay] = React.useState<number>(100)
   return (
     <div
-      className={cn(
-        flexStyles.col,
-        flexStyles.alignStart,
-        flexStyles.spacingSm
-      )}
+      className={cn(display.flex, flex.col, flex.alignStart, flex.spacingSm)}
     >
       <H2 style={{ width: 'fit-content' }} aria-describedby={h2Id} ref={h2Ref}>
         Popups / Tooltip
@@ -49,7 +45,9 @@ export function TooltipPage(props: Props) {
           onChange={event => setEnterDelay(Number(event.target.value))}
         />
       </label>
-      <div className={cn(flexStyles.col, flexStyles.spacingMd, justifyCenter)}>
+      <div
+        className={cn(display.flex, flex.col, flex.spacingMd, flex.justifyCenter)}
+      >
         <Button
           variant="outlined"
           color="default"
