@@ -1,7 +1,7 @@
 .button {
   position: relative;
   --btn-font-size: var(--font-size-p);
-  --btn-line-height: var(--line-height-p);
+  --btn-line-height: var(--btn-line-height-md);
   font-size: var(--btn-font-size);
   line-height: var(--btn-line-height);
   border-radius: var(--border-radius);
@@ -33,18 +33,18 @@
 
 .sizeSmall {
   --btn-font-size: var(--font-size-p-small);
-  --btn-line-height: var(--line-height-p-small);
+  --btn-line-height: var(--btn-line-height-sm);
 }
 .sizeLarge {
   --btn-font-size: var(--font-size-p-lead);
-  --btn-line-height: var(--line-height-p-lead);
+  --btn-line-height: var(--btn-line-height-lg);
 }
 
 /* Variant: text */
 .variantText {
   background: none;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: var(--space-sm) var(--space-lg);
 }
 .variantText.colorNeutral {
   color: var(--neutral-on-background-color);
@@ -77,7 +77,7 @@
 /* Variant: filled */
 .variantFilled {
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: var(--space-sm) var(--space-lg);
 }
 .variantFilled:not(:disabled) {
   box-shadow: 0px 1px 5px 0px var(--box-shadow-main-color),
@@ -123,7 +123,7 @@
 
 /* Variant: outlined */
 .variantOutlined {
-  padding: calc(0.75rem - 1px) calc(1.5rem - 1px);
+  padding: calc(var(--space-sm) - 1px) calc(var(--space-lg) - 1px);
   background: none;
 }
 .variantOutlined.colorNeutral {

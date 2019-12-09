@@ -109,6 +109,10 @@
   --space-lg: calc(var(--spacer) * 3);
   --space-xl: calc(var(--spacer) * 4);
 
+  --btn-line-height-sm: 1rem;
+  --btn-line-height-md: 1.5rem;
+  --btn-line-height-lg: 2rem;
+
   /**
     * Font sizes
     * small
