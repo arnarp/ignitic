@@ -1,8 +1,7 @@
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
-
-import { BaseComponentProps } from '../../types/base-component-props'
-import css, { rounded } from './surface.css'
+import css from './surface.css'
+import { motion, MotionProps } from 'framer-motion'
 
 type Props = {
   children?: React.ReactNode
@@ -10,8 +9,8 @@ type Props = {
   padding?: 'sm' | 'md' | 'lg' | 'xl'
   border?: 'neutral' | 'default' | 'primary' | 'secondary'
   rounded?: boolean
-} & BaseComponentProps &
-  React.DOMAttributes<HTMLDivElement>
+} & MotionProps &
+  React.HTMLAttributes<HTMLDivElement>
 
 export function Surface({
   children,
@@ -23,7 +22,7 @@ export function Surface({
   ...rest
 }: Props) {
   return (
-    <div
+    <motion.div
       {...rest}
       className={cn(
         {
@@ -46,6 +45,6 @@ export function Surface({
       )}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }

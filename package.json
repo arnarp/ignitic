@@ -27,9 +27,10 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "@seznam/compose-react-refs": "^1.0.4",
+    "react-icons": "^3.5.0",
     "react-laag": "^1.5.1",
-    "wicg-inert": "^3.0.0",
-    "react-icons": "^3.5.0"
+    "wicg-inert": "^3.0.0"
   },
   "devDependencies": {
     "@types/reach__router": "^1.2.6",

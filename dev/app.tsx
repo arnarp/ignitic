@@ -12,8 +12,9 @@ import * as css from './app.css'
 import { Core } from './routes/core'
 import { Data } from './routes/data'
 import { Inputs } from './routes/inputs'
-import { Styles } from './routes/styles'
+import { Navigation } from './routes/navigation/'
 import { Popups } from './routes/popups'
+import { Styles } from './routes/styles'
 import { Surfaces } from './routes/surfaces'
 
 type Props = {}
@@ -55,7 +56,7 @@ export function App(props: Props) {
         <div className={css.sidebar}>
           <H2 color="primary">{version}</H2>
           <nav>
-            <H3 variant="h4">Core</H3>
+            <H3>Core</H3>
             <Link className={linkStyles.neutral} to="/core/text">
               Text
             </Link>
@@ -68,25 +69,25 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/core/link">
               Links
             </Link>
-            <H3 variant="h4">Inputs</H3>
+            <H3>Inputs</H3>
             <Link className={linkStyles.neutral} to="/inputs/switch">
               Switch
             </Link>
-            <H3 variant="h4">Styles</H3>
+            <H3>Styles</H3>
             <Link className={linkStyles.neutral} to="/styles/display">
               Display
             </Link>
             <Link className={linkStyles.neutral} to="/styles/flex">
               Flex
             </Link>
-            <H3 variant="h4">Surfaces</H3>
+            <H3>Surfaces</H3>
             <Link className={linkStyles.neutral} to="/surfaces/surface">
               Surface
             </Link>
             <Link className={linkStyles.neutral} to="/surfaces/paper">
               Paper
             </Link>
-            <H3 variant="h4">Popups</H3>
+            <H3>Popups</H3>
             <Link className={linkStyles.neutral} to="/popups/tooltip">
               Tooltip
             </Link>
@@ -96,9 +97,13 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/popups/blanket">
               Blanket
             </Link>
-            <H3 variant="h4">Data</H3>
+            <H3>Data</H3>
             <Link className={linkStyles.neutral} to="/data/table">
               Table
+            </Link>
+            <H3>Navigation</H3>
+            <Link className={linkStyles.neutral} to="/navigation/tabs">
+              Tabs
             </Link>
           </nav>
         </div>
@@ -110,6 +115,7 @@ export function App(props: Props) {
             <Inputs path="/inputs/*" />
             <Styles path="/styles/*" />
             <Data path="/data/*" />
+            <Navigation path="/navigation/*" />
           </Router>
         </main>
         <footer className={css.footer} />
