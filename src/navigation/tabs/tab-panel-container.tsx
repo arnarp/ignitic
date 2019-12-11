@@ -5,16 +5,17 @@ import { TabsContext } from './tabs-context'
 
 type Props = {
   children: React.ReactNode
+  padding?: 'md' | 'sm' | 'lg' | 'xl'
 } & MotionProps &
   React.HTMLAttributes<HTMLDivElement>
 
-export function TabPanelContainer({ children, id, ...rest }: Props) {
+export function TabPanelContainer({ children, id, padding, ...rest }: Props) {
   const tabsContext = React.useContext(TabsContext)
 
   return (
     <Surface
       {...rest}
-      padding="md"
+      padding={padding}
       rounded={tabsContext.rounded}
       color={tabsContext.color}
     >

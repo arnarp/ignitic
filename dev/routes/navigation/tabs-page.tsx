@@ -42,7 +42,7 @@ export function TabsPage(props: Props) {
             </Tab>
           ))}
         </TabList>
-        <TabPanelContainer>
+        <TabPanelContainer padding="md">
           <TabPanel
             key={selectedItem.id}
             id={selectedItem.id}
@@ -72,7 +72,7 @@ export function TabsPage(props: Props) {
               </Tab>
             ))}
           </TabList>
-          <TabPanelContainer>
+          <TabPanelContainer padding="md">
             <TabPanel
               key={selectedItem.id}
               id={selectedItem.id}
