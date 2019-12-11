@@ -4,7 +4,7 @@ export const display = {
   block: css.block,
   inlineBlock: css.inlineBlock,
   inline: css.inline,
-  flex: css.flex,
+  flex: css.flexbox,
   inlineFlex: css.inlineFlex,
   none: css.none,
 

@@ -37,8 +37,8 @@
   --cell-padding-left: calc(var(--spacer) * 1.5);
 }
 .table.cellPaddingNone,
-.th.cellPaddingNone,
-.td.cellPaddingNone {
+.table .tc.th.cellPaddingNone,
+.table .tc.td.cellPaddingNone {
   --cell-padding-top-bottom: 0;
   --header-cell-padding-top-bottom: 0;
   --cell-padding-right: 0;
