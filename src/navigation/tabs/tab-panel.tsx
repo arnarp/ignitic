@@ -1,7 +1,6 @@
 import { MotionProps, motion } from 'framer-motion'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
-import css from './tabs.css'
 
 type Props = {
   children: React.ReactNode

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { cn } from 'itils/dist/misc/cn'
-import * as css from './tabs.css'
+import css from './tabs.css'
 
 type Props = {
   children: React.ReactNode
