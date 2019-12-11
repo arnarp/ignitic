@@ -44,7 +44,7 @@
 .variantText {
   background: none;
   border: none;
-  padding: var(--space-sm) var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
 }
 .variantText.colorNeutral {
   color: var(--neutral-on-background-color);
@@ -77,7 +77,7 @@
 /* Variant: filled */
 .variantFilled {
   border: none;
-  padding: var(--space-sm) var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
 }
 .variantFilled:not(:disabled) {
   box-shadow: 0px 1px 5px 0px var(--box-shadow-main-color),
@@ -123,7 +123,7 @@
 
 /* Variant: outlined */
 .variantOutlined {
-  padding: calc(var(--space-sm) - 1px) calc(var(--space-lg) - 1px);
+  padding: calc(var(--space-sm) - 1px) calc(var(--space-md) - 1px);
   background: none;
 }
 .variantOutlined.colorNeutral {
