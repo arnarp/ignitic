@@ -15,7 +15,7 @@
 .table.cellPaddingDense,
 .td.cellPaddingDense,
 .th.cellPaddingDense {
-  --cell-padding-right: calc(var(--spacer) * 1.5);
+  --cell-padding-right: var(--spacer);
 }
 .table.cellPaddingDense,
 .td.cellPaddingDense {
