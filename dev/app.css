@@ -314,7 +314,7 @@ body {
 }
 .main {
   grid-area: content;
-  padding: var(--space-xl);
+  padding: var(--space-md);
   margin-bottom: 100px;
 }
 

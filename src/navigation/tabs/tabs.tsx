@@ -1,13 +1,26 @@
 import * as React from 'react'
+import { SurfaceColor } from '../../surfaces/surface'
 import { TabsContext } from './tabs-context'
 
 type Props = {
   children: React.ReactNode
   selectedTab: string
   setSelectedTab: (selected: string) => void
-}
+  rounded?: boolean
+  color: SurfaceColor
+} & React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>
 
-export function Tabs(props: Props) {
+export function Tabs({
+  selectedTab,
+  setSelectedTab,
+  children,
+  rounded = true,
+  color = 'neutral',
+  ...rest
+}: Props) {
   const tabsArray = React.useRef<string[]>([])
   const refMap = new Map<string, React.RefObject<HTMLButtonElement>>()
 
@@ -21,42 +34,42 @@ export function Tabs(props: Props) {
   function focusNextTab() {
     const tabsCount = tabsArray.current.length
     const currentSelectedIndex = tabsArray.current.findIndex(
-      i => i == props.selectedTab
+      i => i == selectedTab
     )
     const indexOfNextTabBtn = (currentSelectedIndex + 1) % tabsCount
     const idOfNextTab = tabsArray.current[indexOfNextTabBtn]
     const nextTabBtnRef = refMap.get(idOfNextTab)
     nextTabBtnRef?.current?.focus()
-    console.log({ nextTabBtnRef })
-    props.setSelectedTab(idOfNextTab)
+    setSelectedTab(idOfNextTab)
   }
 
   function focusPreviousTab() {
     const tabsCount = tabsArray.current.length
     const currentSelectedIndex = tabsArray.current.findIndex(
-      i => i == props.selectedTab
+      i => i == selectedTab
     )
     const indexOfPreviousTabBtn =
       (currentSelectedIndex - 1 + tabsCount) % tabsCount
     const idOfPreviousTab = tabsArray.current[indexOfPreviousTabBtn]
     const previousTabRef = refMap.get(idOfPreviousTab)
-    console.log({ previousTabRef })
     previousTabRef?.current?.focus()
-    props.setSelectedTab(idOfPreviousTab)
+    setSelectedTab(idOfPreviousTab)
   }
 
   return (
     <TabsContext.Provider
       value={{
-        selectedTab: props.selectedTab,
-        setSelectedTab: props.setSelectedTab,
+        selectedTab: selectedTab,
+        setSelectedTab: setSelectedTab,
         registerTab,
         registerRef,
         focusNextTab,
-        focusPreviousTab
+        focusPreviousTab,
+        rounded,
+        color
       }}
     >
-      <div>{props.children}</div>
+      <div {...rest}>{children}</div>
     </TabsContext.Provider>
   )
 }

@@ -1,0 +1,19 @@
+.md {
+  padding: var(--space-md);
+}
+.smX {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+.mdX {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+.none {
+  padding: 0;
+}
+@media print {
+  .printNone {
+    padding: 0;
+  }
+}

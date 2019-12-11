@@ -2,6 +2,7 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 
 import css from './switch.css'
+import { misc } from '../../styles/misc'
 
 export type SwitchColor = 'default' | 'primary' | 'secondary' | 'neutral'
 
@@ -17,6 +18,7 @@ export function Switch({
   onChange,
   ...rest
 }: Props) {
+  const [hasFocus, setHasFocus] = React.useState(false)
   return (
     <span
       className={cn(css.container, {
@@ -24,7 +26,8 @@ export function Switch({
         [css.colorPrimary]: color == 'primary',
         [css.colorSecondary]: color == 'secondary',
         [css.colorNeutral]: color == 'neutral',
-        [css.checked]: checked
+        [css.checked]: checked,
+        [misc.outline]: hasFocus
       })}
     >
       <input
@@ -34,6 +37,8 @@ export function Switch({
         checked={checked}
         aria-checked={checked}
         onChange={onChange}
+        onFocus={() => setHasFocus(true)}
+        onBlur={() => setHasFocus(false)}
       />
       <span className={css.slider} />
       <span className={css.knob} />

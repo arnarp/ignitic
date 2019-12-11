@@ -22,7 +22,6 @@ export const Tab = React.forwardRef<HTMLButtonElement, Props>(function Tab(
     tabsContext.registerTab(id, innerRef)
   }, [])
   React.useEffect(() => {
-    console.log({ id, ref, innerRef })
     tabsContext.registerRef(id, innerRef)
   })
 
@@ -49,7 +48,15 @@ export const Tab = React.forwardRef<HTMLButtonElement, Props>(function Tab(
       {...rest}
       aria-controls={`tabpanel-${id}`}
       aria-selected={tabsContext.selectedTab == id}
-      className={cn(css.tab, className)}
+      className={cn(
+        css.tab,
+        {
+          [css.rounded]: tabsContext.rounded,
+          [css.colorNeutral]: tabsContext.color == 'neutral',
+          [css.colorPaper]: tabsContext.color == 'paper'
+        },
+        className
+      )}
       id={`tab-${id}`}
       onClick={() => tabsContext.setSelectedTab(id)}
       ref={composeRefs(innerRef, ref)}

@@ -7,7 +7,7 @@
   border: none;
   margin: 0;
   padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-md);
-  outline-offset: -4px;
+  outline-offset: calc(-1 * var(--space-sm));
   --btn-font-size: var(--font-size-p);
   --btn-line-height: var(--btn-line-height-md);
   font-size: var(--btn-font-size);
@@ -18,7 +18,15 @@
   justify-content: center;
   letter-spacing: 0.057em;
 }
-.tab[aria-selected='true'] {
+.tab.rounded {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.tab.colorNeutral[aria-selected='true'] {
   background: var(--neutral-surface-color);
   color: var(--neutral-on-neutral-surface-color);
+}
+.tab.colorPaper[aria-selected='true'] {
+  background: var(--paper-surface-color);
+  color: var(--neutral-on-paper-surface-color);
 }

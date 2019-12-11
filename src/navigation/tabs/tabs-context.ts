@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { SurfaceColor } from '../../surfaces/surface'
 
 export const TabsContext = React.createContext<{
   selectedTab: string
@@ -7,11 +8,15 @@ export const TabsContext = React.createContext<{
   registerRef: (tabId: string, ref: React.RefObject<HTMLButtonElement>) => void
   focusNextTab: () => void
   focusPreviousTab: () => void
+  rounded: boolean
+  color: SurfaceColor
 }>({
   selectedTab: '',
   setSelectedTab: () => {},
   registerTab: () => {},
   registerRef: () => {},
   focusNextTab: () => {},
-  focusPreviousTab: () => {}
+  focusPreviousTab: () => {},
+  rounded: true,
+  color: 'neutral'
 })

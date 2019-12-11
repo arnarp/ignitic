@@ -3,9 +3,16 @@ import * as React from 'react'
 import css from './surface.css'
 import { motion, MotionProps } from 'framer-motion'
 
+export type SurfaceColor =
+  | 'paper'
+  | 'neutral'
+  | 'default'
+  | 'primary'
+  | 'secondary'
+
 type Props = {
   children?: React.ReactNode
-  color: 'paper' | 'neutral' | 'default' | 'primary' | 'secondary'
+  color: SurfaceColor
   padding?: 'sm' | 'md' | 'lg' | 'xl'
   border?: 'neutral' | 'default' | 'primary' | 'secondary'
   rounded?: boolean

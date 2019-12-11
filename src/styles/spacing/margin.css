@@ -1,0 +1,24 @@
+.none {
+  margin: 0;
+}
+.negSmR {
+  margin-right: calc(-1 * var(--space-sm));
+}
+.negSmL {
+  margin-left: calc(-1 * var(--space-sm));
+}
+.negMdR {
+  margin-right: calc(-1 * var(--space-md));
+}
+.negMdL {
+  margin-left: calc(-1 * var(--space-md));
+}
+/* Extra Small (xs) 512px */
+@media (min-width: 32rem) {
+  .xsNegSmR {
+    margin-right: calc(-1 * var(--space-sm));
+  }
+  .xsNegSmL {
+    margin-left: calc(-1 * var(--space-sm));
+  }
+}
