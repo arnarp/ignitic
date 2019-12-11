@@ -6,6 +6,7 @@ export const margin = {
   negSmL: css.negSmL,
   negMdR: css.negMdR,
   negMdL: css.negMdL,
+  negMdT: css.negMdT,
   xs_negSmR: css.xsNegSmR,
   xs_negSmL: css.xsNegSmL
 }
