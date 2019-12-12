@@ -64,6 +64,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.tc.wrapEllipsis {
+  text-overflow: ellipsis;
+}
 @media screen {
   .tc {
     box-shadow: inset 0px -1px 0px 0px var(--neutral-seperator-on-background-color);

@@ -4,7 +4,7 @@ export type CellSize = 'small' | 'normal'
 export type TableCellProps = {
   cellPadding?: CellPadding
   cellSize?: CellSize
-  ellipsis?: boolean
+  overflow?: 'wrap-ellipsis' | 'ellipsis'
 }
 
 export type SortDirection = false | 'desc' | 'asc'
