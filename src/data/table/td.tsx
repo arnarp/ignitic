@@ -16,6 +16,7 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
     cellPadding = 'normal',
     cellSize = 'normal',
     align = 'left',
+    ellipsis,
     ...rest
   },
   ref
@@ -34,7 +35,8 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
           [css.cellSizeSmall]: cellSize == 'small',
           [css.alignCenter]: align == 'center',
           [css.alignRight]: align == 'right',
-          [css.alignJustify]: align == 'justify'
+          [css.alignJustify]: align == 'justify',
+          [css.ellipsis]: ellipsis
         },
         className
       )}

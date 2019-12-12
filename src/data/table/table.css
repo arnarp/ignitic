@@ -58,7 +58,11 @@
   font-weight: 300;
   color: var(--neutral-on-background-color);
   text-align: left;
-  text-align: left;
+}
+.tc.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media screen {
   .tc {

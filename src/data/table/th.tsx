@@ -24,6 +24,7 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
       cellSize = 'normal',
       align = 'left',
       sortDirection,
+      ellipsis,
       ...rest
     },
     ref
@@ -49,7 +50,8 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
             [css.cellSizeSmall]: cellSize == 'small',
             [css.alignCenter]: align == 'center',
             [css.alignRight]: align == 'right',
-            [css.alignJustify]: align == 'justify'
+            [css.alignJustify]: align == 'justify',
+            [css.ellipsis]: ellipsis
           },
           className
         )}

@@ -9,7 +9,8 @@ import {
   TH,
   THead,
   THSortButton,
-  TR
+  TR,
+  TBody
 } from '../../../src/data/table'
 import { display } from '../../../src/styles/display'
 import { flex } from '../../../src/styles/flex'
@@ -26,7 +27,7 @@ export function TablePage(props: Props) {
         <H2>Table</H2>
         <H3 variant="h6">Normal</H3>
       </div>
-      <Table>
+      <Table layout="fixed">
         <THead>
           <TR>
             <TH sortDirection={sd}>
@@ -37,7 +38,7 @@ export function TablePage(props: Props) {
             <TH align="right">Kennitala</TH>
           </TR>
         </THead>
-        <tbody>
+        <TBody>
           <TR hover>
             <TD>Arnar Birgisson</TD>
             <TD>Afganistan 7</TD>
@@ -56,7 +57,7 @@ export function TablePage(props: Props) {
             <TD align="center">35</TD>
             <TD align="right">3322331234</TD>
           </TR>
-        </tbody>
+        </TBody>
       </Table>
 
       <div className={cn(display.flex, flex.row, flex.paddingMd)}>
@@ -64,7 +65,7 @@ export function TablePage(props: Props) {
       </div>
 
       <Surface color="neutral">
-        <Table cellPadding="dense">
+        <Table layout="fixed" cellPadding="dense">
           <THead>
             <TR>
               <TH sortDirection={sd}>
@@ -75,7 +76,7 @@ export function TablePage(props: Props) {
               <TH align="right">Kennitala</TH>
             </TR>
           </THead>
-          <tbody>
+          <TBody>
             <TR hover>
               <TD>Arnar Birgisson</TD>
               <TD>Afganistan 7</TD>
@@ -94,14 +95,14 @@ export function TablePage(props: Props) {
               <TD align="center">35</TD>
               <TD align="right">3322331234</TD>
             </TR>
-          </tbody>
+          </TBody>
         </Table>
       </Surface>
       <div className={cn(display.flex, flex.row, flex.paddingMd)}>
         <H3 variant="h6">cellPadding='dense' cellSize='small'</H3>
       </div>
       <Surface color="secondary">
-        <Table cellPadding="dense" cellSize="small">
+        <Table layout="fixed" cellPadding="dense" cellSize="small">
           <THead>
             <TR>
               <TH sortDirection={sd}>
@@ -114,7 +115,7 @@ export function TablePage(props: Props) {
               <TH align="right">Kennitala</TH>
             </TR>
           </THead>
-          <tbody>
+          <TBody>
             <TR hover>
               <TD>Arnar Birgisson</TD>
               <TD>Afganistan 7</TD>
@@ -133,13 +134,15 @@ export function TablePage(props: Props) {
             </TR>
             <TR hover>
               <TD>Nína Santos Arnarsdóttir</TD>
-              <TD>Suður Afríkustræti 19</TD>
+              <TD ellipsis>
+                Suður Afríkustræti 19 rosalega langur texti sem ellipsar út
+              </TD>
               <TD align="center" cellPadding="none">
                 35
               </TD>
               <TD align="right">3322331234</TD>
             </TR>
-          </tbody>
+          </TBody>
         </Table>
       </Surface>
     </Paper>
