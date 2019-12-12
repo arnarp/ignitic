@@ -2,6 +2,7 @@ import { Link, Router } from '@reach/router'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import { version } from '../package.json'
+import { ScreenContext } from '../src/context/screen-context'
 import { linkStyles } from '../src/core/link'
 import { H1, H2, H3 } from '../src/core/text'
 import { useLocalStorage } from '../src/hooks/use-local-storage'
@@ -21,6 +22,8 @@ type Props = {}
 type Theme = 'light' | 'dark'
 
 export function App(props: Props) {
+  const screenContext = React.useContext(ScreenContext)
+  console.log('screenContext', { ...screenContext })
   const [theme, setTheme] = useLocalStorage<Theme>({
     key: 'theme',
     defaultValue: 'light'

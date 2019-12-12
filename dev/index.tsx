@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom'
 
 import { App } from './app'
 import { IgniticSettingsContext } from '../src/context/ignitic-settings-context'
+import { ScreenContextProvider } from '../src/context/screen-context-provider'
 
 declare global {
   const enum Env {
@@ -25,7 +26,9 @@ const container = document.getElementById('root') as HTMLElement
 
 ReactDOM.render(
   <IgniticSettingsContext.Provider value={{ container }}>
-    <App />
+    <ScreenContextProvider>
+      <App />
+    </ScreenContextProvider>
   </IgniticSettingsContext.Provider>,
   container
 )

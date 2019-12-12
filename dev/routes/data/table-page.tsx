@@ -134,7 +134,7 @@ export function TablePage(props: Props) {
             </TR>
             <TR hover>
               <TD>Nína Santos Arnarsdóttir</TD>
-              <TD ellipsis>
+              <TD overflow="ellipsis">
                 Suður Afríkustræti 19 rosalega langur texti sem ellipsar út
               </TD>
               <TD align="center" cellPadding="none">
