@@ -24,7 +24,7 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
       cellSize = 'normal',
       align = 'left',
       sortDirection,
-      ellipsis,
+      overflow,
       ...rest
     },
     ref
@@ -51,7 +51,8 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
             [css.alignCenter]: align == 'center',
             [css.alignRight]: align == 'right',
             [css.alignJustify]: align == 'justify',
-            [css.ellipsis]: ellipsis
+            [css.ellipsis]: overflow == 'ellipsis',
+            [css.wrapEllipsis]: overflow == 'wrap-ellipsis'
           },
           className
         )}
