@@ -1,6 +1,7 @@
 export * from './table'
 export * from './thead'
 export * from './tbody'
+export * from './tfoot'
 export * from './tr'
 export * from './th'
 export * from './td'
