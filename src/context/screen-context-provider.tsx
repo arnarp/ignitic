@@ -13,13 +13,9 @@ export function ScreenContextProvider(props: Props) {
   React.useEffect(() => {
     function updateWidth() {
       const widthPx =
-        window.innerWidth ||
-        document.documentElement.clientWidth ||
-        document.body.clientWidth
+        document.documentElement.clientWidth || document.body.clientWidth
       const heightPx =
-        window.innerHeight ||
-        document.documentElement.clientHeight ||
-        document.body.clientHeight
+        document.documentElement.clientHeight || document.body.clientHeight
       const fontSizePx = parseFloat(
         getComputedStyle(document.documentElement).fontSize
       )
@@ -48,13 +44,16 @@ export function ScreenContextProvider(props: Props) {
     }
   }, [])
 
+  const value = React.useMemo(
+    () => ({
+      width,
+      height
+    }),
+    [width, height]
+  )
+
   return (
-    <ScreenContext.Provider
-      value={{
-        width,
-        height
-      }}
-    >
+    <ScreenContext.Provider value={value}>
       {props.children}
     </ScreenContext.Provider>
   )

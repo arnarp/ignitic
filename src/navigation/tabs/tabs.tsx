@@ -56,19 +56,30 @@ export function Tabs({
     setSelectedTab(idOfPreviousTab)
   }
 
+  const value = React.useMemo(
+    () => ({
+      selectedTab: selectedTab,
+      setSelectedTab: setSelectedTab,
+      registerTab,
+      registerRef,
+      focusNextTab,
+      focusPreviousTab,
+      rounded,
+      color
+    }),
+    [
+      selectedTab,
+      setSelectedTab,
+      registerTab,
+      registerRef,
+      focusNextTab,
+      focusPreviousTab,
+      rounded,
+      color
+    ]
+  )
   return (
-    <TabsContext.Provider
-      value={{
-        selectedTab: selectedTab,
-        setSelectedTab: setSelectedTab,
-        registerTab,
-        registerRef,
-        focusNextTab,
-        focusPreviousTab,
-        rounded,
-        color
-      }}
-    >
+    <TabsContext.Provider value={value}>
       <div {...rest}>{children}</div>
     </TabsContext.Provider>
   )
