@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { ScreenContext } from './screen-context'
+import { useScrollbarWidth } from '../hooks/use-scrollbar-width'
 
 type Props = {
   children: React.ReactNode
@@ -9,7 +10,7 @@ export function ScreenContextProvider(props: Props) {
   const updateWidthTimeout = React.useRef<any>(undefined)
   const [width, setWidth] = React.useState(0)
   const [height, setHeight] = React.useState(0)
-
+  useScrollbarWidth()
   React.useEffect(() => {
     function updateWidth() {
       const widthPx =
