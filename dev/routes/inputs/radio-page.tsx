@@ -46,6 +46,55 @@ export function RadioPage(props: Props) {
       <FieldSet>
         <Legend id={legendId}>Hvaða ávöxt vilt þú?</Legend>
         <RadioGroup
+          color="default"
+          aria-labelledby={legendId}
+          selectedValue={checked}
+          setSelectedValue={value => setChecked(value)}
+        >
+          {items.map(i => (
+            <Label key={i.enum}>
+              <Radio value={i.enum} />
+              <span>{i.label}</span>
+            </Label>
+          ))}
+        </RadioGroup>
+      </FieldSet>
+      <FieldSet>
+        <Legend id={legendId}>Hvaða ávöxt vilt þú?</Legend>
+        <RadioGroup
+          color="neutral"
+          aria-labelledby={legendId}
+          selectedValue={checked}
+          setSelectedValue={value => setChecked(value)}
+        >
+          {items.map(i => (
+            <Label key={i.enum}>
+              <Radio value={i.enum} />
+              <span>{i.label}</span>
+            </Label>
+          ))}
+        </RadioGroup>
+      </FieldSet>
+      <FieldSet>
+        <Legend id={legendId}>Hvaða ávöxt vilt þú?</Legend>
+        <RadioGroup
+          color="primary"
+          aria-labelledby={legendId}
+          selectedValue={checked}
+          setSelectedValue={value => setChecked(value)}
+        >
+          {items.map(i => (
+            <Label key={i.enum}>
+              <Radio value={i.enum} />
+              <span>{i.label}</span>
+            </Label>
+          ))}
+        </RadioGroup>
+      </FieldSet>
+      <FieldSet>
+        <Legend id={legendId}>Hvaða ávöxt vilt þú?</Legend>
+        <RadioGroup
+          color="secondary"
           aria-labelledby={legendId}
           selectedValue={checked}
           setSelectedValue={value => setChecked(value)}

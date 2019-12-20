@@ -19,8 +19,17 @@
   outline: 1px dotted #212121;
   outline: 5px auto -webkit-focus-ring-color;
 }
-.radio.checked {
-  border-color: var(--primary-on-background-color);
+.colorNeutral .radio.checked {
+  border-color: var(--neutral-on-background-color);
+}
+.colorDefault .radio.checked {
+  border-color: var(--default-color);
+}
+.colorPrimary .radio.checked {
+  border-color: var(--primary-color);
+}
+.colorSecondary .radio.checked {
+  border-color: var(--secondary-color);
 }
 .radio .input {
   position: absolute;
@@ -40,6 +49,15 @@
   background: transparent;
   transition: background-color 0.2s linear;
 }
-.radio.radio.checked .innerCircle {
-  background-color: var(--primary-on-background-color);
+.colorNeutral .radio.checked .innerCircle {
+  background-color: var(--neutral-on-background-color);
+}
+.colorDefault .radio.checked .innerCircle {
+  background-color: var(--default-color);
+}
+.colorPrimary .radio.checked .innerCircle {
+  background-color: var(--primary-color);
+}
+.colorSecondary .radio.checked .innerCircle {
+  background-color: var(--secondary-color);
 }

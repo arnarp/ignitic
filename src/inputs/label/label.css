@@ -5,6 +5,7 @@
   color: var(--neutral-on-background-color);
   display: inline-flex;
   flex-direction: row;
+  width: fit-content;
 }
 .label > * + * {
   margin-left: var(--spacer);

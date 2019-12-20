@@ -4,9 +4,12 @@ import * as React from 'react'
 import css from './radio-group.css'
 import { RadioGroupContext, RadioGroupContextType } from './radio-group-context'
 
+export type InputColor = 'default' | 'primary' | 'secondary' | 'neutral'
+
 type Props<T> = {
   selectedValue?: T
   setSelectedValue: (value: T) => void
+  color?: InputColor
 } & React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
@@ -24,6 +27,7 @@ export function RadioGroup<T extends string>({
   className,
   selectedValue,
   setSelectedValue,
+  color = 'neutral',
   ...rest
 }: Props<T>) {
   const radios = React.useRef<T[]>([])
@@ -88,7 +92,20 @@ export function RadioGroup<T extends string>({
 
   return (
     <RadioGroupContext.Provider value={contextValue}>
-      <div role="radiogroup" className={cn(css.group, className)} {...rest}>
+      <div
+        role="radiogroup"
+        className={cn(
+          css.group,
+          {
+            [css.colorDefault]: color == 'default',
+            [css.colorPrimary]: color == 'primary',
+            [css.colorSecondary]: color == 'secondary',
+            [css.colorNeutral]: color == 'neutral'
+          },
+          className
+        )}
+        {...rest}
+      >
         {children}
       </div>
     </RadioGroupContext.Provider>
