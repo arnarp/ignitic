@@ -70,10 +70,6 @@ export function Tabs({
     [
       selectedTab,
       setSelectedTab,
-      registerTab,
-      registerRef,
-      focusNextTab,
-      focusPreviousTab,
       rounded,
       color
     ]
