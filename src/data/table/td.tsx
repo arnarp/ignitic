@@ -17,6 +17,7 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
     cellSize = 'normal',
     align = 'left',
     overflow,
+    numeric,
     ...rest
   },
   ref
@@ -37,7 +38,8 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
           [css.alignRight]: align == 'right',
           [css.alignJustify]: align == 'justify',
           [css.ellipsis]: overflow == 'ellipsis',
-          [css.wrapEllipsis]: overflow == 'wrap-ellipsis'
+          [css.wrapEllipsis]: overflow == 'wrap-ellipsis',
+          [css.numeric]: numeric
         },
         className
       )}

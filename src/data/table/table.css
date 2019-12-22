@@ -67,6 +67,9 @@
 .tc.wrapEllipsis {
   text-overflow: ellipsis;
 }
+.tc.numeric {
+  font-variant-numeric: 'tabular-nums';
+}
 @media screen {
   .tc {
     box-shadow: inset 0px -1px 0px 0px var(--neutral-seperator-on-background-color);
