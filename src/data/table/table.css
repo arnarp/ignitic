@@ -56,7 +56,7 @@
   font-size: var(--table-cell-font-size);
   line-height: var(--table-cell-line-height);
   font-weight: 300;
-  color: var(--neutral-on-background-color);
+  /* color: var(--neutral-on-background-color); */
   text-align: left;
   overflow: hidden;
 }

@@ -2,6 +2,7 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import css from './table.css'
 import { TableCellProps } from './types'
+import { getColorClass } from '../../core/text'
 
 type Props = TableCellProps &
   React.DetailedHTMLProps<
@@ -16,6 +17,7 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
     cellPadding = 'normal',
     cellSize = 'normal',
     align = 'left',
+    color = 'neutral',
     overflow,
     numeric,
     ...rest
@@ -29,6 +31,7 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
       className={cn(
         css.tc,
         css.td,
+        getColorClass(color),
         {
           [css.cellPaddingDense]: cellPadding == 'dense',
           [css.cellPaddingCheckbox]: cellPadding == 'checkbox',

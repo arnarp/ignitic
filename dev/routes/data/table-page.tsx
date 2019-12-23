@@ -140,7 +140,9 @@ export function TablePage(props: Props) {
               <TD align="center" cellPadding="none">
                 35
               </TD>
-              <TD align="right">3322331234</TD>
+              <TD align="right" color="default">
+                3322331234
+              </TD>
             </TR>
           </TBody>
         </Table>

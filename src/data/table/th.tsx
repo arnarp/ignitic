@@ -2,6 +2,7 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import css from './table.css'
 import { SortDirection, TableCellProps } from './types'
+import { getColorClass } from '../../core/text'
 
 type Props = {
   sortDirection?: SortDirection
@@ -23,8 +24,10 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
       cellPadding = 'normal',
       cellSize = 'normal',
       align = 'left',
+      color = 'neutral',
       sortDirection,
-      overflow, numeric,
+      overflow,
+      numeric,
       ...rest
     },
     ref
@@ -43,6 +46,7 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
         className={cn(
           css.tc,
           css.th,
+          getColorClass(color),
           {
             [css.cellPaddingDense]: cellPadding == 'dense',
             [css.cellPaddingCheckbox]: cellPadding == 'checkbox',
