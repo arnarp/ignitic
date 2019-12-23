@@ -40,10 +40,33 @@ export function ActionSheetPage(props: Props) {
               triggerBtnRef.current.focus()
             }
           }}
+          className={cn(
+            display.flex,
+            flex.col,
+            flex.spacingMd,
+            flex.justifySpaceBetween
+          )}
         >
-          {Array.from(Array(70).keys()).map(i => (
-            <P key={i}>Action sheet content</P>
-          ))}
+          <div className={cn(display.flex, flex.col)}>
+            {Array.from(Array(7).keys()).map(i => (
+              <P key={i}>Action sheet content</P>
+            ))}
+          </div>
+          <div
+            className={cn(
+              display.flex,
+              flex.row,
+              flex.spacingMd,
+              flex.justifyCenter
+            )}
+          >
+            <Button variant="filled" onClick={() => {}}>
+              Hætta við
+            </Button>
+            <Button variant="filled" onClick={() => {}}>
+              Vista
+            </Button>
+          </div>
         </ActionSheet>
       </div>
     </div>

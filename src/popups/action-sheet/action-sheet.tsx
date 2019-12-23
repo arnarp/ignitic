@@ -27,6 +27,7 @@ type Props = {
   onOpened?: () => void
   onClosed?: () => void
   children: React.ReactNode
+  className?: string
 }
 
 export function ActionSheet(props: Props) {
@@ -126,7 +127,7 @@ export function ActionSheet(props: Props) {
                   {props.ariaTitle}
                 </h2>
               </VisuallyHidden>
-              <span className={css.line}></span>
+              <span className={css.line} />
               <IconButton
                 aria-label="Loka"
                 color="neutral"
@@ -136,7 +137,9 @@ export function ActionSheet(props: Props) {
                 <MdClose />
               </IconButton>
             </div>
-            <div className={css.content}>{props.children}</div>
+            <div className={cn(css.content, props.className)}>
+              {props.children}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
