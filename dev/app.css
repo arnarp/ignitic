@@ -190,9 +190,9 @@ body {
 ::-webkit-scrollbar-corner {
   background-color: var(--neutral-on-background-color);
 }
-::-webkit-resizer {
+/* ::-webkit-resizer {
   background-color: #666;
-}
+} */
 .container {
   background: var(--background-color);
   min-height: 100vh;

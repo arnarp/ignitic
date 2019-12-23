@@ -79,6 +79,9 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/inputs/radio">
               Radio
             </Link>
+            <Link className={linkStyles.neutral} to="/inputs/textarea">
+              Textarea
+            </Link>
             <H3>Styles</H3>
             <Link className={linkStyles.neutral} to="/styles/display">
               Display

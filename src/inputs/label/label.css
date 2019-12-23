@@ -10,3 +10,10 @@
 .label > * + * {
   margin-left: var(--spacer);
 }
+.label.col {
+  flex-direction: column;
+  width: 100%;
+}
+.label.col > * + * {
+  margin: 0;
+}

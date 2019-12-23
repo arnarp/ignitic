@@ -1,6 +1,6 @@
 .legend {
-  font-size: var(--font-size-p);
-  line-height: var(--line-height-p);
+  font-size: var(--font-size-p-lead);
+  line-height: var(--line-height-p-lead);
   font-weight: 400;
   color: var(--neutral-on-background-color);
 }

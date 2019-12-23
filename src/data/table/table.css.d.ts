@@ -10,6 +10,7 @@ export const tr: string;
 export const hover: string;
 export const ellipsis: string;
 export const wrapEllipsis: string;
+export const numeric: string;
 export const alignCenter: string;
 export const alignRight: string;
 export const alignJustify: string;
