@@ -1,9 +1,9 @@
 .sheet {
   position: fixed;
   background: var(--paper-surface-color, var(--background-color, #fff));
-  margin: var(--space-md) var(--space-md) 0 var(--space-md);
+  margin: var(--space-md) 0 0 0;
   padding-bottom: var(--space-md);
-  width: calc(100vw - 2 * var(--space-md) - var(--scrollbar-width));
+  width: calc(100vw - var(--scrollbar-width));
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   min-height: calc(50vh);
@@ -32,4 +32,12 @@
       2
   );
   overflow-y: auto;
+}
+
+/* Small (sm) 640px */
+@media (min-width: 40rem) {
+  .sheet {
+    margin: var(--space-md) var(--space-md) 0 var(--space-md);
+    width: calc(100vw - 2 * var(--space-md) - var(--scrollbar-width));
+  }
 }

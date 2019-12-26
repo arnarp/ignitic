@@ -122,7 +122,9 @@ export function TablePage(props: Props) {
               <TD align="center" cellPadding="none">
                 35
               </TD>
-              <TD align="right">1122331234</TD>
+              <TD align="right" numeric>
+                1122331234
+              </TD>
             </TR>
             <TR hover>
               <TD>Glói Arnarsson</TD>
@@ -130,7 +132,9 @@ export function TablePage(props: Props) {
               <TD align="center" cellPadding="none">
                 35
               </TD>
-              <TD align="right">2211331234</TD>
+              <TD align="right" numeric>
+                2211331234
+              </TD>
             </TR>
             <TR hover>
               <TD>Nína Santos Arnarsdóttir</TD>
@@ -140,7 +144,7 @@ export function TablePage(props: Props) {
               <TD align="center" cellPadding="none">
                 35
               </TD>
-              <TD align="right" color="default">
+              <TD align="right" numeric color="default">
                 3322331234
               </TD>
             </TR>

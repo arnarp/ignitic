@@ -68,7 +68,7 @@
   text-overflow: ellipsis;
 }
 .tc.numeric {
-  font-variant-numeric: 'tabular-nums';
+  font-variant-numeric: tabular-nums;
 }
 @media screen {
   .tc {
