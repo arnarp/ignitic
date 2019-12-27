@@ -6,6 +6,8 @@ export const display = {
   inline: css.inline,
   flex: css.flexbox,
   inlineFlex: css.inlineFlex,
+  grid: css.grid,
+  tableCell: css.tableCell,
   none: css.none,
 
   xs_block: css.xsBlock,
@@ -13,6 +15,8 @@ export const display = {
   xs_inline: css.xsInline,
   xs_flex: css.xsFlex,
   xs_inlineFlex: css.xsInlineFlex,
+  xs_grid: css.xsGrid,
+  xs_tableCell: css.xsTableCell,
   xs_none: css.xsNone,
 
   sm_block: css.smBlock,
@@ -20,6 +24,8 @@ export const display = {
   sm_inline: css.smInline,
   sm_flex: css.smFlex,
   sm_inlineFlex: css.smInlineFlex,
+  sm_grid: css.smGrid,
+  sm_tableCell: css.smTableCell,
   sm_none: css.smNone,
 
   md_block: css.mdBlock,
@@ -27,6 +33,8 @@ export const display = {
   md_inline: css.mdInline,
   md_flex: css.mdFlex,
   md_inlineFlex: css.mdInlineFlex,
+  md_grid: css.mdGrid,
+  md_tableCell: css.mdTableCell,
   md_none: css.mdNone,
 
   lg_block: css.lgBlock,
@@ -34,6 +42,8 @@ export const display = {
   lg_inline: css.lgInline,
   lg_flex: css.lgFlex,
   lg_inlineFlex: css.lgInlineFlex,
+  lg_grid: css.lgGrid,
+  lg_tableCell: css.lgTableCell,
   lg_none: css.lgNone,
 
   xl_block: css.xlBlock,
@@ -41,5 +51,7 @@ export const display = {
   xl_inline: css.xlInline,
   xl_flex: css.xlFlex,
   xl_inlineFlex: css.xlInlineFlex,
+  xl_grid: css.xlGrid,
+  xl_tableCell: css.xlTableCell,
   xl_none: css.xlNone
 }
