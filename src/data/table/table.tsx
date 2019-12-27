@@ -3,15 +3,6 @@ import * as React from 'react'
 import css from './table.css'
 import { CellPadding, CellSize } from './types'
 
-// padding?:
-//   | 'none'
-//   | 'md'
-//   | {
-//       top?: 'md'
-//       right?: 'md'
-//       bottom?: 'md'
-//       left?: 'md'
-//     }
 type Props = {
   cellPadding?: CellPadding
   cellSize?: CellSize

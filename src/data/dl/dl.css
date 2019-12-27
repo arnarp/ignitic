@@ -1,0 +1,59 @@
+.dl {
+  margin: 0;
+  padding: 0;
+}
+.dl.grid {
+  display: grid;
+}
+.dl.oneOne {
+  grid-template-columns: 1fr 1fr;
+}
+.dl.oneTwo {
+  grid-template-columns: 1fr 2fr;
+}
+.dl.oneThree {
+  grid-template-columns: 1fr 3fr;
+}
+.dl.oneFour {
+  grid-template-columns: 1fr 4fr;
+}
+.dl.twoOne {
+  grid-template-columns: 2fr 1fr;
+}
+.dl.threeOne {
+  grid-template-columns: 3fr 1fr;
+}
+.dl.fourOne {
+  grid-template-columns: 4fr 1fr;
+}
+.dl.semi .dt::after {
+  content: ':';
+}
+.dl.numericData .dd,
+.dd.numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+.dt {
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.dd {
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+.dl.centered .dt {
+  text-align: right;
+  padding-right: var(--space-md);
+}
+.dl.centered .dd {
+  text-align: left;
+}

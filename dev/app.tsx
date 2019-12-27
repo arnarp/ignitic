@@ -110,6 +110,9 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/data/table">
               Table
             </Link>
+            <Link className={linkStyles.neutral} to="/data/dl">
+              Dl
+            </Link>
             <H3>Navigation</H3>
             <Link className={linkStyles.neutral} to="/navigation/tabs">
               Tabs
