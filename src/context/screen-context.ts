@@ -9,4 +9,5 @@ export const ScreenContext = React.createContext<{
    * Height of the screen in rem's
    */
   height: number
-}>({ width: 0, height: 0 })
+  innerHeight: number
+}>({ width: 0, height: 0, innerHeight: 0 })

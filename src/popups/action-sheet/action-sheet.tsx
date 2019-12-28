@@ -13,6 +13,7 @@ import { display } from '../../styles/display'
 import { flex } from '../../styles/flex'
 import { Blanket } from '../blanket'
 import css from './action-sheet.css'
+import { ScreenContext } from '../../context/screen-context'
 
 declare global {
   interface HTMLElement {
@@ -53,7 +54,7 @@ export function ActionSheet(props: Props) {
     }
   }, [previousOpen, props.open])
   React.useEffect(() => cleanUp, [])
-
+  const screenContext = React.useContext(ScreenContext)
   const igniticSettings = React.useContext(IgniticSettingsContext)
   if (igniticSettings.container == undefined) {
     return null
@@ -71,6 +72,8 @@ export function ActionSheet(props: Props) {
     if (igniticSettings.container) {
       igniticSettings.container.inert = true
     }
+    document.body.style.overflow = 'hidden'
+    document.body.style.position = 'fixed'
   }
   function onClosed() {
     cleanUp()
@@ -83,6 +86,8 @@ export function ActionSheet(props: Props) {
     if (igniticSettings.container) {
       igniticSettings.container.inert = false
     }
+    document.body.style.overflow = 'auto'
+    document.body.style.position = 'static'
   }
 
   function onKeyDown(ev: React.KeyboardEvent) {
@@ -104,6 +109,7 @@ export function ActionSheet(props: Props) {
             className={css.sheet}
             onKeyDown={onKeyDown}
             transition={{ type: 'tween', duration: 0.15 }}
+            style={{ top: `${screenContext.innerHeight}rem` }}
             initial={{
               y: 0
             }}

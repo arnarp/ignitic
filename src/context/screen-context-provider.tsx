@@ -10,6 +10,7 @@ export function ScreenContextProvider(props: Props) {
   const updateWidthTimeout = React.useRef<any>(undefined)
   const [width, setWidth] = React.useState(0)
   const [height, setHeight] = React.useState(0)
+  const [innerHeight, setInnerHeight] = React.useState(0)
   useScrollbarWidth()
   React.useEffect(() => {
     function updateWidth() {
@@ -17,11 +18,13 @@ export function ScreenContextProvider(props: Props) {
         document.documentElement.clientWidth || document.body.clientWidth
       const heightPx =
         document.documentElement.clientHeight || document.body.clientHeight
+      const innerHeightPx = window.innerHeight
       const fontSizePx = parseFloat(
         getComputedStyle(document.documentElement).fontSize
       )
       setWidth(widthPx / fontSizePx)
       setHeight(heightPx / fontSizePx)
+      setInnerHeight(innerHeightPx / fontSizePx)
     }
 
     function updateWidthThrottler() {
@@ -48,9 +51,10 @@ export function ScreenContextProvider(props: Props) {
   const value = React.useMemo(
     () => ({
       width,
-      height
+      height,
+      innerHeight
     }),
-    [width, height]
+    [width, height, innerHeight]
   )
 
   return (

@@ -8,7 +8,7 @@
   border-top-right-radius: var(--border-radius);
   min-height: calc(50vh);
   max-height: calc(100vh - var(--space-xl) - var(--space-md));
-  top: 100vh;
+  /* top: 100vh; */
   z-index: var(--zindex-modal);
   --close-btn-height-width: calc(1.5rem + var(--line-height-p));
 }

@@ -64,7 +64,7 @@ export function Radio<T extends string>({
       <input
         ref={ref}
         className={css.input}
-        role="radio"
+        type="radio"
         aria-checked={checked}
         onClick={() => context.onSelect(value)}
         tabIndex={
