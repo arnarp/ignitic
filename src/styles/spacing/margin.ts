@@ -8,5 +8,6 @@ export const margin = {
   negMdL: css.negMdL,
   negMdT: css.negMdT,
   xs_negSmR: css.xsNegSmR,
-  xs_negSmL: css.xsNegSmL
+  xs_negSmL: css.xsNegSmL,
+  print_moneT: css.printNoneT
 }

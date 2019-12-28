@@ -25,3 +25,8 @@
     margin-left: calc(-1 * var(--space-sm));
   }
 }
+@media print {
+  .printNoneT {
+    margin-top: 0;
+  }
+}

@@ -6,3 +6,4 @@ export const negMdL: string;
 export const negMdT: string;
 export const xsNegSmR: string;
 export const xsNegSmL: string;
+export const printNoneT: string
