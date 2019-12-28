@@ -7,17 +7,19 @@
 .inline {
   display: inline;
 }
-.flexbox {
-  display: flex;
-}
-.inlineFlex {
-  display: inline-flex;
+@media screen {
+  .flexbox {
+    display: flex;
+  }
+  .inlineFlex {
+    display: inline-flex;
+  }
+  .grid {
+    display: grid;
+  }
 }
 .none {
   display: none;
-}
-.grid {
-  display: grid;
 }
 .tableCell {
   display: table-cell;
@@ -34,23 +36,24 @@
   .xsInline {
     display: inline;
   }
+  .xsNone {
+    display: none;
+  }
+  .xsTableCell {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 32rem) {
   .xsFlex {
     display: flex;
   }
   .xsInlineFlex {
     display: inline-flex;
   }
-  .xsNone {
-    display: none;
-  }
   .xsGrid {
     display: grid;
   }
-  .xsTableCell {
-    display: table-cell;
-  }
 }
-
 /* Small (sm) 640px */
 @media (min-width: 40rem) {
   .smBlock {
@@ -62,23 +65,24 @@
   .smInline {
     display: inline;
   }
+  .smNone {
+    display: none;
+  }
+  .smTableCell {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 40rem) {
   .smFlex {
     display: flex;
   }
   .smInlineFlex {
     display: inline-flex;
   }
-  .smNone {
-    display: none;
-  }
   .smGrid {
     display: grid;
   }
-  .smTableCell {
-    display: table-cell;
-  }
 }
-
 /* Medium (md) 768px */
 @media (min-width: 48rem) {
   .mdBlock {
@@ -90,23 +94,24 @@
   .mdInline {
     display: inline;
   }
+  .mdNone {
+    display: none;
+  }
+  .mdTableCell {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 48rem) {
   .mdFlex {
     display: flex;
   }
   .mdInlineFlex {
     display: inline-flex;
   }
-  .mdNone {
-    display: none;
-  }
   .mdGrid {
     display: grid;
   }
-  .mdTableCell {
-    display: table-cell;
-  }
 }
-
 /* Large (lg) 1024px */
 @media (min-width: 64rem) {
   .lgBlock {
@@ -118,23 +123,24 @@
   .lgInline {
     display: inline;
   }
+  .lgNone {
+    display: none;
+  }
+  .lgTableCell {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 64rem) {
   .lgFlex {
     display: flex;
   }
   .lgInlineFlex {
     display: inline-flex;
   }
-  .lgNone {
-    display: none;
-  }
   .lgGrid {
     display: grid;
   }
-  .lgTableCell {
-    display: table-cell;
-  }
 }
-
 /* Extra Large (xl) 1280px */
 @media (min-width: 80rem) {
   .xlBlock {
@@ -146,19 +152,21 @@
   .xlInline {
     display: inline;
   }
+  .xlNone {
+    display: none;
+  }
+  .xlTableCell {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 80rem) {
   .xlFlex {
     display: flex;
   }
   .xlInlineFlex {
     display: inline-flex;
   }
-  .xlNone {
-    display: none;
-  }
   .xlGrid {
     display: grid;
-  }
-  .xlTableCell {
-    display: table-cell;
   }
 }
