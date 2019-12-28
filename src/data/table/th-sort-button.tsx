@@ -7,7 +7,7 @@ type Props = {} & React.ButtonHTMLAttributes<HTMLElement>
 
 export const THSortButton = React.forwardRef<HTMLButtonElement, Props>(
   function THSortButton({ children, className, ...spreadDown }, ref) {
-    const sortDirection = React.useContext(SortDirectionContext)
+    const context = React.useContext(SortDirectionContext)
     return (
       <button
         ref={ref}
@@ -15,14 +15,15 @@ export const THSortButton = React.forwardRef<HTMLButtonElement, Props>(
         className={cn(
           css.sortButton,
           {
-            [css.sortDirectionAsc]: sortDirection == 'asc',
-            [css.sortDirectionDesc]: sortDirection == 'desc'
+            [css.sortDirectionAsc]: context.sortDirection == 'asc',
+            [css.sortDirectionDesc]: context.sortDirection == 'desc'
           },
           className
         )}
       >
-        {children}
+        {context.align != 'right' && children}
         <SortArrowIcon />
+        {context.align == 'right' && children}
       </button>
     )
   }

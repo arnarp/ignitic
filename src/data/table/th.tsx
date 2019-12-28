@@ -12,9 +12,10 @@ type Props = {
     HTMLTableHeaderCellElement
   >
 
-export const SortDirectionContext = React.createContext<Props['sortDirection']>(
-  undefined
-)
+export const SortDirectionContext = React.createContext<{
+  sortDirection: Props['sortDirection']
+  align: Props['align']
+}>({ sortDirection: undefined, align: undefined })
 
 export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
   function TH(
@@ -32,6 +33,12 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
     },
     ref
   ) {
+    const providerValue = React.useMemo(() => {
+      return {
+        sortDirection,
+        align
+      }
+    }, [sortDirection, align])
     return (
       <th
         aria-sort={
@@ -62,7 +69,7 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
           className
         )}
       >
-        <SortDirectionContext.Provider value={sortDirection}>
+        <SortDirectionContext.Provider value={providerValue}>
           {children}
         </SortDirectionContext.Provider>
       </th>

@@ -87,6 +87,17 @@ export function DlPage(props: Props) {
         <Dt>Age</Dt>
         <Dd>99</Dd>
       </Dl>
+      <H3>Vertival</H3>
+      <Dl numericData variant="vertical">
+        <Dt>Drink</Dt>
+        <Dd>500</Dd>
+        <Dt>Fruit</Dt>
+        <Dd>897</Dd>
+        <Dt>Team</Dt>
+        <Dd>112</Dd>
+        <Dt>Age</Dt>
+        <Dd>99</Dd>
+      </Dl>
     </>
   )
 }

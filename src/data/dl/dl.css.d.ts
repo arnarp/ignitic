@@ -7,6 +7,7 @@ export const oneFour: string;
 export const twoOne: string;
 export const threeOne: string;
 export const fourOne: string;
+export const vertical: string;
 export const semi: string;
 export const dt: string;
 export const numericData: string;

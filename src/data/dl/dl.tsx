@@ -59,6 +59,7 @@ export function Dl({
             [css.semi]: semi,
             [css.numericData]: numericData,
             [css.grid]: props.variant == 'grid',
+            [css.vertical]: props.variant == 'vertical',
             [css.oneOne]: props.variant == 'grid' && props.ratio == '1:1',
             [css.oneTwo]: props.variant == 'grid' && props.ratio == '1:2',
             [css.oneThree]: props.variant == 'grid' && props.ratio == '1:3',

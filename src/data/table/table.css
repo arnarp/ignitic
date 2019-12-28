@@ -12,11 +12,11 @@
 .table.layoutFixed {
   table-layout: fixed;
 }
-.table.cellPaddingDense,
+/* .table.cellPaddingDense,
 .td.cellPaddingDense,
 .th.cellPaddingDense {
   --cell-padding-right: var(--spacer);
-}
+} */
 .table.cellPaddingDense,
 .td.cellPaddingDense {
   --cell-padding-top-bottom: calc(var(--spacer) / 2);
@@ -27,6 +27,9 @@
 }
 .table.cellPaddingDense .tc:not(:first-child) {
   --cell-padding-left: var(--spacer);
+}
+.table.cellPaddingDense .tc:not(:last-child) {
+  --cell-padding-right: var(--spacer);
 }
 .table.cellPaddingCheckbox,
 .th.cellPaddingCheckbox,
@@ -56,7 +59,6 @@
   font-size: var(--table-cell-font-size);
   line-height: var(--table-cell-line-height);
   font-weight: 300;
-  /* color: var(--neutral-on-background-color); */
   text-align: left;
   overflow: hidden;
 }
@@ -114,9 +116,9 @@
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   outline-offset: -4px;
-  padding: var(--header-cell-padding-top-bottom) 0
+  padding: var(--header-cell-padding-top-bottom) var(--cell-padding-right)
     var(--header-cell-padding-top-bottom) var(--cell-padding-left);
   margin: calc(-1 * var(--header-cell-padding-top-bottom))
     calc(-1 * var(--cell-padding-right))
@@ -127,12 +129,11 @@
   flex-shrink: 0;
   display: inline-block;
   fill: currentColor;
-  margin-left: 0.25rem;
   transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   opacity: 0;
-  height: var(--table-cell-line-height);
-  width: var(--table-cell-line-height);
+  height: calc(var(--table-cell-font-size) + 0.1rem);
+  width: calc(var(--table-cell-font-size) + 0.1rem);
 }
 .sortButton.sortDirectionAsc,
 .sortButton.sortDirectionDesc {
@@ -149,5 +150,5 @@
   justify-content: center;
 }
 .tc.alignRight .sortButton {
-  justify-content: end;
+  justify-content: flex-end;
 }

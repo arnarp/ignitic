@@ -35,7 +35,9 @@ export function TablePage(props: Props) {
             </TH>
             <TH>Heimilisfang</TH>
             <TH align="center">Fjöldi</TH>
-            <TH align="right">Kennitala</TH>
+            <TH sortDirection={sd} align="right">
+              <THSortButton onClick={onSortBtnClick()}>Kennitala</THSortButton>
+            </TH>
           </TR>
         </THead>
         <TBody>
@@ -43,19 +45,25 @@ export function TablePage(props: Props) {
             <TD>Arnar Birgisson</TD>
             <TD>Afganistan 7</TD>
             <TD align="center">35</TD>
-            <TD align="right">1122331234</TD>
+            <TD align="right" numeric>
+              1122331234
+            </TD>
           </TR>
           <TR hover>
             <TD>Glói Arnarsson</TD>
             <TD>Írlandstræti 18</TD>
             <TD align="center">35</TD>
-            <TD align="right">2211331234</TD>
+            <TD align="right" numeric>
+              2211331234
+            </TD>
           </TR>
           <TR hover>
             <TD>Nína Santos Arnarsdóttir</TD>
             <TD>Suður Afríkustræti 19</TD>
             <TD align="center">35</TD>
-            <TD align="right">3322331234</TD>
+            <TD align="right" numeric>
+              3322331234
+            </TD>
           </TR>
         </TBody>
       </Table>
@@ -73,7 +81,11 @@ export function TablePage(props: Props) {
               </TH>
               <TH>Heimilisfang</TH>
               <TH align="center">Fjöldi</TH>
-              <TH align="right">Kennitala</TH>
+              <TH align="right" sortDirection={sd}>
+                <THSortButton onClick={onSortBtnClick()}>
+                  Kennitala
+                </THSortButton>
+              </TH>
             </TR>
           </THead>
           <TBody>
@@ -81,19 +93,25 @@ export function TablePage(props: Props) {
               <TD>Arnar Birgisson</TD>
               <TD>Afganistan 7</TD>
               <TD align="center">35</TD>
-              <TD align="right">1122331234</TD>
+              <TD align="right" numeric>
+                1122331234
+              </TD>
             </TR>
             <TR hover>
               <TD>Glói Arnarsson</TD>
               <TD>Írlandstræti 18</TD>
               <TD align="center">35</TD>
-              <TD align="right">2211331234</TD>
+              <TD align="right" numeric>
+                2211331234
+              </TD>
             </TR>
             <TR hover>
               <TD>Nína Santos Arnarsdóttir</TD>
               <TD>Suður Afríkustræti 19</TD>
               <TD align="center">35</TD>
-              <TD align="right">3322331234</TD>
+              <TD align="right" numeric>
+                3322331234
+              </TD>
             </TR>
           </TBody>
         </Table>
@@ -112,7 +130,11 @@ export function TablePage(props: Props) {
               <TH align="center" cellPadding="none">
                 Fjöldi
               </TH>
-              <TH align="right">Kennitala</TH>
+              <TH align="right" sortDirection={sd}>
+                <THSortButton onClick={onSortBtnClick()}>
+                  Kennitala
+                </THSortButton>
+              </TH>
             </TR>
           </THead>
           <TBody>

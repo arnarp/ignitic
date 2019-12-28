@@ -26,6 +26,10 @@
 .fourOne {
   grid-template-columns: 4fr 1fr;
 }
+.vertical {
+  display: inline-flex;
+  flex-direction: column;
+}
 .semi .dt::after {
   content: ':';
 }
