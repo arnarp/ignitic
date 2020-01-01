@@ -1,5 +1,9 @@
 import * as React from 'react'
-import { ScreenContext } from './screen-context'
+import {
+  ScreenContext,
+  ScreenContextType,
+  initialValue
+} from './screen-context'
 import { useScrollbarWidth } from '../hooks/use-scrollbar-width'
 
 type Props = {
@@ -8,9 +12,7 @@ type Props = {
 
 export function ScreenContextProvider(props: Props) {
   const updateWidthTimeout = React.useRef<any>(undefined)
-  const [width, setWidth] = React.useState(0)
-  const [height, setHeight] = React.useState(0)
-  const [innerHeight, setInnerHeight] = React.useState(0)
+  const [state, setState] = React.useState<ScreenContextType>(initialValue)
   useScrollbarWidth()
   React.useEffect(() => {
     function updateWidth() {
@@ -18,13 +20,24 @@ export function ScreenContextProvider(props: Props) {
         document.documentElement.clientWidth || document.body.clientWidth
       const heightPx =
         document.documentElement.clientHeight || document.body.clientHeight
-      const innerHeightPx = window.innerHeight
+      const windowHeightPx = window.innerHeight
+      const windowWidthPx = window.innerWidth
       const fontSizePx = parseFloat(
         getComputedStyle(document.documentElement).fontSize
       )
-      setWidth(widthPx / fontSizePx)
-      setHeight(heightPx / fontSizePx)
-      setInnerHeight(innerHeightPx / fontSizePx)
+      const windowHeight = windowHeightPx / fontSizePx
+      const windowWidth = windowWidthPx / fontSizePx
+      setState({
+        width: widthPx / fontSizePx,
+        height: heightPx / fontSizePx,
+        windowHeight,
+        windowWidth,
+        minWidthXs: windowWidth >= 32,
+        minWidthSm: windowWidth >= 40,
+        minWidthMd: windowWidth >= 48,
+        minWidthLg: windowWidth >= 64,
+        minWidthXl: windowWidth >= 80
+      })
     }
 
     function updateWidthThrottler() {
@@ -48,14 +61,12 @@ export function ScreenContextProvider(props: Props) {
     }
   }, [])
 
-  const value = React.useMemo(
-    () => ({
-      width,
-      height,
-      innerHeight
-    }),
-    [width, height, innerHeight]
-  )
+  const value = React.useMemo(() => state, [
+    state.width,
+    state.height,
+    state.windowHeight,
+    state.windowWidth
+  ])
 
   return (
     <ScreenContext.Provider value={value}>

@@ -1,13 +1,34 @@
 import * as React from 'react'
 
-export const ScreenContext = React.createContext<{
+export type ScreenContextType = {
   /**
-   * Width of the screen in rem's
+   * Width of the viewport in rem's
    */
   width: number
   /**
-   * Height of the screen in rem's
+   * Height of the viewport in rem's
    */
   height: number
-  innerHeight: number
-}>({ width: 0, height: 0, innerHeight: 0 })
+  windowHeight: number
+  windowWidth: number
+  minWidthXs: boolean
+  minWidthSm: boolean
+  minWidthMd: boolean
+  minWidthLg: boolean
+  minWidthXl: boolean
+}
+
+export const initialValue: ScreenContextType = {
+  width: 0,
+  height: 0,
+  windowHeight: 0,
+  windowWidth: 0,
+  minWidthXs: false,
+  minWidthSm: false,
+  minWidthMd: false,
+  minWidthLg: false,
+  minWidthXl: false
+}
+export const ScreenContext = React.createContext<ScreenContextType>(
+  initialValue
+)

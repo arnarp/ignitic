@@ -109,7 +109,7 @@ export function ActionSheet(props: Props) {
             className={css.sheet}
             onKeyDown={onKeyDown}
             transition={{ type: 'tween', duration: 0.15 }}
-            style={{ top: `${screenContext.innerHeight}rem` }}
+            style={{ top: `${screenContext.windowHeight}rem` }}
             initial={{
               y: 0
             }}
