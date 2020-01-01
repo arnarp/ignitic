@@ -73,7 +73,6 @@ export function ActionSheet(props: Props) {
       igniticSettings.container.inert = true
     }
     document.body.style.overflow = 'hidden'
-    document.body.style.position = 'fixed'
   }
   function onClosed() {
     cleanUp()
@@ -87,7 +86,6 @@ export function ActionSheet(props: Props) {
       igniticSettings.container.inert = false
     }
     document.body.style.overflow = 'auto'
-    document.body.style.position = 'static'
   }
 
   function onKeyDown(ev: React.KeyboardEvent) {
