@@ -62,17 +62,18 @@
   text-align: left;
   overflow: hidden;
 }
-.tc.ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.tc.wrapEllipsis {
-  text-overflow: ellipsis;
-}
+
 .tc.numeric {
   font-variant-numeric: tabular-nums;
 }
 @media screen {
+  .tc.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .tc.wrapEllipsis {
+    text-overflow: ellipsis;
+  }
   .tc {
     box-shadow: inset 0px -1px 0px 0px var(--neutral-seperator-on-background-color);
   }
@@ -80,6 +81,7 @@
 @media print {
   .tc {
     border-bottom: 1px solid var(--neutral-seperator-on-background-color);
+    line-height: calc(var(--table-cell-line-height) - 1px);
   }
 }
 .tc.alignCenter {
