@@ -1,0 +1,9 @@
+.input {
+  width: 100%;
+  font-size: var(--font-size-p-small);
+  line-height: var(--line-height-p-small);
+  color: var(--neutral-on-background-color);
+  padding: calc(var(--spacer) - 1px);
+  border: 1px solid var(--neutral-seperator-on-background-color);
+  background: transparent;
+}

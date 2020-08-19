@@ -3,7 +3,7 @@ import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import { Button } from '../../../src/core/button'
 import { H2, P } from '../../../src/core/text'
-import { Textarea } from '../../../src/inputs/textarea'
+import { TextArea } from '../../../src/inputs/text-area'
 import { ActionSheet } from '../../../src/popups/action-sheet'
 import { display } from '../../../src/styles/display'
 import { flex } from '../../../src/styles/flex'
@@ -51,15 +51,15 @@ export function ActionSheetPage(props: Props) {
           )}
         >
           <div className={cn(display.flex, flex.col)}>
-            {Array.from(Array(15).keys()).map(i => (
+            {Array.from(Array(15).keys()).map((i) => (
               <P key={i}>Action sheet content</P>
             ))}
             <Label>
-              <span>Test</span>>
-              <Textarea
+              <span>Test</span>
+              <TextArea
                 value={text}
-                onChange={e => setText(e.target.value)}
-              ></Textarea>
+                onChange={(e) => setText(e.target.value)}
+              ></TextArea>
             </Label>
           </div>
           <div

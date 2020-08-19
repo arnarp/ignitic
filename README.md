@@ -4,6 +4,10 @@ A React UI toolkit
 
 ## Changelog
 
+### Next
+
+Fix textarea import
+
 ### 0.22
 
 - Fix tooltip

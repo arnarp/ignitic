@@ -23,7 +23,6 @@ type Theme = 'light' | 'dark'
 
 export function App(props: Props) {
   const screenContext = React.useContext(ScreenContext)
-  console.log('screenContext', { ...screenContext })
   const [theme, setTheme] = useLocalStorage<Theme>({
     key: 'theme',
     defaultValue: 'light'
@@ -79,8 +78,11 @@ export function App(props: Props) {
             <Link className={linkStyles.neutral} to="/inputs/radio">
               Radio
             </Link>
-            <Link className={linkStyles.neutral} to="/inputs/textarea">
-              Textarea
+            <Link className={linkStyles.neutral} to="/inputs/text-area">
+              TextArea
+            </Link>
+            <Link className={linkStyles.neutral} to="/inputs/text-input">
+              TextInput
             </Link>
             <H3>Styles</H3>
             <Link className={linkStyles.neutral} to="/styles/display">

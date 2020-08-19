@@ -8,11 +8,6 @@ export function useScrollbarWidth() {
         '--scrollbar-width',
         window.innerWidth - document.documentElement.clientWidth + 'px'
       )
-
-      console.log(
-        'updateScrollbarWidth',
-        window.innerWidth - document.documentElement.clientWidth + 'px'
-      )
     }
 
     updateScrollbarWidth()
