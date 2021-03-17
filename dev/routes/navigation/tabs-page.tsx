@@ -1,5 +1,4 @@
 import { RouteComponentProps } from '@reach/router'
-import { AnimatePresence } from 'framer-motion'
 import { cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
 import { H2, H3 } from '../../../src/core/text'

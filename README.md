@@ -6,7 +6,14 @@ A React UI toolkit
 
 ### Next
 
-Fix textarea import
+### 1.0
+
+- Peer dependencies
+  - React 17
+  - tslib 2
+  - framer motion 3
+  - reach/router
+- TextArea -> text-area
 
 ### 0.22
 

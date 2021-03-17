@@ -36,7 +36,7 @@ export function Dl({
   ...props
 }: Props) {
   const spread = { ...props }
-  delete spread.variant
+  delete (spread as any)['variant']
   delete (spread as any)['align']
   delete (spread as any)['ratio']
 
@@ -44,7 +44,7 @@ export function Dl({
     function createContextValue(): DlContextType {
       return {
         dtColor,
-        ddColor
+        ddColor,
       }
     },
     [dtColor, ddColor]
@@ -67,7 +67,8 @@ export function Dl({
             [css.twoOne]: props.variant == 'grid' && props.ratio == '2:1',
             [css.threeOne]: props.variant == 'grid' && props.ratio == '3:1',
             [css.fourOne]: props.variant == 'grid' && props.ratio == '4:1',
-            [css.centered]: props.variant == 'grid' && props.align == 'centered'
+            [css.centered]:
+              props.variant == 'grid' && props.align == 'centered',
           },
           className
         )}

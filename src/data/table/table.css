@@ -12,11 +12,6 @@
 .table.layoutFixed {
   table-layout: fixed;
 }
-/* .table.cellPaddingDense,
-.td.cellPaddingDense,
-.th.cellPaddingDense {
-  --cell-padding-right: var(--spacer);
-} */
 .table.cellPaddingDense,
 .td.cellPaddingDense {
   --cell-padding-top-bottom: calc(var(--spacer) / 2);

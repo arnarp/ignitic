@@ -16,6 +16,10 @@ export function TabPanel({ children, className, id, ...rest }: Props) {
       role="tabpanel"
       id={`tabpanel-${id}`}
       aria-labelledby={`tab-${id}`}
+      // initial={false}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
+      transition={{ duration: 0.1 }}
     >
       {children}
     </motion.div>
