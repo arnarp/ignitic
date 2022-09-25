@@ -6,7 +6,7 @@ A React UI toolkit
 
 ### Next
 
-### 1.0
+### 0.71
 
 - Peer dependencies
   - React 17
