@@ -13,7 +13,13 @@
     "titleBar.inactiveForeground": "#e7e7e799",
     "statusBar.background": "#880a15",
     "statusBarItem.hoverBackground": "#b70d1c",
-    "statusBar.foreground": "#e7e7e7"
+    "statusBar.foreground": "#e7e7e7",
+    "editorGroup.border": "#b70d1c",
+    "panel.border": "#b70d1c",
+    "sash.hoverBorder": "#b70d1c",
+    "sideBar.border": "#b70d1c",
+    "statusBarItem.remoteBackground": "#880a15",
+    "statusBarItem.remoteForeground": "#e7e7e7"
   },
   "peacock.color": "#880a15",
   "typescript.tsdk": "node_modules/typescript/lib"

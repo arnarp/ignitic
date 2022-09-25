@@ -14,7 +14,7 @@ export function TextInputPage(props: Props) {
   const input = useTextInput({ initial: '' })
   return (
     <div className={cn(display.flex, flex.col, flex.spacingLg)}>
-      <H2>Textarea</H2>
+      <H2>TextInput</H2>
       <Label direction="col">
         <span>Hvernig ávöxt vilt þú?</span>
         <TextInput {...input.inputProps} placeholder="Placeholder" />
