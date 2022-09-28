@@ -1,3 +1,4 @@
+export const __esModule: true;
 export const text: string;
 export const colorNeutral: string;
 export const colorDefault: string;
@@ -14,3 +15,4 @@ export const p: string;
 export const lead: string;
 export const small: string;
 export const span: string;
+

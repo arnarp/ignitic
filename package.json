@@ -28,7 +28,7 @@
     "version:patch": "npm version patch && git push --follow-tags",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "ts:modules": "node node_modules/typed-css-modules/lib/cli.js -e -w -p src"
+    "ts:modules": "node node_modules/typed-css-modules/lib/cli.js -e -w -p 'src/**/*.css'"
   },
   "dependencies": {
     "@seznam/compose-react-refs": "^1.0.6",

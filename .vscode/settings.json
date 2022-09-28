@@ -8,6 +8,6 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "explorer.fileNesting.patterns": {
-    "*.tsx": "${capture}.ts, ${capture}.module.css, ${capture}.stories.tsx, ${capture}.css"
+    "*.tsx": "${capture}.ts, ${capture}.module.css, ${capture}.module.css.d.ts, ${capture}.stories.tsx, ${capture}.css, ${capture}.css.d.ts"
   }
 }

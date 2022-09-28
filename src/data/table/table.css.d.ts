@@ -1,3 +1,4 @@
+export const __esModule: true;
 export const table: string;
 export const layoutFixed: string;
 export const cellPaddingDense: string;
@@ -18,3 +19,4 @@ export const cellSizeSmall: string;
 export const sortButton: string;
 export const sortDirectionAsc: string;
 export const sortDirectionDesc: string;
+

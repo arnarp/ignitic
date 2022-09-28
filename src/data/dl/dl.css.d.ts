@@ -1,3 +1,4 @@
+export const __esModule: true;
 export const dl: string;
 export const grid: string;
 export const oneOne: string;
@@ -14,3 +15,4 @@ export const numericData: string;
 export const dd: string;
 export const numeric: string;
 export const centered: string;
+

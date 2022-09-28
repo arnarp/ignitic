@@ -1,3 +1,4 @@
+export const __esModule: true;
 export const col: string;
 export const spacingLg: string;
 export const spacingMd: string;
@@ -15,3 +16,4 @@ export const alignEnd: string;
 export const grow: string;
 export const basis50Percent: string;
 export const wrap: string;
+

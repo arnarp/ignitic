@@ -1,3 +1,4 @@
+export const __esModule: true;
 export const block: string;
 export const inlineBlock: string;
 export const inline: string;
@@ -46,3 +47,4 @@ export const xlTableCell: string;
 export const xlFlex: string;
 export const xlInlineFlex: string;
 export const xlGrid: string;
+
