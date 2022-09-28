@@ -5,8 +5,16 @@ type Props = {
   children: React.ReactNode
 }
 
+/**
+ * A component that makes it's content visually hidden while keeping it
+ * in the accessibility tree.
+ */
 export function VisuallyHidden(props: Props) {
-  return <div className={css.visuallyHidden}>{props.children}</div>
+  return (
+    <div test-id="vh" className={css.visuallyHidden}>
+      {props.children}
+    </div>
+  )
 }
 
 export const visuallyHiddenClass: string = css.visuallyHidden

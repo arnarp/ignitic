@@ -1,1 +1,2 @@
-export * from './a11y'
+export * from './core'
+export * from './styles'

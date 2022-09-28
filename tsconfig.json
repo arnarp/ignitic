@@ -10,8 +10,7 @@
     "importHelpers": true,
     "lib": ["ESNext", "DOM"],
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false,
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    "esModuleInterop": false
   },
   "include": ["src/**/*"],
   "exclude": ["dev/**/*"]
