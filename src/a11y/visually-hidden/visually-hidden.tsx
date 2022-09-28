@@ -1,5 +1,5 @@
 import * as React from 'react'
-import css from './visually-hidden.css'
+import css from './visually-hidden.module.css'
 
 type Props = {
   children: React.ReactNode
