@@ -6,5 +6,8 @@
     "statusBarItem.remoteBackground": "#880a15",
     "statusBarItem.remoteForeground": "#e7e7e7"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "explorer.fileNesting.patterns": {
+    "*.tsx": "${capture}.ts, ${capture}.*.css"
+  }
 }

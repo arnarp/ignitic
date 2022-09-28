@@ -4,13 +4,14 @@
     "module": "esNext",
     "strict": true,
     "declaration": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "outDir": "dist",
     "skipLibCheck": true,
     "importHelpers": true,
-    "lib": ["es6", "dom", "dom.iterable"],
+    "lib": ["ESNext", "DOM"],
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false
+    "esModuleInterop": false,
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["src/**/*"],
   "exclude": ["dev/**/*"]
