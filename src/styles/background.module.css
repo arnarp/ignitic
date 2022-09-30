@@ -1,62 +1,35 @@
-.paperColor {
+.paperBackground {
   background: var(--paper-surface-color, var(--background-color, #fff));
   --neutral-on-background-color: var(--neutral-on-paper-surface-color);
   --default-on-background-color: var(--default-on-paper-surface-color);
   --primary-on-background-color: var(--primary-on-paper-surface-color);
   --secondary-on-background-color: var(--secondary-on-paper-surface-color);
 }
-.neutralColor {
+.neutralBackground {
   background: var(--neutral-surface-color);
   --neutral-on-background-color: var(--neutral-on-neutral-surface-color);
   --default-on-background-color: var(--default-on-neutral-surface-color);
   --primary-on-background-color: var(--primary-on-neutral-surface-color);
   --secondary-on-background-color: var(--secondary-on-neutral-surface-color);
 }
-.defaultColor {
+.defaultBackground {
   background: var(--default-surface-color);
   --neutral-on-background-color: var(--neutral-on-default-surface-color);
   --default-on-background-color: var(--default-on-default-surface-color);
   --primary-on-background-color: var(--primary-on-default-surface-color);
   --secondary-on-background-color: var(--secondary-on-default-surface-color);
 }
-.primaryColor {
+.primaryBackground {
   background: var(--primary-surface-color);
   --neutral-on-background-color: var(--neutral-on-primary-surface-color);
   --default-on-background-color: var(--default-on-primary-surface-color);
   --primary-on-background-color: var(--primary-on-primary-surface-color);
   --secondary-on-background-color: var(--secondary-on-primary-surface-color);
 }
-.secondaryColor {
+.secondaryBackground {
   background: var(--secondary-surface-color);
   --neutral-on-background-color: var(--neutral-on-secondary-surface-color);
   --default-on-background-color: var(--default-on-secondary-surface-color);
   --primary-on-background-color: var(--primary-on-secondary-surface-color);
   --secondary-on-background-color: var(--secondary-on-secondary-surface-color);
-}
-.paddingSm {
-  padding: var(--space-sm);
-}
-.paddingMd {
-  padding: var(--space-md);
-}
-.paddingLg {
-  padding: var(--space-lg);
-}
-.paddingXl {
-  padding: var(--space-xl);
-}
-.rounded {
-  border-radius: var(--border-radius, 0.25rem);
-}
-.borderNeutral {
-  border: 1px solid var(--neutral-on-background-color);
-}
-.borderDefault {
-  border: 1px solid var(--default-on-background-color);
-}
-.borderPrimary {
-  border: 1px solid var(--primary-on-background-color);
-}
-.borderSecondary {
-  border: 1px solid var(--secondary-on-background-color);
 }

@@ -1,12 +1,5 @@
-import * as css from './margin.module.css'
-
-// export const margin = {
-//   xs_negSmR: css.xsNegSmR,
-//   xs_negSmL: css.xsNegSmL,
-//   print_noneT: css.printNoneT
-// }
-
 import { StyleProps } from './styleClassValue'
+import * as css from './padding.module.css'
 import { ClassValue } from 'itils'
 
 export function padding({
@@ -21,13 +14,13 @@ export function padding({
 }: Pick<
   StyleProps,
   | 'padding'
-  | 'paddingBottom'
   | 'paddingHorizontal'
+  | 'paddingVertical'
+  | 'paddingTop'
+  | 'paddingRight'
+  | 'paddingBottom'
   | 'paddingLeft'
   | 'paddingPrint'
-  | 'paddingRight'
-  | 'paddingTop'
-  | 'paddingVertical'
 >): ClassValue {
   return {
     [css.none]: padding == 'none',
@@ -64,5 +57,29 @@ export function padding({
     [css.printMd]: paddingPrint == 'md',
     [css.printLg]: paddingPrint == 'lg',
     [css.printXl]: paddingPrint == 'xl',
+    [css.printXsm]: paddingPrintHorizontal == 'sm',
+    [css.printXmd]: paddingPrintHorizontal == 'md',
+    [css.printXlg]: paddingPrintHorizontal == 'lg',
+    [css.printXxl]: paddingPrintHorizontal == 'xl',
+    [css.printYsm]: paddingPrintVertical == 'sm',
+    [css.printYmd]: paddingPrintVertical == 'md',
+    [css.printYlg]: paddingPrintVertical == 'lg',
+    [css.printYxl]: paddingPrintVertical == 'xl',
+    [css.printTsm]: paddingPrintTop == 'sm',
+    [css.printTmd]: paddingPrintTop == 'md',
+    [css.printTlg]: paddingPrintTop == 'lg',
+    [css.printTxl]: paddingPrintTop == 'xl',
+    [css.printBsm]: paddingPrintBottom == 'sm',
+    [css.printBmd]: paddingPrintBottom == 'md',
+    [css.printBlg]: paddingPrintBottom == 'lg',
+    [css.printBxl]: paddingPrintBottom == 'xl',
+    [css.printLsm]: paddingPrintLeft == 'sm',
+    [css.printLmd]: paddingPrintLeft == 'md',
+    [css.printLlg]: paddingPrintLeft == 'lg',
+    [css.printLxl]: paddingPrintLeft == 'xl',
+    [css.printRsm]: paddingPrintRight == 'sm',
+    [css.printRmd]: paddingPrintRight == 'md',
+    [css.printRlg]: paddingPrintRight == 'lg',
+    [css.printRxl]: paddingPrintRight == 'xl',
   }
 }

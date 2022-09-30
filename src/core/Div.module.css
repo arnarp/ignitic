@@ -1,0 +1,22 @@
+.rounded {
+  border-radius: var(--border-radius, 0.25rem);
+}
+.borderNeutral {
+  border: 1px solid var(--neutral-on-background-color);
+}
+.borderDefault {
+  border: 1px solid var(--default-on-background-color);
+}
+.borderPrimary {
+  border: 1px solid var(--primary-on-background-color);
+}
+.borderSecondary {
+  border: 1px solid var(--secondary-on-background-color);
+}
+@media screen {
+  .paperShaddow {
+    box-shadow: 0px 1px 3px 0px var(--box-shadow-main-color, rgba(0, 0, 0, 0.2)),
+      0px 1px 1px 0px var(--box-shadow-sharpen-color, rgba(0, 0, 0, 0.14)),
+      0px 2px 1px -1px var(--box-shadow-bottom-accent-color, rgba(0, 0, 0, 0.12));
+  }
+}
