@@ -16,9 +16,9 @@ const Template: ComponentStory<typeof Div> = (args) => <Div {...args} />
 
 export const DefaultBackground = Template.bind({}) as ComponentStory<typeof Div>
 DefaultBackground.args = {
-  b: 'brand',
+  background: 'brand',
 }
 export const NeutralBackground = Template.bind({}) as ComponentStory<typeof Div>
 NeutralBackground.args = {
-  b: 'neutral',
+  background: 'neutral',
 }
