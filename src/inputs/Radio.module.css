@@ -1,0 +1,35 @@
+.radio {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--radio-border-color);
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio.focus {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+.radio .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.innerCircle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 0.2s linear;
+}
+.radio.checked .innerCircle {
+  background-color: var(--radio-border-color);
+}

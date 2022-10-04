@@ -1,0 +1,18 @@
+.tab {
+  color: var(--neutral-on-background-color);
+  border: none;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-md);
+  outline-offset: calc(-1 * var(--space-sm));
+  --btn-font-size: var(--font-size-p);
+  --btn-line-height: var(--btn-line-height-md);
+  font-size: var(--btn-font-size);
+  line-height: calc(var(--btn-line-height) + var(--border-radius));
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.057em;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}

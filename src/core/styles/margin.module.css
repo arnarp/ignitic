@@ -1,0 +1,191 @@
+.mAnegmd {
+  margin: calc(-1 * var(--space-md));
+}
+.mAnegsm {
+  margin: calc(-1 * var(--space-sm));
+}
+.mAo {
+  margin: 0;
+}
+.mAsm {
+  margin: var(--space-sm);
+}
+.mAmd {
+  margin: var(--space-md);
+}
+.mAlg {
+  margin: var(--space-lg);
+}
+.mAxl {
+  margin: var(--space-xl);
+}
+
+.mVnegmd {
+  margin-left: calc(-1 * var(--space-md));
+  margin-right: calc(-1 * var(--space-md));
+}
+.mVnegsm {
+  margin-left: calc(-1 * var(--space-sm));
+  margin-right: calc(-1 * var(--space-sm));
+}
+.mVo {
+  margin-left: var(--space-sm);
+  margin-right: var(--space-sm);
+}
+.mVsm {
+  margin-left: var(--space-sm);
+  margin-right: var(--space-sm);
+}
+.mVmd {
+  margin-left: var(--space-md);
+  margin-right: var(--space-md);
+}
+.mVlg {
+  margin-left: var(--space-lg);
+  margin-right: var(--space-lg);
+}
+.mVxl {
+  margin-left: var(--space-xl);
+  margin-right: var(--space-xl);
+}
+
+.mHnegmd {
+  margin-top: calc(-1 * var(--space-md));
+  margin-bottom: calc(-1 * var(--space-md));
+}
+.mHnegsm {
+  margin-top: calc(-1 * var(--space-sm));
+  margin-bottom: calc(-1 * var(--space-sm));
+}
+.mHo {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+.mHsm {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+.mHmd {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.mHlg {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+.mHxl {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.mTnegmd {
+  margin-top: vacalc(-1 * r(--space-sm));
+}
+.mTnegsm {
+  margin-top: vacalc(-1 * r(--space-sm));
+}
+.mTo {
+  margin-top: var(--space-sm);
+}
+.mTsm {
+  margin-top: var(--space-sm);
+}
+.mTmd {
+  margin-top: var(--space-md);
+}
+.mTlg {
+  margin-top: var(--space-lg);
+}
+.mTxl {
+  margin-top: var(--space-xl);
+}
+
+.mBnegmd {
+  margin-bottom: calc(-1 * var(--space-sm));
+}
+.mBnegsm {
+  margin-bottom: calc(-1 * var(--space-sm));
+}
+.mBo {
+  margin-bottom: var(--space-sm);
+}
+.mBsm {
+  margin-bottom: var(--space-sm);
+}
+.mBmd {
+  margin-bottom: var(--space-md);
+}
+.mBlg {
+  margin-bottom: var(--space-lg);
+}
+.mBxl {
+  margin-bottom: var(--space-xl);
+}
+
+.mLnegmd {
+  margin-left: vcalc(-1 * ar(--space-sm));
+}
+.mLnegsm {
+  margin-left: vcalc(-1 * ar(--space-sm));
+}
+.mLo {
+  margin-left: var(--space-sm);
+}
+.mLsm {
+  margin-left: var(--space-sm);
+}
+.mLmd {
+  margin-left: var(--space-md);
+}
+.mLlg {
+  margin-left: var(--space-lg);
+}
+.mLxl {
+  margin-left: var(--space-xl);
+}
+
+.mRnegmd {
+  margin-right: calc(-1 * var(--space-sm));
+}
+.mRnegsm {
+  margin-right: calc(-1 * var(--space-sm));
+}
+.mRo {
+  margin-right: var(--space-sm);
+}
+.mRsm {
+  margin-right: var(--space-sm);
+}
+.mRmd {
+  margin-right: var(--space-md);
+}
+.mRlg {
+  margin-right: var(--space-lg);
+}
+.mRxl {
+  margin-right: var(--space-xl);
+}
+
+@media print {
+  .mPrintAnegmd {
+    margin: calc(-1 * var(--space-sm));
+  }
+  .mPrintAnegsm {
+    margin: calc(-1 * var(--space-sm));
+  }
+  .mPrintAo {
+    margin: 0;
+  }
+  .mPrintAsm {
+    margin: var(--space-sm);
+  }
+  .mPrintAmd {
+    margin: var(--space-md);
+  }
+  .mPrintAlg {
+    margin: var(--space-lg);
+  }
+  .mPrintAxl {
+    margin: var(--space-xl);
+  }
+}

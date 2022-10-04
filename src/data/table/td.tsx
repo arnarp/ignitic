@@ -1,6 +1,6 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-import css from './table.css'
+import React from 'react'
+import * as css from './Table.module.css'
 import { TableCellProps } from './types'
 import { getColorClass } from '../../core/text'
 
@@ -42,7 +42,7 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
           [css.alignJustify]: align == 'justify',
           [css.ellipsis]: overflow == 'ellipsis',
           [css.wrapEllipsis]: overflow == 'wrap-ellipsis',
-          [css.numeric]: numeric
+          [css.numeric]: numeric,
         },
         className
       )}

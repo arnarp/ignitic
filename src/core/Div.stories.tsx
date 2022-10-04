@@ -5,19 +5,20 @@ import { Div } from './Div'
 export default {
   title: 'Core/Div',
   component: Div,
-  args: {},
+  args: {
+    w: '12',
+    h: '12',
+  },
   argTypes: {},
 } as ComponentMeta<typeof Div>
 
-const Template: ComponentStory<typeof Div> = (args) => (
-  <Div {...args} style={{ minWidth: '10rem', minHeight: '10rem' }} />
-)
+const Template: ComponentStory<typeof Div> = (args) => <Div {...args} />
 
 export const DefaultBackground = Template.bind({}) as ComponentStory<typeof Div>
 DefaultBackground.args = {
-  background: 'default',
+  b: 'brand',
 }
 export const NeutralBackground = Template.bind({}) as ComponentStory<typeof Div>
 NeutralBackground.args = {
-  background: 'neutral',
+  b: 'neutral',
 }

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import css from './dl.css'
+import React from 'react'
+import * as css from './Dl.module.css'
 import { cn } from 'itils/dist/misc/cn'
-import { DlContextType, DlContext } from './dl-context'
+import { DlContextType, DlContext } from './DlContext'
 import { TextColor } from '../../core/text'
 
 type Variant =

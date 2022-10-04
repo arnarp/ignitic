@@ -1,6 +1,6 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-import css from './table.css'
+import React from 'react'
+import * as css from './Table.module.css'
 import { SortDirection, TableCellProps } from './types'
 import { getColorClass } from '../../core/text'
 
@@ -36,7 +36,7 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
     const providerValue = React.useMemo(() => {
       return {
         sortDirection,
-        align
+        align,
       }
     }, [sortDirection, align])
     return (
@@ -64,7 +64,7 @@ export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
             [css.alignJustify]: align == 'justify',
             [css.ellipsis]: overflow == 'ellipsis',
             [css.wrapEllipsis]: overflow == 'wrap-ellipsis',
-            [css.numeric]: numeric
+            [css.numeric]: numeric,
           },
           className
         )}

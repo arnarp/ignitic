@@ -1,8 +1,8 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
+import React from 'react'
 import { getColorClass, TextColor } from '../../core/text'
-import css from './dl.css'
-import { DlContext } from './dl-context'
+import * as css from './Dl.module.css'
+import { DlContext } from './DlContext'
 
 type Props = {
   children: React.ReactNode

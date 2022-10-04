@@ -1,8 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import { cn } from 'itils/dist/misc/cn'
-import css from './tabs.css'
-import { TabsContext } from './tabs-context'
+import * as css from './Tab.module.css'
+import { TabsContext } from './TabsContext'
 import composeRefs from '@seznam/compose-react-refs'
+import { extractStyleProps, styleClassValue, StyleProps } from '../../core'
 
 type Props = {
   children: React.ReactNode
@@ -10,12 +11,14 @@ type Props = {
 } & React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
->
+> &
+  StyleProps
 
 export const Tab = React.forwardRef<HTMLButtonElement, Props>(function Tab(
-  { children, className, id, ...rest },
+  props,
   ref
 ) {
+  const { children, className, id, ...rest } = extractStyleProps(props)
   const innerRef = React.useRef<HTMLButtonElement>(null)
   const tabsContext = React.useContext(TabsContext)
   React.useEffect(() => {
@@ -50,11 +53,11 @@ export const Tab = React.forwardRef<HTMLButtonElement, Props>(function Tab(
       aria-selected={tabsContext.selectedTab == id}
       className={cn(
         css.tab,
-        {
-          [css.rounded]: tabsContext.rounded,
-          [css.colorNeutral]: tabsContext.color == 'neutral',
-          [css.colorPaper]: tabsContext.color == 'paper'
-        },
+        styleClassValue(props),
+        // {
+        //   [css.colorNeutral]: tabsContext.color == 'neutral',
+        //   [css.colorPaper]: tabsContext.color == 'paper',
+        // },
         className
       )}
       id={`tab-${id}`}

@@ -1,0 +1,86 @@
+.dnone {
+  display: none;
+}
+.dblock {
+  display: block;
+}
+.dinline {
+  display: inline;
+}
+
+@media print {
+  .dPrintnone {
+    display: none;
+  }
+  .dPrintblock {
+    display: block;
+  }
+  .dPrintinline {
+    display: inline;
+  }
+}
+
+/* Extra Small (xs) 512px */
+@media screen and (min-width: 32rem) {
+  .dScreenXsnone {
+    display: none;
+  }
+  .dScreenXsblock {
+    display: block;
+  }
+  .dScreenXsinline {
+    display: inline;
+  }
+}
+
+/* Medium (sm) 640px */
+@media screen and (min-width: 40rem) {
+  .dScreenSmnone {
+    display: none;
+  }
+  .dScreenSmblock {
+    display: block;
+  }
+  .dScreenSminline {
+    display: inline;
+  }
+}
+
+/* Medium (md) 768px */
+@media screen and (min-width: 48rem) {
+  .dScreenMdnone {
+    display: none;
+  }
+  .dScreenMdblock {
+    display: block;
+  }
+  .dScreenMdinline {
+    display: inline;
+  }
+}
+
+/* Large (lg) 1024px */
+@media screen and (min-width: 64rem) {
+  .dScreenLgnone {
+    display: none;
+  }
+  .dScreenLgblock {
+    display: block;
+  }
+  .dScreenLginline {
+    display: inline;
+  }
+}
+
+/* Extra Large (xl) 1280px */
+@media screen and (min-width: 80rem) {
+  .dScreenXlnone {
+    display: none;
+  }
+  .dScreenXlblock {
+    display: block;
+  }
+  .dScreenXlinline {
+    display: inline;
+  }
+}

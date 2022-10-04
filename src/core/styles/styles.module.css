@@ -1,0 +1,11 @@
+.outline {
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+@media screen {
+  .paperShadow {
+    box-shadow: 0px 1px 3px 0px var(--box-shadow-main-color, rgba(0, 0, 0, 0.2)),
+      0px 1px 1px 0px var(--box-shadow-sharpen-color, rgba(0, 0, 0, 0.14)),
+      0px 2px 1px -1px var(--box-shadow-bottom-accent-color, rgba(0, 0, 0, 0.12));
+  }
+}

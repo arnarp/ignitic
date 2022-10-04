@@ -1,0 +1,24 @@
+.w0 {
+  width: 0;
+}
+.w6 {
+  width: 6rem;
+}
+.w12 {
+  width: 12rem;
+}
+.w100p {
+  width: 100%;
+}
+.h0 {
+  height: 0;
+}
+.h6 {
+  height: 6rem;
+}
+.h12 {
+  height: 12rem;
+}
+.h100p {
+  height: 100%;
+}

@@ -1,0 +1,19 @@
+.label {
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
+  font-weight: 300;
+  color: var(--neutral-on-background-color);
+  display: flex;
+}
+.label.row {
+  flex-direction: row;
+}
+.label.row > * + * {
+  margin-left: var(--spacer);
+}
+.label.col {
+  flex-direction: column;
+}
+.label.col > * + * {
+  margin-top: 0.25rem;
+}

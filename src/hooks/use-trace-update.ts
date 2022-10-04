@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 export function useTraceUpdate(props: any) {
   const prev = React.useRef(props)

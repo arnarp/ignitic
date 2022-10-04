@@ -1,6 +1,6 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-import css from './table.css'
+import React from 'react'
+import * as css from './Table.module.css'
 import { CellPadding, CellSize } from './types'
 
 type Props = {
@@ -29,7 +29,7 @@ export const Table = React.forwardRef<HTMLTableElement, Props>(function Table(
         {
           [css.cellPaddingDense]: cellPadding == 'dense',
           [css.cellSizeSmall]: cellSize == 'small',
-          [css.layoutFixed]: layout == 'fixed'
+          [css.layoutFixed]: layout == 'fixed',
         },
         className
       )}

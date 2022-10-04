@@ -1,8 +1,8 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
+import React from 'react'
 import { getColorClass, TextColor } from '../../core/text'
-import css from './dl.css'
-import { DlContext } from './dl-context'
+import * as css from './dl.module.css'
+import { DlContext } from './DlContext'
 
 type Props = {
   children: React.ReactNode
@@ -19,7 +19,7 @@ export function Dd({ children, className, color, numeric, ...rest }: Props) {
         css.dd,
         getColorClass(color || context.ddColor || 'neutral'),
         {
-          [css.numeric]: numeric
+          [css.numeric]: numeric,
         },
         className
       )}

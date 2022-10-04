@@ -1,0 +1,15 @@
+.input {
+  width: 100%;
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-p-small);
+  color: var(--neutral-on-background-color);
+  padding: calc(var(--spacer) - 1px);
+  border: 1px solid var(--neutral-on-background-color);
+  background: transparent;
+}
+.valid {
+  border: 1px solid var(--primary-on-background-color);
+}
+.invalid {
+  border: 1px solid var(--secondary-on-background-color);
+}

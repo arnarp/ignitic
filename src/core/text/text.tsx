@@ -1,8 +1,8 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
+import React from 'react'
 
 import { BaseComponentProps } from '../../types/base-component-props'
-import css from './text.css'
+import * as css from './text.module.css'
 
 export type TextColor = 'neutral' | 'default' | 'primary' | 'secondary'
 export type TextElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'

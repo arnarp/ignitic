@@ -1,0 +1,18 @@
+.inner {
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+}
+
+.tooltip {
+  position: absolute;
+  border-radius: var(--border-radius, 0.25rem);
+  transform-origin: center center;
+  z-index: var(--zindex-tooltip, 1070);
+  font-size: 0.625rem;
+  max-width: 300px;
+  line-height: 1.4em;
+  width: fit-content;
+  height: fit-content;
+  background: transparent;
+  pointer-events: none;
+}

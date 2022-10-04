@@ -1,7 +1,7 @@
 import { ClassValue, cn } from 'itils/dist/misc/cn'
 import * as React from 'react'
-import { extractStyleProps, styleClassValue, StyleProps } from '../styles'
 import * as css from './Div.module.css'
+import { extractStyleProps, styleClassValue, StyleProps } from './styles'
 
 type Props = {
   boxShaddow?: 'none' | 'paper'

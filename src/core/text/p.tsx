@@ -1,7 +1,6 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-
-import css from './text.css'
+import React from 'react'
+import * as css from './text.module.css'
 import { TextProps, getColorClass, getVariantClass } from '.'
 
 export const P = React.forwardRef<HTMLHeadingElement, TextProps>(function P(
