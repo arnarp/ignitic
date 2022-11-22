@@ -23,18 +23,3 @@ export function Div(props: Props) {
     />
   )
 }
-
-// export function boxClassName({
-//   background,
-//   padding,
-// }: // rounded,
-// // border,
-// StyleProps): ClassValue {
-//   return {
-//     // [css.rounded]: rounded == true,
-//     // [css.borderNeutral]: border == 'neutral',
-//     // [css.borderDefault]: border == 'default',
-//     // [css.borderPrimary]: border == 'primary',
-//     // [css.borderSecondary]: border == 'secondary',
-//   }
-// }

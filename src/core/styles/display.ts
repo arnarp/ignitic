@@ -10,6 +10,10 @@ export function display({
   dScreenMd,
   dScreenLg,
   dScreenXl,
+  direction,
+  spacing,
+  crossAxisAlignment,
+  mainAxisAlignment,
 }: Pick<
   StyleProps,
   | 'd'
@@ -19,6 +23,10 @@ export function display({
   | 'dScreenMd'
   | 'dScreenLg'
   | 'dScreenXl'
+  | 'direction'
+  | 'spacing'
+  | 'crossAxisAlignment'
+  | 'mainAxisAlignment'
 >): ClassValue {
   return [
     d ? css[`d${d}`] : undefined,
@@ -28,5 +36,17 @@ export function display({
     dScreenMd ? css[`dScreenMd${dScreenMd}`] : undefined,
     dScreenLg ? css[`dScreenLg${dScreenLg}`] : undefined,
     dScreenXl ? css[`dScreenXl${dScreenXl}`] : undefined,
+    direction ? css[direction] : undefined,
+    spacing ? css[`spacing${spacing}`] : undefined,
+    crossAxisAlignment ? css[`crossA${crossAxisAlignment}`] : undefined,
+    mainAxisAlignment
+      ? mainAxisAlignment == 'space around'
+        ? css.mainAaround
+        : mainAxisAlignment === 'space between'
+        ? css.mainAbetween
+        : mainAxisAlignment == 'space evenly'
+        ? css.mainAevenly
+        : css[`mainA${mainAxisAlignment}`]
+      : undefined,
   ]
 }
