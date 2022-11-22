@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof Dialog> = (args) => {
   return (
     <Dialog {...args} headingId={hId}>
       <DialogHeader>
-        <H1 variant="h4" color="neutral" id={hId}>
+        <H1 fontVariant="h4" color="neutral" id={hId}>
           Dialog title
         </H1>
         <IconButton aria-label="Loka" color="neutral">

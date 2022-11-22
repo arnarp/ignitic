@@ -1,31 +1,31 @@
 import { cn } from 'itils/dist/misc/cn'
 import React from 'react'
-import { getColorClass, TextColor } from '../../core/text'
-import * as css from './dl.module.css'
+import { extractStyleProps, styleClassValue, StyleProps } from '../../core'
 import { DlContext } from './DlContext'
 
-type Props = {
-  children: React.ReactNode
-  color?: TextColor
-  numeric?: boolean
-} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>
+type Props = React.HTMLAttributes<HTMLElement> & StyleProps
 
-export function Dd({ children, className, color, numeric, ...rest }: Props) {
+export function Dd(props: Props) {
+  const { className, ...rest } = extractStyleProps(props)
+
   const context = React.useContext(DlContext)
 
   return (
     <dd
       className={cn(
-        css.dd,
-        getColorClass(color || context.ddColor || 'neutral'),
-        {
-          [css.numeric]: numeric,
-        },
+        styleClassValue(props, {
+          color: context.ddColor,
+          fontVariant: 'p',
+          mA: 'o',
+          pA: 'o',
+          textAlign:
+            context.variant == 'grid' && context.align == 'centered'
+              ? 'left'
+              : undefined,
+        }),
         className
       )}
       {...rest}
-    >
-      {children}
-    </dd>
+    />
   )
 }

@@ -12,6 +12,11 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 export const Default = Template.bind({}) as ComponentStory<typeof Button>
+Default.parameters = {
+  chromatic: {
+    disableSnapshot: true,
+  },
+}
 Default.args = {
   children: 'Click me',
 }

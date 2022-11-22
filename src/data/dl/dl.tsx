@@ -2,9 +2,14 @@ import React from 'react'
 import * as css from './Dl.module.css'
 import { cn } from 'itils/dist/misc/cn'
 import { DlContextType, DlContext } from './DlContext'
-import { TextColor } from '../../core/text'
+import {
+  Color,
+  extractStyleProps,
+  styleClassValue,
+  StyleProps,
+} from '../../core'
 
-type Variant =
+export type DLVariant =
   | {
       variant: 'grid'
       align: 'spread' | 'centered'
@@ -12,52 +17,48 @@ type Variant =
     }
   | {
       variant: 'vertical'
+      align: undefined
+      ratio: undefined
+    }
+  | {
+      variant: undefined
+      align: undefined
+      ratio: undefined
     }
 
-type Props = {
-  children: React.ReactNode
+type DlProps = {
   semi?: boolean
-  numericData?: boolean
-  dtColor?: TextColor
-  ddColor?: TextColor
-} & Variant &
-  React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDListElement>,
-    HTMLDListElement
-  >
+  dtColor?: Color
+  ddColor?: Color
+} & DLVariant &
+  StyleProps &
+  React.HTMLAttributes<HTMLDListElement>
 
-export function Dl({
-  children,
-  className,
-  semi,
-  numericData,
-  dtColor,
-  ddColor,
-  ...props
-}: Props) {
-  const spread = { ...props }
-  delete (spread as any)['variant']
-  delete (spread as any)['align']
-  delete (spread as any)['ratio']
+export function Dl(props: DlProps) {
+  const { className, dtColor, ddColor, semi, ...rest } =
+    extractStyleProps(props)
+
+  delete rest['variant']
+  delete rest['align']
+  delete rest['ratio']
 
   const contextValue = React.useMemo(
     function createContextValue(): DlContextType {
-      return {
-        dtColor,
-        ddColor,
-      }
+      return props
     },
-    [dtColor, ddColor]
+    [dtColor, ddColor, props.variant, props.align, props.ratio]
   )
 
   return (
     <DlContext.Provider value={contextValue}>
       <dl
         className={cn(
-          css.dl,
+          styleClassValue(props, {
+            mA: 'o',
+            pA: 'o',
+          }),
           {
             [css.semi]: semi,
-            [css.numericData]: numericData,
             [css.grid]: props.variant == 'grid',
             [css.vertical]: props.variant == 'vertical',
             [css.oneOne]: props.variant == 'grid' && props.ratio == '1:1',
@@ -67,15 +68,11 @@ export function Dl({
             [css.twoOne]: props.variant == 'grid' && props.ratio == '2:1',
             [css.threeOne]: props.variant == 'grid' && props.ratio == '3:1',
             [css.fourOne]: props.variant == 'grid' && props.ratio == '4:1',
-            [css.centered]:
-              props.variant == 'grid' && props.align == 'centered',
           },
           className
         )}
-        {...spread}
-      >
-        {children}
-      </dl>
+        {...rest}
+      />
     </DlContext.Provider>
   )
 }

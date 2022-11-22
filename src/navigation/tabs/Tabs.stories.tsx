@@ -36,13 +36,13 @@ const Template: ComponentStory<typeof Tabs> = (args) => {
           <Tab
             key={i.id}
             id={i.id}
-            b={i.id == selectedTab ? 'neutral' : 'paper'}
+            background={i.id == selectedTab ? 'neutral' : 'paper'}
           >
             {i.label}
           </Tab>
         ))}
       </TabList>
-      <TabPanelContainer pA="md" b="neutral">
+      <TabPanelContainer pA="md" background="neutral">
         {selectedItem && (
           <TabPanel
             key={selectedItem.id}

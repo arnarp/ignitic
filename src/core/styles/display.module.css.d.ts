@@ -5,6 +5,7 @@ export const dinline: string;
 export const dflex: string;
 export const row: string;
 export const col: string;
+export const spacingxs: string;
 export const spacingsm: string;
 export const spacingmd: string;
 export const spacinglg: string;

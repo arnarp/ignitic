@@ -10,7 +10,7 @@
 .w12 {
   width: 12rem;
 }
-.w100p {
+.wfull {
   width: 100%;
 }
 .h0 {
@@ -25,6 +25,6 @@
 .h12 {
   height: 12rem;
 }
-.h100p {
+.hfull {
   height: 100%;
 }

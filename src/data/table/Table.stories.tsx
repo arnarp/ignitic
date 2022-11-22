@@ -43,13 +43,17 @@ const Template: ComponentStory<typeof Table> = (args) => {
     <Table {...args}>
       <THead>
         <TR>
-          <TH sortDirection={sd}>
-            <THSortButton onClick={onSortBtnClick()}>Nafn</THSortButton>
+          <TH sortDirection={sd} textAlign="left">
+            <THSortButton align="left" onClick={onSortBtnClick()}>
+              Nafn
+            </THSortButton>
           </TH>
           <TH>Heimilisfang</TH>
-          <TH align="center">Fjöldi</TH>
-          <TH sortDirection={sd} align="right">
-            <THSortButton onClick={onSortBtnClick()}>Kennitala</THSortButton>
+          <TH textAlign="center">Fjöldi</TH>
+          <TH sortDirection={sd} textAlign="right">
+            <THSortButton align="right" onClick={onSortBtnClick()}>
+              Kennitala
+            </THSortButton>
           </TH>
         </TR>
       </THead>
@@ -57,24 +61,24 @@ const Template: ComponentStory<typeof Table> = (args) => {
         <TR hover>
           <TD>Arnar Birgisson</TD>
           <TD>Afganistan 7</TD>
-          <TD align="center">35</TD>
-          <TD align="right" numeric>
+          <TD textAlign="center">35</TD>
+          <TD textAlign="right" fontNumeric="tabular">
             1122331234
           </TD>
         </TR>
         <TR hover>
           <TD>Glói Arnarsson</TD>
           <TD>Írlandstræti 18</TD>
-          <TD align="center">35</TD>
-          <TD align="right" numeric>
+          <TD textAlign="center">35</TD>
+          <TD textAlign="right" fontNumeric="tabular">
             2211331234
           </TD>
         </TR>
         <TR hover>
           <TD>Nína Santos Arnarsdóttir</TD>
           <TD>Suður Afríkustræti 19</TD>
-          <TD align="center">35</TD>
-          <TD align="right" numeric>
+          <TD textAlign="center">35</TD>
+          <TD textAlign="right" fontNumeric="tabular">
             3322331234
           </TD>
         </TR>

@@ -1,23 +1,23 @@
 import { cn } from 'itils/dist/misc/cn'
 import React from 'react'
-import * as css from './text.module.css'
-import { TextProps, getColorClass, getVariantClass } from '.'
+import { FontProps } from '.'
+import { extractStyleProps, StyleProps, styleClassValue } from '../styles'
 
-export const P = React.forwardRef<HTMLHeadingElement, TextProps>(function P(
-  { color = 'neutral', variant, className, style, marginBottom, ...rest },
-  ref
-) {
+export const P = React.forwardRef<
+  HTMLHeadingElement,
+  StyleProps & FontProps & React.HTMLAttributes<HTMLParagraphElement>
+>(function H1(props, ref) {
+  const { className, ...rest } = extractStyleProps(props)
   return (
     <p
       ref={ref}
       className={cn(
-        css.text,
-        getColorClass(color),
-        getVariantClass('p', variant),
-        { [css.marginBottom]: marginBottom },
+        styleClassValue(props, {
+          color: 'neutral',
+          fontVariant: 'p',
+        }),
         className
       )}
-      style={style}
       {...rest}
     />
   )

@@ -51,7 +51,7 @@ const Template: ComponentStory<typeof RadioGroup> = (args) => {
         setSelectedValue={(value) => setChecked(value)}
       >
         {items.map((i) => (
-          <Label direction="row" key={i.enum}>
+          <Label variant="row" key={i.enum}>
             <Radio value={i.enum} />
             <span>{i.label}</span>
           </Label>

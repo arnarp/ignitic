@@ -1,3 +1,6 @@
+.transparent {
+  background: transparent;
+}
 .paper {
   background: var(--paper-surface-color, var(--background-color, #fff));
   --neutral-on-background-color: var(--neutral-on-paper-surface-color);
@@ -32,4 +35,22 @@
   --default-on-background-color: var(--default-on-secondary-surface-color);
   --primary-on-background-color: var(--primary-on-secondary-surface-color);
   --secondary-on-background-color: var(--secondary-on-secondary-surface-color);
+}
+.colorneutral {
+  color: var(--neutral-on-background-color);
+}
+.colordefault {
+  color: var(--default-on-background-color);
+}
+.colorprimary {
+  color: var(--primary-on-background-color);
+}
+.colorsecondary {
+  color: var(--secondary-on-background-color);
+}
+.colorinherit {
+  color: inherit;
+}
+.colorcurrent {
+  color: currentColor;
 }

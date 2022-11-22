@@ -1,5 +1,4 @@
 .table {
-  width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   --cell-padding-top-bottom: var(--spacer);
@@ -54,13 +53,9 @@
   font-size: var(--table-cell-font-size);
   line-height: var(--table-cell-line-height);
   font-weight: 300;
-  text-align: left;
   overflow: hidden;
 }
 
-.tc.numeric {
-  font-variant-numeric: tabular-nums;
-}
 @media screen {
   .tc.ellipsis {
     white-space: nowrap;
@@ -79,15 +74,6 @@
     line-height: calc(var(--table-cell-line-height) - 1px);
   }
 }
-.tc.alignCenter {
-  text-align: center;
-}
-.tc.alignRight {
-  text-align: right;
-}
-.tc.alignJustify {
-  text-align: justify;
-}
 
 .table.cellSizeSmall .tc {
   --table-cell-font-size: var(--font-size-p-small);
@@ -104,16 +90,9 @@
     var(--cell-padding-top-bottom) var(--cell-padding-left);
 }
 .sortButton {
-  color: inherit;
-  width: 100%;
-  border: none;
-  background: transparent;
   font-size: inherit;
   line-height: inherit;
   display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
   outline-offset: -4px;
   padding: var(--header-cell-padding-top-bottom) var(--cell-padding-right)
     var(--header-cell-padding-top-bottom) var(--cell-padding-left);
@@ -142,10 +121,4 @@
 }
 .sortButton.sortDirectionAsc > svg {
   transform: rotate(180deg);
-}
-.tc.alignCenter .sortButton {
-  justify-content: center;
-}
-.tc.alignRight .sortButton {
-  justify-content: flex-end;
 }

@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from 'itils/dist/misc/cn'
 import React from 'react'
 import { useToggleLayer } from 'react-laag'
-import { background, styles } from '../core'
+import { styleClassValue, styles } from '../core'
 import { IgniticContext } from '../core/context/IgniticContext'
 import { useIsScrolling } from '../hooks/use-is-scrolling'
 import { BaseComponentProps } from '../types/base-component-props'
@@ -84,7 +84,7 @@ export function Tooltip({
               <div
                 className={cn(
                   css.inner,
-                  background({ background: 'paper' }),
+                  styleClassValue({ background: 'paper' }),
                   styles.boxShadow.paper
                 )}
                 color="neutral"

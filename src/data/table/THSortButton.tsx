@@ -1,29 +1,41 @@
 import { cn } from 'itils/dist/misc/cn'
 import React from 'react'
+import { extractStyleProps, styleClassValue, StyleProps } from '../../core'
 import * as css from './Table.module.css'
 import { SortDirectionContext } from './TH'
 
-type Props = {} & React.ButtonHTMLAttributes<HTMLElement>
+type Props = { align: 'right' | 'left' } & StyleProps &
+  React.ButtonHTMLAttributes<HTMLElement>
 
 export const THSortButton = React.forwardRef<HTMLButtonElement, Props>(
-  function THSortButton({ children, className, ...spreadDown }, ref) {
+  function THSortButton(props, ref) {
+    const { children, className, align, ...rest } = extractStyleProps(props)
     const context = React.useContext(SortDirectionContext)
     return (
       <button
         ref={ref}
-        {...spreadDown}
+        {...rest}
         className={cn(
           css.sortButton,
           {
             [css.sortDirectionAsc]: context.sortDirection == 'asc',
             [css.sortDirectionDesc]: context.sortDirection == 'desc',
           },
+          styleClassValue(props, {
+            w: 'full',
+            color: 'inherit',
+            borderA: 'none',
+            background: 'transparent',
+            direction: 'row',
+            crossAxisAlignment: 'center',
+            mainAxisAlignment: align == 'left' ? 'start' : 'end',
+          }),
           className
         )}
       >
-        {context.align != 'right' && children}
+        {align == 'left' && children}
         <SortArrowIcon />
-        {context.align == 'right' && children}
+        {align == 'right' && children}
       </button>
     )
   }
