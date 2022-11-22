@@ -1,3 +1,5 @@
-export const __esModule: true;
-export const visuallyHidden: string;
+declare const styles: {
+  readonly "visuallyHidden": string;
+};
+export = styles;
 

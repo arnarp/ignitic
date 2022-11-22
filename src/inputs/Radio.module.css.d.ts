@@ -1,7 +1,9 @@
-export const __esModule: true;
-export const radio: string;
-export const focus: string;
-export const input: string;
-export const innerCircle: string;
-export const checked: string;
+declare const styles: {
+  readonly "radio": string;
+  readonly "focus": string;
+  readonly "input": string;
+  readonly "innerCircle": string;
+  readonly "checked": string;
+};
+export = styles;
 

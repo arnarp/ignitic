@@ -4,12 +4,11 @@ import { color, ColorProps, extractColorProps } from './color'
 import { display, DisplayProps, extractDisplayProps } from './display'
 import { margin } from './margin'
 import { padding } from './padding'
-import { size } from './size'
+import { extractSizeProps, size, SizeProps } from './size'
 import { extractFontProps, font, FontProps } from './text'
 
 export type Padding = 'o' | 'sm' | 'md' | 'lg' | 'xl'
 export type Margin = 'negmd' | 'negsm' | 'o' | 'sm' | 'md' | 'lg' | 'xl'
-export type Length = '0' | '4' | '6' | '12' | 'full'
 export type BorderStyle = 'none' | 'thin'
 export type BorderColor = 'neutral' | 'brand' | 'primary' | 'secondary'
 export type BorderRadius = '0' | '4'
@@ -47,11 +46,6 @@ export type StyleProps = Partial<{
   mR: Margin
   /** Margin all sides for print */
   mPrintA: Margin
-
-  /** To set element width */
-  w: Length
-  /** To set element height */
-  h: Length
   /** Border style for all sides */
   borderA: BorderStyle
   /** Border style for top */
@@ -67,6 +61,7 @@ export type StyleProps = Partial<{
   /** Border radius */
   borderRadius: BorderRadius
 }> &
+  SizeProps &
   DisplayProps &
   FontProps &
   ColorProps
@@ -89,8 +84,6 @@ export function extractStyleProps<T extends StyleProps>(props: T) {
     mL,
     mR,
     mPrintA,
-    w,
-    h,
     borderA,
     borderT,
     borderB,
@@ -100,7 +93,9 @@ export function extractStyleProps<T extends StyleProps>(props: T) {
     borderRadius,
     ...rest
   } = props
-  return extractDisplayProps(extractColorProps(extractFontProps(rest)))
+  return extractSizeProps(
+    extractDisplayProps(extractColorProps(extractFontProps(rest)))
+  )
 }
 
 export function styleClassValue(

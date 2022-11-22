@@ -22,7 +22,7 @@ export const THSortButton = React.forwardRef<HTMLButtonElement, Props>(
             [css.sortDirectionDesc]: context.sortDirection == 'desc',
           },
           styleClassValue(props, {
-            w: 'full',
+            w: '100p',
             color: 'inherit',
             borderA: 'none',
             background: 'transparent',

@@ -1,3 +1,5 @@
-export const __esModule: true;
-export const fieldset: string;
+declare const styles: {
+  readonly "fieldset": string;
+};
+export = styles;
 

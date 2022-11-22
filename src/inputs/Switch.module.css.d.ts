@@ -1,11 +1,13 @@
-export const __esModule: true;
-export const container: string;
-export const input: string;
-export const slider: string;
-export const knob: string;
-export const checked: string;
-export const colorNeutral: string;
-export const colorDefault: string;
-export const colorPrimary: string;
-export const colorSecondary: string;
+declare const styles: {
+  readonly "container": string;
+  readonly "input": string;
+  readonly "slider": string;
+  readonly "knob": string;
+  readonly "checked": string;
+  readonly "colorNeutral": string;
+  readonly "colorDefault": string;
+  readonly "colorPrimary": string;
+  readonly "colorSecondary": string;
+};
+export = styles;
 

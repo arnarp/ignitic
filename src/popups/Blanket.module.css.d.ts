@@ -1,3 +1,5 @@
-export const __esModule: true;
-export const blanket: string;
+declare const styles: {
+  readonly "blanket": string;
+};
+export = styles;
 

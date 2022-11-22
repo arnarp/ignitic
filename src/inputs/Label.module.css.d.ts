@@ -1,5 +1,7 @@
-export const __esModule: true;
-export const label: string;
-export const row: string;
-export const col: string;
+declare const styles: {
+  readonly "label": string;
+  readonly "row": string;
+  readonly "col": string;
+};
+export = styles;
 

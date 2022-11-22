@@ -1,6 +1,8 @@
-export const __esModule: true;
-export const primary: string;
-export const neutral: string;
-export const small: string;
-export const large: string;
+declare const styles: {
+  readonly "primary": string;
+  readonly "neutral": string;
+  readonly "small": string;
+  readonly "large": string;
+};
+export = styles;
 

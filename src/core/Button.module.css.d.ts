@@ -1,14 +1,16 @@
-export const __esModule: true;
-export const button: string;
-export const iconOnLeft: string;
-export const iconOnRight: string;
-export const sizeSmall: string;
-export const sizeLarge: string;
-export const variantText: string;
-export const colorNeutral: string;
-export const colorDefault: string;
-export const colorPrimary: string;
-export const colorSecondary: string;
-export const variantFilled: string;
-export const variantOutlined: string;
+declare const styles: {
+  readonly "button": string;
+  readonly "iconOnLeft": string;
+  readonly "iconOnRight": string;
+  readonly "sizeSmall": string;
+  readonly "sizeLarge": string;
+  readonly "variantText": string;
+  readonly "colorNeutral": string;
+  readonly "colorDefault": string;
+  readonly "colorPrimary": string;
+  readonly "colorSecondary": string;
+  readonly "variantFilled": string;
+  readonly "variantOutlined": string;
+};
+export = styles;
 

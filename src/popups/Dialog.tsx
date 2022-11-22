@@ -27,7 +27,7 @@ type Props = {
   children: React.ReactNode
   className?: string
   variant?: 'center' | 'fullscreen'
-} & Pick<StyleProps, 'background'>
+} & Pick<StyleProps, 'background' | 'color'>
 
 export function Dialog({ variant = 'center', ...props }: Props) {
   const headingId = useUUID()

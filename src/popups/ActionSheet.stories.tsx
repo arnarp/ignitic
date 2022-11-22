@@ -18,13 +18,6 @@ const Template: ComponentStory<typeof ActionSheet> = (args) => (
           Action sheet content
         </P>
       ))}
-      {/* <Label>
-        <span>Test</span>
-        <TextArea
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        ></TextArea>
-      </Label> */}
     </div>
     <div>
       <Button variant="filled" onClick={() => {}}>
@@ -37,8 +30,17 @@ const Template: ComponentStory<typeof ActionSheet> = (args) => (
   </ActionSheet>
 )
 
-export const Default = Template.bind({}) as ComponentStory<typeof ActionSheet>
+export const Default = Template.bind({})
 Default.args = {
   ariaTitle: 'Test sheet',
   open: false,
+}
+Default.parameters = {
+  chromatic: { disableSnapshot: true },
+}
+
+export const Open = Template.bind({})
+Open.args = {
+  ariaTitle: 'Test sheet',
+  open: true,
 }

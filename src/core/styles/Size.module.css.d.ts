@@ -1,12 +1,22 @@
-export const __esModule: true;
-export const w0: string;
-export const w4: string;
-export const w6: string;
-export const w12: string;
-export const wfull: string;
-export const h0: string;
-export const h4: string;
-export const h6: string;
-export const h12: string;
-export const hfull: string;
+declare const styles: {
+  readonly "w0": string;
+  readonly "w4": string;
+  readonly "w6": string;
+  readonly "w12": string;
+  readonly "w48": string;
+  readonly "w100p": string;
+  readonly "maxW0": string;
+  readonly "maxW4": string;
+  readonly "maxW6": string;
+  readonly "maxW12": string;
+  readonly "maxW48": string;
+  readonly "maxW100p": string;
+  readonly "h0": string;
+  readonly "h4": string;
+  readonly "h6": string;
+  readonly "h12": string;
+  readonly "h48": string;
+  readonly "h100p": string;
+};
+export = styles;
 

@@ -1,13 +1,15 @@
-export const __esModule: true;
-export const grid: string;
-export const oneOne: string;
-export const oneTwo: string;
-export const oneThree: string;
-export const oneFour: string;
-export const twoOne: string;
-export const threeOne: string;
-export const fourOne: string;
-export const vertical: string;
-export const semi: string;
-export const dt: string;
+declare const styles: {
+  readonly "grid": string;
+  readonly "oneOne": string;
+  readonly "oneTwo": string;
+  readonly "oneThree": string;
+  readonly "oneFour": string;
+  readonly "twoOne": string;
+  readonly "threeOne": string;
+  readonly "fourOne": string;
+  readonly "vertical": string;
+  readonly "semi": string;
+  readonly "dt": string;
+};
+export = styles;
 

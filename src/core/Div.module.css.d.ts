@@ -1,4 +1,6 @@
-export const __esModule: true;
-export const rounded: string;
-export const paperShaddow: string;
+declare const styles: {
+  readonly "rounded": string;
+  readonly "paperShaddow": string;
+};
+export = styles;
 

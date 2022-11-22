@@ -1,9 +1,11 @@
-export const __esModule: true;
-export const button: string;
-export const sizeSmall: string;
-export const sizeLarge: string;
-export const colorNeutral: string;
-export const colorDefault: string;
-export const colorPrimary: string;
-export const colorSecondary: string;
+declare const styles: {
+  readonly "button": string;
+  readonly "sizeSmall": string;
+  readonly "sizeLarge": string;
+  readonly "colorNeutral": string;
+  readonly "colorDefault": string;
+  readonly "colorPrimary": string;
+  readonly "colorSecondary": string;
+};
+export = styles;
 

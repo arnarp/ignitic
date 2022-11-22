@@ -27,8 +27,8 @@
     "version:patch": "npm version patch && git push --follow-tags",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "ts:modules": "node node_modules/typed-css-modules/lib/cli.js -e -w -p 'src/**/*.css'",
-    "chromatic": "npx chromatic --exit-zero-on-changes",
+    "ts:modules": "node node_modules/typed-css-modules/lib/cli.js -w -p 'src/**/*.css'",
+    "chromatic": "npx chromatic --exit-zero-on-changes --only-changed",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {

@@ -1,5 +1,7 @@
-export const __esModule: true;
-export const input: string;
-export const valid: string;
-export const invalid: string;
+declare const styles: {
+  readonly "input": string;
+  readonly "valid": string;
+  readonly "invalid": string;
+};
+export = styles;
 

@@ -33,7 +33,7 @@ export const Table = React.forwardRef<HTMLTableElement, Props>(function Table(
           [css.cellSizeSmall]: cellSize == 'small',
           [css.layoutFixed]: layout == 'fixed',
         },
-        styleClassValue(props, { w: 'full' }),
+        styleClassValue(props, { w: '100p' }),
         className
       )}
     />

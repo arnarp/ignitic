@@ -1,8 +1,10 @@
-export const __esModule: true;
-export const dialog: string;
-export const dialogCenter: string;
-export const dialogFullscreen: string;
-export const dialogHeader: string;
-export const dialogContent: string;
-export const dialogFooter: string;
+declare const styles: {
+  readonly "dialog": string;
+  readonly "dialogCenter": string;
+  readonly "dialogFullscreen": string;
+  readonly "dialogHeader": string;
+  readonly "dialogContent": string;
+  readonly "dialogFooter": string;
+};
+export = styles;
 

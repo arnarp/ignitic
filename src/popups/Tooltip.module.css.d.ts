@@ -1,4 +1,6 @@
-export const __esModule: true;
-export const inner: string;
-export const tooltip: string;
+declare const styles: {
+  readonly "inner": string;
+  readonly "tooltip": string;
+};
+export = styles;
 

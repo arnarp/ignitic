@@ -10,8 +10,29 @@
 .w12 {
   width: 12rem;
 }
-.wfull {
+.w48 {
+  width: 48rem;
+}
+.w100p {
   width: 100%;
+}
+.maxW0 {
+  max-width: 0;
+}
+.maxW4 {
+  max-width: 4rem;
+}
+.maxW6 {
+  max-width: 6rem;
+}
+.maxW12 {
+  max-width: 12rem;
+}
+.maxW48 {
+  max-width: 48rem;
+}
+.maxW100p {
+  max-width: 100%;
 }
 .h0 {
   height: 0;
@@ -25,6 +46,9 @@
 .h12 {
   height: 12rem;
 }
-.hfull {
+.h48 {
+  height: 48rem;
+}
+.h100p {
   height: 100%;
 }
