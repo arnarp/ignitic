@@ -1,5 +1,6 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { Tooltip } from './Tooltip'
 import { H2, Span } from '../core'
 import { useUUID } from '../hooks'
@@ -17,7 +18,12 @@ const Template: ComponentStory<typeof Tooltip> = (args) => {
 
   return (
     <>
-      <H2 style={{ width: 'fit-content' }} aria-describedby={h2Id} ref={h2Ref}>
+      <H2
+        style={{ width: 'fit-content' }}
+        aria-describedby={h2Id}
+        ref={h2Ref}
+        data-testid="hover-me"
+      >
         Popups / Tooltip
       </H2>
       <Tooltip {...args} id={h2Id} triggerRef={h2Ref}>
@@ -29,3 +35,10 @@ const Template: ComponentStory<typeof Tooltip> = (args) => {
 
 export const Default = Template.bind({}) as ComponentStory<typeof Tooltip>
 Default.args = {}
+Default.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement)
+  const el = canvas.getByTestId('hover-me')
+  await waitFor(async () => {
+    await userEvent.hover(el)
+  })
+}
