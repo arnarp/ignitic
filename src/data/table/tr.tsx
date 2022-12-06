@@ -1,6 +1,6 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-import css from './table.css'
+import React from 'react'
+import * as css from './Table.module.css'
 
 type Props = {
   hover?: boolean
@@ -17,7 +17,7 @@ export const TR = React.forwardRef<HTMLTableRowElement, Props>(function TR(
       className={cn(
         css.tr,
         {
-          [css.hover]: hover
+          [css.hover]: hover,
         },
         className
       )}

@@ -1,24 +1,23 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
+import React from 'react'
+import { FontProps } from '.'
+import { extractStyleProps, StyleProps, styleClassValue } from '../styles'
 
-import css from './text.css'
-import { TextProps, getColorClass, getVariantClass } from '.'
-
-export const Span = React.forwardRef<HTMLSpanElement, TextProps>(function Span(
-  { color = 'neutral', variant, className, style, marginBottom, ...rest },
-  ref
-) {
+export const Span = React.forwardRef<
+  HTMLHeadingElement,
+  StyleProps & FontProps & React.HTMLAttributes<HTMLSpanElement>
+>(function H1(props, ref) {
+  const { className, ...rest } = extractStyleProps(props)
   return (
     <span
       ref={ref}
       className={cn(
-        css.text,
-        getColorClass(color),
-        getVariantClass('p', variant),
-        { [css.marginBottom]: marginBottom },
+        styleClassValue(props, {
+          color: 'inherit',
+          fontVariant: 'inherit',
+        }),
         className
       )}
-      style={style}
       {...rest}
     />
   )

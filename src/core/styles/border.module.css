@@ -1,0 +1,50 @@
+.neutral {
+  --border-color: var(--neutral-on-background-color);
+}
+.brand {
+  --border-color: var(--default-on-background-color);
+}
+.primary {
+  --border-color: var(--primary-on-background-color);
+}
+.secondary {
+  --border-color: var(--secondary-on-background-color);
+}
+
+.borderAnone {
+  border: none;
+}
+.borderAthin {
+  border: 1px solid var(--border-color);
+}
+.borderTnone {
+  border-top: none;
+}
+.borderTthin {
+  border-top: 1px solid var(--border-color);
+}
+.borderRnone {
+  border-right: none;
+}
+.borderRthin {
+  border-right: 1px solid var(--border-color);
+}
+.borderBnone {
+  border-bottom: none;
+}
+.borderBthin {
+  border-bottom: 1px solid var(--border-color);
+}
+.borderLnone {
+  border-left: none;
+}
+.borderLthin {
+  border-left: 1px solid var(--border-color);
+}
+
+.borderRadius0 {
+  border-radius: 0;
+}
+.borderRadius4 {
+  border-radius: var(--border-radius);
+}

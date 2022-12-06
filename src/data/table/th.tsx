@@ -1,78 +1,67 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-import css from './table.css'
+import React from 'react'
+import { extractStyleProps, styleClassValue, StyleProps } from '../../core'
+import * as css from './Table.module.css'
 import { SortDirection, TableCellProps } from './types'
-import { getColorClass } from '../../core/text'
 
 type Props = {
   sortDirection?: SortDirection
 } & TableCellProps &
-  React.DetailedHTMLProps<
-    React.ThHTMLAttributes<HTMLTableHeaderCellElement>,
-    HTMLTableHeaderCellElement
-  >
+  StyleProps &
+  Omit<React.TdHTMLAttributes<HTMLTableCellElement>, 'align'>
 
 export const SortDirectionContext = React.createContext<{
   sortDirection: Props['sortDirection']
-  align: Props['align']
-}>({ sortDirection: undefined, align: undefined })
+}>({ sortDirection: undefined })
 
-export const TH = React.forwardRef<HTMLTableHeaderCellElement, Props>(
-  function TH(
-    {
-      children,
-      className,
-      cellPadding = 'normal',
-      cellSize = 'normal',
-      align = 'left',
-      color = 'neutral',
+export const TH = React.forwardRef<HTMLTableCellElement, Props>(function TH(
+  props,
+  ref
+) {
+  const {
+    children,
+    className,
+    cellPadding = 'normal',
+    cellSize = 'normal',
+    sortDirection,
+    overflow,
+    ...rest
+  } = extractStyleProps(props)
+
+  const providerValue = React.useMemo(() => {
+    return {
       sortDirection,
-      overflow,
-      numeric,
-      ...rest
-    },
-    ref
-  ) {
-    const providerValue = React.useMemo(() => {
-      return {
-        sortDirection,
-        align
+    }
+  }, [sortDirection])
+  return (
+    <th
+      aria-sort={
+        sortDirection
+          ? sortDirection == 'asc'
+            ? 'ascending'
+            : 'descending'
+          : 'none'
       }
-    }, [sortDirection, align])
-    return (
-      <th
-        aria-sort={
-          sortDirection
-            ? sortDirection == 'asc'
-              ? 'ascending'
-              : 'descending'
-            : 'none'
-        }
-        {...rest}
-        ref={ref}
-        className={cn(
-          css.tc,
-          css.th,
-          getColorClass(color),
-          {
-            [css.cellPaddingDense]: cellPadding == 'dense',
-            [css.cellPaddingCheckbox]: cellPadding == 'checkbox',
-            [css.cellPaddingNone]: cellPadding == 'none',
-            [css.cellSizeSmall]: cellSize == 'small',
-            [css.alignCenter]: align == 'center',
-            [css.alignRight]: align == 'right',
-            [css.alignJustify]: align == 'justify',
-            [css.ellipsis]: overflow == 'ellipsis',
-            [css.wrapEllipsis]: overflow == 'wrap-ellipsis',
-            [css.numeric]: numeric
-          },
-          className
-        )}
-      >
-        <SortDirectionContext.Provider value={providerValue}>
-          {children}
-        </SortDirectionContext.Provider>
-      </th>
-    )
-  }
-)
+      {...rest}
+      ref={ref}
+      className={cn(
+        css.tc,
+        css.th,
+        {
+          [css.cellPaddingDense]: cellPadding == 'dense',
+          [css.cellPaddingCheckbox]: cellPadding == 'checkbox',
+          [css.cellPaddingNone]: cellPadding == 'none',
+          [css.cellSizeSmall]: cellSize == 'small',
+          [css.ellipsis]: overflow == 'ellipsis',
+          [css.wrapEllipsis]: overflow == 'wrap-ellipsis',
+        },
+        styleClassValue(props, { textAlign: 'left' }),
+        className
+      )}
+    >
+      <SortDirectionContext.Provider value={providerValue}>
+        {children}
+      </SortDirectionContext.Provider>
+    </th>
+  )
+})

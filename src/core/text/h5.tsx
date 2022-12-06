@@ -1,24 +1,23 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
+import React from 'react'
+import { FontProps } from '.'
+import { extractStyleProps, StyleProps, styleClassValue } from '../styles'
 
-import css from './text.css'
-import { TextProps, getColorClass, getVariantClass } from '.'
-
-export const H5 = React.forwardRef<HTMLHeadingElement, TextProps>(function H5(
-  { color = 'default', variant, className, style, marginBottom, ...rest },
-  ref
-) {
+export const H5 = React.forwardRef<
+  HTMLHeadingElement,
+  StyleProps & FontProps & React.HTMLAttributes<HTMLHeadingElement>
+>(function H5(props, ref) {
+  const { className, ...rest } = extractStyleProps(props)
   return (
     <h5
       ref={ref}
       className={cn(
-        css.text,
-        getColorClass(color),
-        getVariantClass('h5', variant),
-        { [css.marginBottom]: marginBottom },
+        styleClassValue(props, {
+          color: 'neutral',
+          fontVariant: 'h5',
+        }),
         className
       )}
-      style={style}
       {...rest}
     />
   )

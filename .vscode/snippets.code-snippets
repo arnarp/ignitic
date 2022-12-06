@@ -1,0 +1,24 @@
+{
+  "UI Component Story": {
+    "scope": "typescriptreact",
+    "prefix": "story",
+    "body": [
+      "import React from 'react'",
+      "import { ComponentStory, ComponentMeta } from '@storybook/react'",
+      "import { ${TM_FILENAME_BASE/\\.stories//} } from './${TM_FILENAME_BASE/\\.stories//}'",
+      "",
+      "export default {",
+      "\ttitle: '$0/${TM_FILENAME_BASE/\\.stories//}',",
+      "\tcomponent: ${TM_FILENAME_BASE/\\.stories//},",
+      "\targs: {},",
+      "\targTypes: {},",
+      "} as ComponentMeta<typeof ${TM_FILENAME_BASE/\\.stories//}>",
+      "",
+      "const Template: ComponentStory<typeof ${TM_FILENAME_BASE/\\.stories//}> = (args) => <${TM_FILENAME_BASE/\\.stories//} {...args} />",
+      "",
+      "export const Default = Template.bind({}) as ComponentStory<typeof ${TM_FILENAME_BASE/\\.stories//}>",
+      "Default.args = {}",
+      ""
+    ]
+  }
+}

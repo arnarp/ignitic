@@ -1,0 +1,139 @@
+.pAo {
+  padding: 0;
+}
+.pAsm {
+  padding: var(--space-sm);
+}
+.pAmd {
+  padding: var(--space-md);
+}
+.pAlg {
+  padding: var(--space-lg);
+}
+.pAxl {
+  padding: var(--space-xl);
+}
+
+.pVo {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+.pVsm {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+.pVmd {
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+.pVlg {
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+.pVxl {
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+
+.pHo {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+.pHsm {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+.pHmd {
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+.pHlg {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+.pHxl {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.pTo {
+  padding-top: var(--space-sm);
+}
+.pTsm {
+  padding-top: var(--space-sm);
+}
+.pTmd {
+  padding-top: var(--space-md);
+}
+.pTlg {
+  padding-top: var(--space-lg);
+}
+.pTxl {
+  padding-top: var(--space-xl);
+}
+
+.pBo {
+  padding-bottom: var(--space-sm);
+}
+.pBsm {
+  padding-bottom: var(--space-sm);
+}
+.pBmd {
+  padding-bottom: var(--space-md);
+}
+.pBlg {
+  padding-bottom: var(--space-lg);
+}
+.pBxl {
+  padding-bottom: var(--space-xl);
+}
+
+.pLo {
+  padding-left: var(--space-sm);
+}
+.pLsm {
+  padding-left: var(--space-sm);
+}
+.pLmd {
+  padding-left: var(--space-md);
+}
+.pLlg {
+  padding-left: var(--space-lg);
+}
+.pLxl {
+  padding-left: var(--space-xl);
+}
+
+.pRo {
+  padding-right: var(--space-sm);
+}
+.pRsm {
+  padding-right: var(--space-sm);
+}
+.pRmd {
+  padding-right: var(--space-md);
+}
+.pRlg {
+  padding-right: var(--space-lg);
+}
+.pRxl {
+  padding-right: var(--space-xl);
+}
+
+@media print {
+  .pPrintAo {
+    padding: 0;
+  }
+  .pPrintAsm {
+    padding: var(--space-sm);
+  }
+  .pPrintAmd {
+    padding: var(--space-md);
+  }
+  .pPrintAlg {
+    padding: var(--space-lg);
+  }
+  .pPrintAxl {
+    padding: var(--space-xl);
+  }
+}

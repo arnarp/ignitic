@@ -1,0 +1,54 @@
+.w0 {
+  width: 0;
+}
+.w4 {
+  width: 4rem;
+}
+.w6 {
+  width: 6rem;
+}
+.w12 {
+  width: 12rem;
+}
+.w48 {
+  width: 48rem;
+}
+.w100p {
+  width: 100%;
+}
+.maxW0 {
+  max-width: 0;
+}
+.maxW4 {
+  max-width: 4rem;
+}
+.maxW6 {
+  max-width: 6rem;
+}
+.maxW12 {
+  max-width: 12rem;
+}
+.maxW48 {
+  max-width: 48rem;
+}
+.maxW100p {
+  max-width: 100%;
+}
+.h0 {
+  height: 0;
+}
+.h4 {
+  height: 4rem;
+}
+.h6 {
+  height: 6rem;
+}
+.h12 {
+  height: 12rem;
+}
+.h48 {
+  height: 48rem;
+}
+.h100p {
+  height: 100%;
+}

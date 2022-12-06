@@ -1,29 +1,20 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-import css from './table.css'
+import React from 'react'
+import { extractStyleProps, styleClassValue, StyleProps } from '../../core'
+import * as css from './Table.module.css'
 import { TableCellProps } from './types'
-import { getColorClass } from '../../core/text'
 
 type Props = TableCellProps &
-  React.DetailedHTMLProps<
-    React.TdHTMLAttributes<HTMLTableDataCellElement>,
-    HTMLTableDataCellElement
-  >
+  StyleProps &
+  React.TdHTMLAttributes<HTMLTableCellElement>
 
-export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
-  {
-    children,
-    className,
-    cellPadding = 'normal',
-    cellSize = 'normal',
-    align = 'left',
-    color = 'neutral',
-    overflow,
-    numeric,
-    ...rest
-  },
+export const TD = React.forwardRef<HTMLTableCellElement, Props>(function TD(
+  props,
   ref
 ) {
+  const { className, cellPadding, cellSize, overflow, ...rest } =
+    extractStyleProps(props)
+
   return (
     <td
       {...rest}
@@ -31,23 +22,17 @@ export const TD = React.forwardRef<HTMLTableDataCellElement, Props>(function TD(
       className={cn(
         css.tc,
         css.td,
-        getColorClass(color),
         {
           [css.cellPaddingDense]: cellPadding == 'dense',
           [css.cellPaddingCheckbox]: cellPadding == 'checkbox',
           [css.cellPaddingNone]: cellPadding == 'none',
           [css.cellSizeSmall]: cellSize == 'small',
-          [css.alignCenter]: align == 'center',
-          [css.alignRight]: align == 'right',
-          [css.alignJustify]: align == 'justify',
           [css.ellipsis]: overflow == 'ellipsis',
           [css.wrapEllipsis]: overflow == 'wrap-ellipsis',
-          [css.numeric]: numeric
         },
+        styleClassValue(props),
         className
       )}
-    >
-      {children}
-    </td>
+    />
   )
 })

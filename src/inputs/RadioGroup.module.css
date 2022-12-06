@@ -1,0 +1,23 @@
+.group {
+  display: inline-flex;
+  flex-direction: column;
+}
+.colorNeutral {
+  --radio-border-color: var(--neutral-on-background-color);
+  --radio-circle-background: var(--neutral-on-background-color);
+}
+.colorDefault {
+  --radio-border-color: var(--default-color);
+  --radio-circle-background: var(--default-color);
+}
+.colorPrimary {
+  --radio-border-color: var(--primary-color);
+  --radio-circle-background: var(--primary-color);
+}
+.colorSecondary {
+  --radio-border-color: var(--secondary-color);
+  --radio-circle-background: var(--secondary-color);
+}
+.group > * + * {
+  margin-top: var(--space-sm);
+}

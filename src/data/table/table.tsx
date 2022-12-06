@@ -1,25 +1,27 @@
 import { cn } from 'itils/dist/misc/cn'
-import * as React from 'react'
-import css from './table.css'
+import React from 'react'
+import { extractStyleProps, styleClassValue, StyleProps } from '../../core'
+import * as css from './Table.module.css'
 import { CellPadding, CellSize } from './types'
 
 type Props = {
   cellPadding?: CellPadding
   cellSize?: CellSize
   layout?: 'auto' | 'fixed'
-} & React.TableHTMLAttributes<HTMLElement>
+} & StyleProps &
+  React.TableHTMLAttributes<HTMLElement>
 
 export const Table = React.forwardRef<HTMLTableElement, Props>(function Table(
-  {
-    children,
+  props,
+  ref
+) {
+  const {
     className,
     cellPadding = 'normal',
     cellSize = 'normal',
     layout,
     ...rest
-  },
-  ref
-) {
+  } = extractStyleProps(props)
   return (
     <table
       {...rest}
@@ -29,12 +31,11 @@ export const Table = React.forwardRef<HTMLTableElement, Props>(function Table(
         {
           [css.cellPaddingDense]: cellPadding == 'dense',
           [css.cellSizeSmall]: cellSize == 'small',
-          [css.layoutFixed]: layout == 'fixed'
+          [css.layoutFixed]: layout == 'fixed',
         },
+        styleClassValue(props, { w: '100p' }),
         className
       )}
-    >
-      {children}
-    </table>
+    />
   )
 })

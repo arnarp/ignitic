@@ -2,3 +2,5 @@ node_modules
 .cache
 .npmrc
 dist
+.parcel-cache
+build-storybook.log

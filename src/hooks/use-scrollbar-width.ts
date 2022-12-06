@@ -1,10 +1,14 @@
-import * as React from 'react'
+import React from 'react'
 
 export function useScrollbarWidth() {
   const intervalRef = React.useRef<any>(undefined)
   React.useEffect(() => {
     function updateScrollbarWidth() {
       document.documentElement.style.setProperty(
+        '--scrollbar-width',
+        window.innerWidth - document.documentElement.clientWidth + 'px'
+      )
+      console.log(
         '--scrollbar-width',
         window.innerWidth - document.documentElement.clientWidth + 'px'
       )

@@ -1,0 +1,155 @@
+.button {
+  position: relative;
+  --btn-font-size: var(--font-size-p);
+  --btn-line-height: var(--btn-line-height-md);
+  font-size: var(--btn-font-size);
+  line-height: var(--btn-line-height);
+  border-radius: var(--border-radius);
+  margin: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out;
+  text-transform: uppercase;
+  letter-spacing: 0.057em;
+  outline-offset: -4px;
+}
+.button:disabled {
+  cursor: not-allowed;
+}
+.button:active {
+  transform: scale(0.9);
+}
+.button svg {
+  font-size: var(--btn-line-height);
+}
+.button.iconOnLeft svg {
+  margin-right: calc(0.5 * var(--btn-font-size));
+}
+.button.iconOnRight svg {
+  margin-left: calc(0.5 * var(--btn-font-size));
+}
+
+.sizeSmall {
+  --btn-font-size: var(--font-size-p-small);
+  --btn-line-height: var(--btn-line-height-sm);
+}
+.sizeLarge {
+  --btn-font-size: var(--font-size-p-lead);
+  --btn-line-height: var(--btn-line-height-lg);
+}
+
+/* Variant: text */
+.variantText {
+  background: none;
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+}
+.variantText.colorNeutral {
+  color: var(--neutral-on-background-color);
+}
+.variantText.colorNeutral:hover:not(:disabled) {
+  background: var(--neutral-hover-color-text);
+}
+.variantText.colorDefault {
+  color: var(--default-on-background-color);
+}
+.variantText.colorDefault:hover:not(:disabled) {
+  background: var(--default-hover-color-text);
+}
+.variantText.colorPrimary {
+  color: var(--primary-on-background-color);
+}
+.variantText.colorPrimary:hover:not(:disabled) {
+  background: var(--primary-hover-color-text);
+}
+.variantText.colorSecondary {
+  color: var(--secondary-on-background-color);
+}
+.variantText.colorSecondary:hover:not(:disabled) {
+  background: var(--secondary-hover-color-text);
+}
+.variantText:disabled {
+  color: var(--disabled-color);
+}
+
+/* Variant: filled */
+.variantFilled {
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+}
+.variantFilled.colorNeutral {
+  background: var(--neutral-very-light-on-background-color);
+  color: var(--text-on-neutral-color);
+}
+.variantFilled.colorNeutral:hover:not(:disabled) {
+  background: var(--neutral-hover-color-filled);
+}
+.variantFilled.colorDefault {
+  background: var(--default-color);
+  color: var(--text-on-default-color);
+}
+.variantFilled.colorDefault:hover:not(:disabled) {
+  background: var(--default-hover-color-filled);
+}
+.variantFilled.colorPrimary {
+  background: var(--primary-color);
+  color: var(--text-on-primary-color);
+}
+.variantFilled.colorPrimary:hover:not(:disabled) {
+  background: var(--primary-hover-color-filled);
+}
+.variantFilled.colorSecondary {
+  background: var(--secondary-color);
+  color: var(--text-on-secondary-color);
+}
+.variantFilled.colorSecondary:hover:not(:disabled) {
+  background: var(--secondary-hover-color-filled);
+}
+.variantFilled:disabled::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+}
+
+/* Variant: outlined */
+.variantOutlined {
+  padding: calc(var(--space-sm) - 1px) calc(var(--space-md) - 1px);
+  background: none;
+}
+.variantOutlined.colorNeutral {
+  border: 1px solid var(--neutral-on-background-color);
+  color: var(--neutral-on-background-color);
+}
+.variantOutlined.colorNeutral:hover:not(:disabled) {
+  background: var(--neutral-hover-color-text);
+}
+.variantOutlined.colorDefault {
+  border: 1px solid var(--default-on-background-color);
+  color: var(--default-on-background-color);
+}
+.variantOutlined.colorDefault:hover:not(:disabled) {
+  background: var(--default-hover-color-text);
+}
+.variantOutlined.colorPrimary {
+  border: 1px solid var(--primary-on-background-color);
+  color: var(--primary-on-background-color);
+}
+.variantOutlined.colorPrimary:hover:not(:disabled) {
+  background: var(--primary-hover-color-text);
+}
+.variantOutlined.colorSecondary {
+  border: 1px solid var(--secondary-on-background-color);
+  color: var(--secondary-on-background-color);
+}
+.variantOutlined.colorSecondary:hover:not(:disabled) {
+  background: var(--secondary-hover-color-text);
+}
+
+.variantOutlined:disabled {
+  color: var(--disabled-color);
+}

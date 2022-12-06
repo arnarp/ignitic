@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+}
+.oneOne {
+  grid-template-columns: 1fr 1fr;
+}
+.oneTwo {
+  grid-template-columns: 1fr 2fr;
+}
+.oneThree {
+  grid-template-columns: 1fr 3fr;
+}
+.oneFour {
+  grid-template-columns: 1fr 4fr;
+}
+.twoOne {
+  grid-template-columns: 2fr 1fr;
+}
+.threeOne {
+  grid-template-columns: 3fr 1fr;
+}
+.fourOne {
+  grid-template-columns: 4fr 1fr;
+}
+.vertical {
+  display: inline-flex;
+  flex-direction: column;
+}
+.semi .dt::after {
+  content: ':';
+}

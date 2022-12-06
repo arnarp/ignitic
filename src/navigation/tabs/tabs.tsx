@@ -1,26 +1,22 @@
-import * as React from 'react'
-import { SurfaceColor } from '../../surfaces/surface'
-import { TabsContext } from './tabs-context'
+import { cn } from 'itils'
+import React from 'react'
+import { extractStyleProps, styleClassValue, StyleProps } from '../../core'
+import { TabsContext } from './TabsContext'
 
 type Props = {
   children: React.ReactNode
   selectedTab: string
   setSelectedTab: (selected: string) => void
-  rounded?: boolean
-  color: SurfaceColor
 } & React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
->
+> &
+  StyleProps
 
-export function Tabs({
-  selectedTab,
-  setSelectedTab,
-  children,
-  rounded = true,
-  color = 'neutral',
-  ...rest
-}: Props) {
+export function Tabs(props: Props) {
+  const { selectedTab, setSelectedTab, className, ...rest } =
+    extractStyleProps(props)
+
   const tabsArray = React.useRef<string[]>([])
   const refMap = new Map<string, React.RefObject<HTMLButtonElement>>()
 
@@ -34,7 +30,7 @@ export function Tabs({
   function focusNextTab() {
     const tabsCount = tabsArray.current.length
     const currentSelectedIndex = tabsArray.current.findIndex(
-      i => i == selectedTab
+      (i) => i == selectedTab
     )
     const indexOfNextTabBtn = (currentSelectedIndex + 1) % tabsCount
     const idOfNextTab = tabsArray.current[indexOfNextTabBtn]
@@ -46,7 +42,7 @@ export function Tabs({
   function focusPreviousTab() {
     const tabsCount = tabsArray.current.length
     const currentSelectedIndex = tabsArray.current.findIndex(
-      i => i == selectedTab
+      (i) => i == selectedTab
     )
     const indexOfPreviousTabBtn =
       (currentSelectedIndex - 1 + tabsCount) % tabsCount
@@ -64,19 +60,12 @@ export function Tabs({
       registerRef,
       focusNextTab,
       focusPreviousTab,
-      rounded,
-      color
     }),
-    [
-      selectedTab,
-      setSelectedTab,
-      rounded,
-      color
-    ]
+    [selectedTab, setSelectedTab]
   )
   return (
     <TabsContext.Provider value={value}>
-      <div {...rest}>{children}</div>
+      <div className={cn(styleClassValue(props), className)} {...rest} />
     </TabsContext.Provider>
   )
 }
